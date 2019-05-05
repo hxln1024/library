@@ -1,0 +1,433 @@
+.pageWrap {
+    padding: 0.88rem 0;
+}
+
+/* 首页头部搜索 */
+
+.headers .searchBar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: #e70002;
+    background: linear-gradient(to bottom, #fe2828 0%, #e60000 100%);
+    width: 100%;
+    height: 0.88rem;
+    z-index: 900;
+}
+
+.headers .searchInner {
+    position: relative;
+    height: 0.88rem;
+    width: 100%;
+    overflow: hidden;
+}
+
+.headers .searchBar h1 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 0.6rem;
+    margin-top: 0.14rem;
+    position: relative;
+}
+
+.headers .searchBar h1 img {
+    width: 1.84rem;
+}
+
+.headers .searchBar .searchWrap {
+    width: 60%;
+    height: 0.6rem;
+    border-radius: 0.6rem;
+    line-height: 0.6rem;
+    background: #fff;
+    border: none;
+    position: absolute;
+    left: 1.86rem;
+    top: 0.15rem;
+}
+
+.headers .searchBar .searchWrap span {
+    color: #8e8e8e;
+    font-size: 0.24rem;
+    display: block;
+    text-indent: 0.2rem;
+    height: 0.6rem;
+}
+
+.headers .searchBar .searchBtn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 0.6rem;
+    height: 0.88rem;
+    text-indent: -999px;
+    overflow: hidden;
+    font-size: 0;
+    background: no-repeat url(../images/index/search.png) center;
+    background-size: 0.34rem 0.34rem;
+}
+
+/* 分页头部导航 */
+
+.header {
+    background: #fff;
+    box-shadow: 0px 0px 0.1rem #d4d2d3;
+    position: relative;
+    z-index: 901;
+}
+
+.header .headerInner {
+    position: relative;
+    height: 0.88rem;
+}
+
+/* 返回箭头 */
+
+.header .headerInner .returnBtn {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.header .headerInner .returnBtn a {
+    display: block;
+    height: 0.88rem;
+    width: 0.6rem;
+    background: url(../images/common/returnbtnicon.png) no-repeat center;
+    background-size: 0.2rem 0.35rem;
+}
+
+/* 标题字体 */
+
+.header .head_lable {
+    text-align: center;
+    height: 0.88rem;
+    line-height: 0.88rem;
+}
+
+.header .head_lable span {
+    font-size: 0.30rem;
+    color: #333333;
+    display: block;
+}
+
+.header .shareBtn {
+    /* display: none; */
+    position: absolute;
+    width: 0.85rem;
+    height: 0.88rem;
+    right: 0.75rem;
+    top: 0;
+    background: url(../images/common/sharebtn.png) no-repeat center;
+    background-size: 0.34rem 0.32rem;
+    cursor: pointer;
+}
+
+.header .shortCut {
+    position: absolute;
+    width: 0.75rem;
+    height: 0.88rem;
+    right: 0;
+    top: 0;
+    background: url(../images/common/shortcut.png) no-repeat center;
+    background-size: 0.35rem 0.06rem;
+    cursor: pointer;
+}
+
+.header .shortCutLayer {
+    position: absolute;
+    top: 0.68rem;
+    right: 0.1rem;
+    display: none;
+}
+
+.header .shortCutLayer .shortCutInner {
+    position: relative;
+    padding-top: 0.2rem;
+}
+
+.header .shortCutLayer ul {
+    background: url(../images/common/dot.png) repeat;
+    border-radius: 0.1rem;
+    padding: 0 0.1rem;
+}
+
+.header .shortCutLayer ul li {
+    border-bottom: 1px solid #999999;
+    width: 2rem;
+}
+
+.header .shortCutLayer ul li a {
+    color: #ffffff;
+    font-size: 0.24rem;
+    display: block;
+    height: 0.7rem;
+    line-height: 0.7rem;
+    line-height: 0.7rem;
+    padding-left: 0.77rem;
+}
+
+.header .shortCutLayer ul li.homeLink {
+    background: url(../images/common/homeShortCut.png) no-repeat 0.17rem;
+    background-size: 0.34rem 0.34rem;
+}
+
+.header .shortCutLayer ul li.tstLink {
+    background: url(../images/common/tstShortCut.png) no-repeat 0.17rem;
+    background-size: 0.34rem 0.34rem;
+}
+
+.header .shortCutLayer ul li.kindLink {
+    background: url(../images/common/kindshortCut.png) no-repeat 0.17rem;
+    background-size: 0.34rem 0.28rem;
+}
+
+.header .shortCutLayer ul li.carLink {
+    background: url(../images/common/carshortCut.png) no-repeat 0.17rem;
+    background-size: 0.34rem 0.34rem;
+}
+
+.header .shortCutLayer ul li.accountLink {
+    background: url(../images/common/accountShortCut.png) no-repeat 0.17rem;
+    background-size: 0.32rem 0.32rem;
+}
+
+.header .shortCutLayer ul li:last-child {
+    border-bottom: none;
+}
+
+.header .shortCutLayer .shortCutInner .uptriangle {
+    position: absolute;
+    background: url(../images/common/Triangle.png) no-repeat center;
+    background-size: 0.36rem 0.22rem;
+    width: 0.36rem;
+    height: 0.22rem;
+    right: 0.1rem;
+    top: 0;
+}
+
+/* 签到栏 */
+
+.sign_btn {
+    position: fixed;
+    z-index: 999;
+    right: 0rem;
+    bottom: 2rem;
+    height: 0.9rem;
+    width: 0.9rem;
+    line-height: 0.25rem;
+}
+
+.sign_btn a {
+    display: block;
+}
+
+.sign_btn a img {
+    width: 100%;
+    font-size: 12px;
+}
+
+/* 回到顶部 */
+
+.fixed_box {
+    display: none;
+    position: fixed;
+    right: 0em;
+    bottom: 1rem;
+    height: 0.9rem;
+    width: 0.9rem;
+    line-height: 0.25rem;
+}
+
+.fixed_box a {
+    display: block;
+}
+
+.fixed_box a img {
+    width: 100%;
+    font-size: 12px;
+}
+/* 快速导航 */
+.sidebarNav {
+    position: fixed;
+    right: -1px;
+    bottom: 1.2rem;
+    z-index: 995;
+}
+.sidebarNav dl {
+    overflow: hidden;
+    font-size: 12px;
+    padding-left: 0.9rem;
+    position: relative;
+    height: 1.96rem;
+}
+.sidebarNav dl dt {
+width: 0.9rem;
+height: 0.7rem;
+cursor: pointer;
+border-radius: 0.05rem 0 0 0.05rem;
+padding-left: 0.1rem;
+text-align: center;
+line-height: 0.22rem;
+background: rgba(0,0,0,0.7);
+display: table;
+position: absolute;
+left: 0;
+top: 50%;
+margin-top: -0.35rem;
+}
+.sidebarNav dl dt span {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 0.2rem;
+    color: #fff;
+    background: url('../images/common/sidebarrightarrow.png') no-repeat left;
+    background-size: 0.11rem 0.23rem;
+}
+.sidebarNav dl dd {
+    width: 4.08rem;
+    padding: 0.1rem 0.1rem;
+    background: #fff;
+    display: none;
+    border-radius: 0.05rem 0 0 0.05rem;
+}
+.sidebarNav dl dd ul {
+    overflow: hidden;
+}
+.sidebarNav dl dd ul li {
+    float: left;
+    width: 25%;
+    margin: 0.08rem 0;
+}
+.sidebarNav dl dd ul li a {
+    display: block;
+    color: #7e7b7f;
+    text-align: center;
+}
+.sidebarNav dl dd ul li .sideIcon {
+    display: block;
+}
+.sidebarNav dl dd ul li .sideIcon img {
+    width: 0.4rem;
+    font-size: 12px;
+    display: block;
+    margin: auto;
+}
+.sidebarNav dl dd ul li b {
+    display: block;
+    font-size: 0.18rem;
+    height: 0.28rem;
+    line-height: 0.28rem;
+    margin-top: 0.04rem;
+}
+/* 上箭头 */
+.backTop {
+    display: none;
+    position: fixed;
+    bottom: 1.1rem;
+    right: 0;
+    border-radius: 0.05rem 0 0 0.05rem;
+    background: rgba(0,0,0,0.7) url('../images/common/sidebarbacktop.png') no-repeat center;
+    background-size: 0.23rem 0.33rem;
+    z-index: 999;
+  }
+  .backTop a {
+    display: block;
+    height: 0.7rem;
+    width: 0.9rem;
+  }
+/* 底部说明 */
+
+.pagefoot {
+    background: #fff;
+}
+
+.pagefoot .actions-wrap {
+    text-align: center;
+    line-height: 0;
+    padding: 0.2rem 0;
+    border-bottom: 1px solid #f3f3f3;
+}
+
+.pagefoot .actions-wrap a {
+    display: inline-block;
+    border: 1px solid #999999;
+    height: 0.38rem;
+    line-height: 0.36rem;
+    color: #666666;
+    font-size: 0.24rem;
+    padding: 0 0.16rem;
+    border-radius: 0.04rem;
+}
+
+.pagefoot .b-nav {
+    text-align: center;
+    font-size: 0.22rem;
+    color: #666666;
+    line-height: 0.6rem;
+}
+
+.pagefoot .b-nav a.red {
+    color: #e60000;
+}
+
+.pagefoot .b-nav a {
+    margin: 0 0.22rem;
+    color: #666;
+}
+
+.pagefoot .copyRight {
+    font-size: 0.22rem;
+    color: #8e8e8e;
+    text-align: center;
+    line-height: 0.82rem;
+}
+
+/* 底部菜单 */
+
+.webNav {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    background: #fff;
+    box-shadow: 0px 0px 5px #8e8e8e;
+    z-index: 100;
+}
+
+.webNav ul {
+    overflow: hidden;
+}
+
+.webNav ul li {
+    float: left;
+    width: 20%;
+    text-align: center;
+    height: 0.88rem;
+}
+
+.webNav ul li.cur a {
+    color: #e60000;
+}
+
+.webNav ul li a {
+    color: #333333;
+    font-size: 0.22rem;
+    display: block;
+    height: 0.88rem;
+}
+
+.webNav ul li a img {
+    width: 0.36rem;
+    margin: auto;
+    display: block;
+    margin-top: 0.13rem;
+    height: 0.36rem;
+}
+
+.webNav ul li a b {
+    display: block;
+    text-align: center;
+    line-height: 0.5rem;
+}
