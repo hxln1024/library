@@ -1,19 +1,20 @@
 // banner轮播图
 var mySwiper = new Swiper('.banner1', {
-  loop: true,
-  autoplay: 2000, //可选选项，自动滑动
+  loop:true,
+  autoplay: 2000,//可选选项，自动滑动
   pagination: '.swp1',
   paginationClickable: true,
-  speed: 500,
+  speed:500,
 })
 
 var mySwiper = new Swiper('.banner2', {
-  loop: true,
-  autoplay: 2000, //可选选项，自动滑动
+  loop:true,
+  autoplay: 2000,//可选选项，自动滑动
   pagination: '.swp2',
   paginationClickable: true,
-  speed: 500,
+  speed:500,
 })
+
 
 //   上下滚动公告
 function noticeUp(obj, top, time) {
