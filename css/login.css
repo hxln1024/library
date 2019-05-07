@@ -1,0 +1,761 @@
+/* 内容区 */
+
+body {
+    background: #f6f4f5;
+    font-family: Microsoft Yahei, Helvetica, Arial;
+}
+
+/* 头部 */
+
+header {
+    background: #fff;
+    box-shadow: 0px 0px 0.1rem #d4d2d3;
+    position: relative;
+}
+
+.headerInner {
+    height: 1.1rem;
+    position: relative;
+}
+
+/* 头部左上角返回箭头 */
+
+header .headerInner .returnBtn {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+header .headerInner .returnBtn a {
+    background: url(../images/login/returnbtnicon.png) no-repeat center;
+    display: block;
+    height: 1.1rem;
+    width: 0.6rem;
+    background-size: 0.2rem 0.35rem;
+}
+
+header .headerInner .centerInner {
+    text-align: center;
+    height: 1.1rem;
+    line-height: 1.1rem
+}
+
+header .headerInner .centerInner span {
+    font-size: 0.36rem;
+    color: #333333;
+    display: block;
+}
+
+header .headerInner .rightBtn {
+    width: 0.75rem;
+    height: 1.1rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url(../images/login/shortcut.png) no-repeat center;
+    background-size: 0.35rem 0.06rem;
+}
+
+/* 侧边栏导航 */
+
+.sider-nav .sider ul {
+    background: url(../images/login/dot.png) repeat;
+    border-radius: 0.1rem;
+    padding: 0 0.1rem;
+}
+
+.sider-nav .sider ul li {
+    border-bottom: 1px solid #999999;
+    width: 2rem;
+}
+
+.sider-nav .sider ul li a {
+    color: #ffffff;
+    font-size: 0.26rem;
+    display: block;
+    height: 0.7rem;
+    line-height: 0.7rem;
+    padding-left: 0.77rem;
+}
+
+.sider-nav {
+    position: absolute;
+    top: 0.8rem;
+    right: 0.1rem;
+    display: none;
+    z-index: 10000;
+}
+
+.sider-nav .sider {
+    position: relative;
+    padding-top: 0.2rem;
+}
+
+.sider-nav .sider ul .index {
+    background: url(../images/login/homeShortCut.png) no-repeat 0.17rem center;
+    background-size: 0.36rem 0.36rem;
+}
+
+.sider-nav .sider ul .shop-book {
+    background: url(../images/login/tstShortCut.png) no-repeat 0.17rem center;
+    background-size: 0.36rem 0.36rem;
+}
+
+.sider-nav .sider ul .kind-list {
+    background: url(../images/login/kindshortCut.png) no-repeat 0.17rem center;
+    background-size: 0.34rem 0.34rem;
+}
+
+.sider-nav .sider ul .car-link {
+    background: url(../images/login/carshortCut.png) no-repeat 0.17rem center;
+    background-size: 0.36rem 0.36rem;
+}
+
+.sider-nav .sider ul .my {
+    background: url(../images/login/accountShortCut.png) no-repeat 0.17rem center;
+    background-size: 0.36rem 0.36rem;
+}
+
+/* 侧边栏显示类名 */
+
+.block {
+    display: block
+}
+
+/* 三角形 */
+
+.up-trg {
+    position: absolute;
+    right: 0.1rem;
+    top: 0;
+    width: 0.36rem;
+    height: 0.22rem;
+    background: url(../images/login/Triangle.png) no-repeat;
+    background-size: 0.36rem 0.22rem;
+}
+
+/*  登录*/
+
+.loginForm {
+    padding: 0 0.2rem 0.2rem;
+}
+
+.loginForm .user, .loginForm .pas, .loginForm .inputs {
+    margin-top: 0.3rem;
+    overflow: hidden;
+    position: relative;
+    border-radius: 4px;
+}
+
+.loginForm .user .label, .loginForm .pas .label {
+    background-color: aqua;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 1.16rem;
+    color: #999999;
+    font-size: 1.16rem;
+    text-align: center;
+    line-height: 1.16rem;
+    z-index: 5;
+}
+
+.loginForm .user .userInput {
+    padding: 0 1.16rem 0 0.9rem;
+}
+
+.loginForm .user .label {
+    background: #e3e3e3 url(../images/login/newuser.png) no-repeat center;
+    background-size: 0.36rem 0.36rem;
+}
+
+.loginForm .userInput {
+    cursor: pointer;
+    border: 1px solid #e3e3e3;
+    border-radius: 4px;
+    width: 100%;
+    background: #fff;
+    overflow: hidden;
+    position: relative;
+}
+
+/* 用户名输入框样式 */
+
+.loginForm .user .userInput input {
+    width: 100%;
+    display: block;
+    border: none;
+    outline: none;
+    background: #fff;
+    color: #999999;
+    font-size: 0.32rem;
+    text-indent: 0.4rem;
+    height: 1.16rem;
+    line-height: 1.16rem;
+    vertical-align: middle
+}
+
+.loginForm .pas .userInput {
+    padding: 0 1.16rem 0 0.9rem;
+}
+
+/* 密码输入样式 */
+
+.loginForm .pas .userInput input {
+    width: 100%;
+    display: block;
+    border: none;
+    outline: none;
+    background: #fff;
+    color: #999999;
+    font-size: 0.31rem;
+    text-indent: 0.4rem;
+    height: 1.16rem;
+    line-height: 1.16rem;
+    vertical-align: middle
+}
+
+/*用户名输入框中的清除叉叉  */
+
+.loginForm .user .clearInput {
+    background: url(../images/login/inputclose.png) no-repeat;
+    z-index: 4;
+    position: absolute;
+    top: 50%;
+    right: 0.24rem;
+    margin-top: -0.18rem;
+    height: 0.36rem;
+    width: 0.36rem;
+    cursor: pointer;
+    background-size: cover;
+    display: none;
+}
+
+/* 密码输入框前面的钥匙图标 */
+
+.loginForm .pas .label {
+    background: #e3e3e3 url(../images/login/nepass.png) no-repeat center;
+    background-size: 0.35rem 0.40rem;
+}
+
+/* 密码输入框后面的叉叉及隐藏图标 */
+
+.loginForm .pas .clearInput {
+    background: url(../images/login/inputclose.png) no-repeat;
+    z-index: 4;
+    position: absolute;
+    top: 50%;
+    right: 0.85rem;
+    margin-top: -0.18rem;
+    height: 0.36rem;
+    width: 0.36rem;
+    cursor: pointer;
+    background-size: cover;
+    display: none;
+}
+
+/* 隐藏图标 */
+
+.loginForm .pas .eye {
+    background: url(../images/login/hidePassWord.png) no-repeat center;
+    width: 0.36rem;
+    height: 0.28rem;
+    position: absolute;
+    top: 50%;
+    right: 0.3rem;
+    margin-top: -0.14rem;
+    background-size: 0.36rem 0.28rem;
+}
+.loginForm .pas span.show {
+    background: url(../images/login/showPassWord.png) no-repeat center; 
+    background-size: 0.36rem 0.28rem;
+}
+/* 验证码部分 */
+
+.loginForm .inputs .input-block {
+    width: 100%;
+    display: block;
+    border: none;
+    outline: none;
+    background: #fff;
+    color: #999999;
+    font-size: 0.32rem;
+    text-indent: 0.2rem;
+    height: 1.16rem;
+    line-height: 1.16rem;
+    vertical-align: middle;
+}
+
+.loginForm .imgInput {
+    padding: 0 2rem 0 0;
+}
+
+/* 验证码隐藏叉叉 */
+
+.loginForm .inputs .clearInput {
+    background: url(../images/login/inputclose.png) no-repeat;
+    z-index: 4;
+    position: absolute;
+    top: 50%;
+    right: 0.3rem;
+    margin-top: -0.18rem;
+    height: 0.36rem;
+    width: 0.36rem;
+    cursor: pointer;
+    background-size: cover;
+    display: none;
+}
+
+/* 右侧图形验证码 */
+
+.loginForm .imgInput .imgWrap {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 1.8rem;
+}
+
+.loginForm .imgInput .imgWrap img {
+    width: 100%;
+    height: 100%;
+    font-size: 12px;
+}
+
+/*登录按钮 */
+
+.loginForm .nextLogin {
+    width: 100%;
+    margin-top: 0.6rem;
+    height: 1.2rem;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 0.36rem;
+    line-height: 1.2rem;
+    background: #666a6b;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* 忘记密码和注册链接 */
+
+.loginForm .link {
+    font-size: 0.32rem;
+    color: #666;
+    margin-top: 0.3rem;
+    line-height: 0.36rem;
+    overflow: hidden;
+}
+
+.loginForm .link .registerr {
+    float: right;
+}
+
+.loginForm .link a {
+    margin-left: 0.08rem;
+}
+
+/* 第二部分第三方登录 */
+
+.third-login {
+    margin-top: 0.24rem;
+}
+
+.third-login .third-title {
+    background: url(../images/login/thirdlogintitleline.png) no-repeat center;
+    width: 80%;
+    margin: auto;
+    background-size: 100% 2px;
+    text-align: center;
+}
+
+.third-login .third-title span {
+    font-size: 0.32rem;
+    color: #999999;
+    display: block;
+    width: 40%;
+    height: 0.48rem;
+    line-height: 0.48rem;
+    margin: auto;
+    background-color: #f6f4f5;
+}
+
+/* qq 微博 百度 图标  */
+
+.third-login .list {
+    overflow: hidden;
+    width: 80%;
+    margin: 0.72rem auto 0;
+}
+
+.third-login .list li {
+    width: 33.3333%;
+    float: left;
+    text-align: center;
+}
+
+.third-login .list li a img {
+    width: 1.2rem;
+    display: block;
+    margin: auto;
+}
+
+.third-login .list li a span {
+    font-size: 0.3rem;
+    color: #666;
+    display: block;
+    line-height: 0.48rem;
+    margin-top: 0.1rem;
+}
+
+/* 底部qq微博百度绑定微信账号的注意事项 */
+
+.qq-link {
+    font-size: 0.32rem;
+    margin-top: 1rem;
+    text-align: center;
+    color: #666
+}
+
+/* 注册 */
+
+.register {
+    padding: 0 0.2rem 0.2rem;
+}
+
+.register .inputs {
+    margin-top: 0.3rem;
+    overflow: hidden;
+    position: relative;
+    border-radius: 4px;
+}
+
+/* 注册优惠券 */
+
+.discounts {
+    font-size: 0.30rem;
+    padding: 0.12rem 0.2rem;
+    background: #fff8de;
+    line-height: 0.4rem;
+    color: #e60000;
+}
+
+/* 注册手机号码+86 */
+
+.register .phone .label {
+    background-color: aqua;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 1.16rem;
+    color: #999999;
+    font-size: 1.16rem;
+    text-align: center;
+    line-height: 1.16rem;
+    z-index: 5;
+}
+
+.register .phone .label {
+    background: #e3e3e3 center;
+    background-size: 0.36rem 0.36rem;
+    font-size: 0.32rem
+}
+
+.register .userInput {
+    cursor: pointer;
+    border: 1px solid #e3e3e3;
+    border-radius: 4px;
+    width: 100%;
+    background: #fff;
+    overflow: hidden;
+    position: relative;
+}
+
+/* 用户名输入框样式 */
+
+.register .phone .userInput input {
+    width: 100%;
+    display: block;
+    border: none;
+    outline: none;
+    background: #fff;
+    color: #999999;
+    font-size: 0.32rem;
+    text-indent: 0.4rem;
+    height: 1.16rem;
+    line-height: 1.16rem;
+    vertical-align: middle
+}
+
+.register .phone .userInput {
+    padding: 0 1.16rem 0 0.9rem;
+}
+
+/*注册图形验证码 */
+
+.register .inputs .input-block {
+    width: 100%;
+    display: block;
+    border: none;
+    outline: none;
+    background: #fff;
+    color: #999999;
+    font-size: 0.32rem;
+    text-indent: 0.2rem;
+    height: 1.16rem;
+    line-height: 1.16rem;
+    vertical-align: middle;
+}
+
+.register .imgInput {
+    padding: 0 2rem 0 0;
+}
+
+/* 注册验证码隐藏叉叉 */
+
+.register .inputs .clearInput {
+    background: url(../images/login/inputclose.png) no-repeat;
+    z-index: 4;
+    position: absolute;
+    top: 50%;
+    right: 0.3rem;
+    margin-top: -0.18rem;
+    height: 0.36rem;
+    width: 0.36rem;
+    cursor: pointer;
+    background-size: cover;
+    display: none;
+}
+
+.register .imgInput .imgWrap {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 1.8rem;
+}
+
+.register .imgInput .imgWrap img {
+    width: 100%;
+    height: 100%;
+    font-size: 12px;
+}
+
+/* 注册按钮 */
+
+.register .nextLogin {
+    width: 100%;
+    margin-top: 0.5rem;
+    height: 1.2rem;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 0.36rem;
+    line-height: 1.2rem;
+    background: #666a6b;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* 立即登录和找回密码链接 */
+
+.register .link {
+    font-size: 0.32rem;
+    color: #666;
+    margin-top: 0.3rem;
+    line-height: 0.36rem;
+    overflow: hidden;
+}
+
+.register .link .find {
+    float: right;
+}
+
+.register .link a {
+    margin-left: 0.08rem;
+}
+
+/* 找回密码页面 */
+
+.retrieve {
+    padding: 0 0.2rem 0.2rem;
+}
+
+.retrieve .user, .retrieve .inputs {
+    margin-top: 0.3rem;
+    overflow: hidden;
+    position: relative;
+    border-radius: 4px;
+}
+
+.retrieve .user .label {
+    background-color: aqua;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 1.16rem;
+    color: #999999;
+    font-size: 1.16rem;
+    text-align: center;
+    line-height: 1.16rem;
+    z-index: 5;
+}
+
+.retrieve .user .userInput {
+    padding: 0 1.16rem 0 0.9rem;
+}
+
+.retrieve .user .label {
+    background: #e3e3e3 url(../images/login/newuser.png) no-repeat center;
+    background-size: 0.36rem 0.36rem;
+}
+
+.retrieve .userInput {
+    cursor: pointer;
+    border: 1px solid #e3e3e3;
+    border-radius: 4px;
+    width: 100%;
+    background: #fff;
+    overflow: hidden;
+    position: relative;
+}
+
+/* 用户名输入框样式 */
+
+.retrieve .user .userInput input {
+    width: 100%;
+    display: block;
+    border: none;
+    outline: none;
+    background: #fff;
+    color: #999999;
+    font-size: 0.32rem;
+    text-indent: 0.4rem;
+    height: 1.16rem;
+    line-height: 1.16rem;
+    vertical-align: middle
+}
+
+/*用户名输入框中的清除叉叉  */
+
+.retrieve .user .clearInput {
+    background: url(../images/login/inputclose.png) no-repeat;
+    z-index: 4;
+    position: absolute;
+    top: 50%;
+    right: 0.24rem;
+    margin-top: -0.18rem;
+    height: 0.36rem;
+    width: 0.36rem;
+    cursor: pointer;
+    background-size: cover;
+    display: none;
+}
+
+/* 验证码部分 */
+
+.retrieve .inputs .input-block {
+    width: 100%;
+    display: block;
+    border: none;
+    outline: none;
+    background: #fff;
+    color: #999999;
+    font-size: 0.32rem;
+    text-indent: 0.2rem;
+    height: 1.16rem;
+    line-height: 1.16rem;
+    vertical-align: middle;
+}
+
+.retrieve .imgInput {
+    padding: 0 2rem 0 0;
+}
+
+/* 验证码隐藏叉叉 */
+
+.retrieve .inputs .clearInput {
+    background: url(../images/login/inputclose.png) no-repeat;
+    z-index: 4;
+    position: absolute;
+    top: 50%;
+    right: 0.3rem;
+    margin-top: -0.18rem;
+    height: 0.36rem;
+    width: 0.36rem;
+    cursor: pointer;
+    background-size: cover;
+    display: none;
+}
+
+/* 右侧图形验证码 */
+
+.retrieve .imgInput .imgWrap {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 1.8rem;
+}
+
+.retrieve .imgInput .imgWrap #canvas {
+    width: 100%;
+    height: 100%;
+    font-size: 12px;
+}
+
+/*登录按钮 */
+
+.retrieve .next {
+    width: 100%;
+    margin-top: 0.6rem;
+    height: 1.2rem;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 0.36rem;
+    line-height: 1.2rem;
+    background: #666a6b;
+    color: #fff;
+    cursor: pointer;
+}
+/*当输入框全输入时登录按钮变颜色  */
+ .btnOk{
+    background-color: #E60000;
+    color: #ffffff;
+ }
+ /* 错误提示信息 */
+.error{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 98;
+}
+.error div{
+    display: table;
+    color: white;
+    font-size: 0.28rem;
+    width: 100%;
+    height: 100%;
+}
+.error div p{
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+.error div p span{
+    display: inline-block;
+    padding: 0.25rem .2rem;
+    margin: 0 1rem;
+    border-radius: 0.1rem;
+    background-color: rgba(0,0,0,.8);
+}
+/* 输入框提示信息 */
+.p1{
+    font-size: 0.28rem;
+   
+}

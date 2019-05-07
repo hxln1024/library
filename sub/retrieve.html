@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport"
+        content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, width=device-width">
+    <title>找回密码</title>
+    <script src="../js/rem.js"></script>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+
+<body>
+    <!-- 公有的头部 -->
+    <header>
+        <div class="headerInner">
+            <div class="returnBtn">
+                <a href="index.html" class="return"></a>
+            </div>
+            <div class="centerInner">
+                <span>找回密码</span>
+            </div>
+            <div class="rightBtn">
+                <span></span>
+            </div>
+            <div class="sider-nav">
+                <div class="sider">
+               <ul>
+                   <li class="index">
+                       <a href="index.html">首页</a>
+                   </li>
+                   <li class="shop-book"><a href="index.html">淘书团</a></li>
+                   <li class="kind-list"><a href="index.html">分类搜索</a></li>
+                   <li class="car-link"><a href="index.html">购物车
+
+                   </a></li>
+                   <li class="my"><a href="../login.html">我的账户</a></li>
+               </ul>
+               <span class="up-trg"></span>
+
+</div>
+            </div>
+        </div>
+    </header>
+    <!-- 找回密码页面content -->
+    <div class="retrieve">
+        <div class="user">
+            <span class="label"></span>
+            <div class="userInput">
+                <input type="text" placeholder="用户名/邮箱/已验证手机"class="input">
+                <span class="clearInput" style="display:none"></span>
+            </div>
+        </div>
+        <div class="inputs imgInput">
+            <div class="userInput">
+                <input type="text" name="" id="imgInput" placeholder="请输入图形验证码" class="input-block input" >
+                <span class="clearInput" style="display:none"></span>
+            </div>
+            <div class="imgWrap">
+                <canvas src="../images/login/Yzm.jpg" alt="" id="canvas"></canvas>
+            </div>
+        </div>
+        <div class="next">
+            <span>下一步</span>
+        </div>
+    </div>
+    <div class="error">
+        <div>
+            <p>
+                <span>账号或密码输入错误，请重新输入</span>
+            </p>
+        </div>
+    </div>
+    <script src="../js/zepto.min.js"></script>
+    <script src="../js/touch.js"></script>
+    <script src="../js/loginregiste.js"></script>
+</body>
+
+</html>

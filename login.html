@@ -1,12 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <meta name="viewport"
+        content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, width=device-width">
+    <title>登录</title>
+    <script src="js/rem.js"></script>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/login.css">
+    <script src="js/public.js"></script>
+    <script>
+        ajax({
+            url: "php/checkuser&pwd.php",
+            async: false,
+            success: function (data) {
+                if (data== "验证通过") {
+                    location.href = "index.html";
+                }
+            }
+        })
+    </script>
 </head>
+
 <body>
+    <!-- 头部 -->
+    <header>
+        <div class="headerInner">
+            <div class="returnBtn">
+                <a href="index.html" class="return"></a>
+            </div>
+            <div class="centerInner">
+                <span>登录</span>
+            </div>
+            <div class="rightBtn">
+                <span></span>
+            </div>
+            <div class="sider-nav">
+                <div class="sider">
+               <ul>
+                   <li class="index">
+                       <a href="index.html">首页</a>
+                   </li>
+                   <li class="shop-book"><a href="index.html">淘书团</a></li>
+                   <li class="kind-list"><a href="index.html">分类搜索</a></li>
+                   <li class="car-link"><a href="index.html">购物车
+
+                   </a></li>
+                   <li class="my"><a href="login.html">我的账户</a></li>
+               </ul>
+               <span class="up-trg"></span>
+
+</div>
+            </div>
+        </div>
+    </header>
+    <!-- 内容区 -->
+    <div class="content">
+        <!-- 表单区 -->
+        <div class="loginForm">
+            <div class="user">
+                <span class="label"></span>
+                <div class="userInput">
+                    <input type="text" placeholder="用户名/邮箱/已验证手机" class="input" id="userName">
+                    <span class="clearInput"></span>
+                </div>
+            </div>
+            <div class="pas">
+                <span class="label"></span>
+                <div class="userInput">
+                    <input type="password" placeholder="请输入密码" class="input pas-input" id="userPas">
+                    <span class="clearInput"></span>
+                    <span class="eye"></span>
+                </div>
+            </div>
+            <div class="inputs imgInput">
+                <div class="userInput">
+                    <input type="text" name="" id="imgInput" placeholder="请输入图形验证码" class="input-block input" id="imgcode">
+                    <span class="clearInput"></span>
+                </div>
+                <div class="imgWrap">
+                    <canvas src="images/login/Yzm.jpg" alt="" id="canvas"></canvas>
+                </div>
+            </div>
+            <div class="nextLogin">
+                <span>登录</span>
+            </div>
+            <div class="link">
+                <a href="sub/retrieve.html">忘记密码</a>
+                <a href="resigst.html" class="registerr">新用户注册</a>
+            </div>
+        </div>
+        <!-- 第三方登录 -->
+        <div class="third-login">
+            <div class="third-title">
+                <span>第三方账号登录</span>
+            </div>
+            <ul class="list">
+                <li class="qq">
+                    <a
+                        href="http://qq.bookschina.com/qq/qqlogin.aspx?url=http://m.bookschina.com/register/qqlogin?u=/UserCenter/MyHome">
+                        <img src=" images/login/newqq.png" alt="">
+                        <span>QQ登录</span>
+                    </a>
+                </li>
+                <li class="weibo">
+                    <a
+                        href="http://qq.bookschina.com/weibo/weibologin.aspx?url=http://m.bookschina.com/register/weibologin?u=/UserCenter/MyHome">
+                        <img src=" images/login/newweibo.png" alt="">
+                        <span>微博登录</span>
+                    </a>
+                </li>
+                <li class="baidu">
+                    <a
+                        href="http://qq.bookschina.com/BaiDu/BaiDuLogin.aspx?url=http://m.bookschina.com/register/BaiDuLogin?u=/UserCenter/MyHome">
+                        <img src=" images/login/baiduloginicon.png" alt="">
+                        <span>百度登录</span>
+                    </a>
+                </li>
+            </ul>
+
+
+        </div>
+        <!-- 底部qq微博百度绑定微信账号的注意事项 -->
+        <div class="qq-link">
+            <a href="">QQ、微博、百度登录绑定微信账号的解决方案</a>
+        </div>
+
+    </div>
+    <div class="error">
+        <div>
+            <p>
+                <span>账号或密码输入错误，请重新输入</span>
+            </p>
+        </div>
+    </div>
+ 
+    <script src="js/zepto.min.js"></script>
+  
+    <script src="js/touch.js"></script>
+<script src="js/fx.js"></script>
+    <script src="js/loginregiste.js"></script> 
     
 </body>
+
 </html>
