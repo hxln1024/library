@@ -1,3 +1,11 @@
+// ;(function(){
+//     var html=document.documentElement;
+//     var w=html.getBoundingClientRect().width;
+//     w=w>750?750:w;
+//     var fontSize=w/7.5;
+//     html.style.fontSize=fontSize+"px";
+// })()
+
 ;(function(){
     function resize(){
         var html = document.documentElement;

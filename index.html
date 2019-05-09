@@ -17,7 +17,7 @@
 <body>
     <div class="pageWrap">
         <!-- 头部导航 -->
-         <header class="header">
+        <header class="header">
             <div class="headerInner">
                 <div class="searchBar">
                     <div class="searchInner">
@@ -39,6 +39,7 @@
             </div>
 
         </header>
+       
         <!-- 轮播图 -->
         <div class="swiper-container banner1">
             <div class="swiper-wrapper">
@@ -191,6 +192,7 @@
                                     <img src="images/indexs/book5.jpg" />
 
                                     <p class="name">善的研究</p>
+                                </div>
                                     <div class="priceWrap"><span class="price">¥3.4</span><span
                                             class="original">¥12.0</span></div>
 
@@ -204,6 +206,7 @@
                                     <img src="images/indexs/book6.jpg" />
 
                                     <p class="name">蒋丰看日本:日本国会议员谈中国</p>
+                                </div>
                                     <div class="priceWrap"><span class="price">¥8.5</span><span
                                             class="original">¥38.0</span></div>
 
@@ -305,8 +308,9 @@
                 </ul>
 
             </div>
+         </div>
 <div class="fiveStarLink">
-    <a href="###">查看五星书>></a>
+    <a href="###">查看五星书&gt;&gt;</a>
 
 </div>
 <!-- 推荐书单 -->
@@ -378,29 +382,32 @@
         <div class="sellHotWrap">
         <div class="sellHotTit"><img src="images/indexs/changxiaobangtitle.png" alt="畅销榜"></div>
         <!-- 畅销榜tab切换 -->
-       <div class="sellHotNavWrap">
-        <div class="sellHotNavFixed">
-                <div class="sellHotNav wrapper" id="retr" style="touch-action: pan-y pinch-zoom;">
-                    <div class="dropnav scroller tab">
-                        <ul class="sort_tab" id="ulSort">
-                            <li class="cur" data-page="2" data-flh="" style="width: 70.5882px; margin-left: 0px; margin-right: 0px;"><span>总榜</span></li>
-                            <li class="on" data-page="2" data-flh="wenxue" style="width: 70.5882px; margin-left: 0px; margin-right: 0px;"><span>文学</span></li>
-                            <li class="on" data-page="2" data-flh="sheke" style="width: 70.5882px; margin-left: 0px; margin-right: 0px;"><span>社科</span></li>
-                            <li class="on" data-page="2" data-flh="shaoer" style="width: 70.5882px; margin-left: 0px; margin-right: 0px;"><span>少儿</span></li>
-                            <li class="on" data-page="2" data-flh="yishu" style="width: 70.5882px; margin-left: 0px; margin-right: 0px;"><span>艺术</span></li>
-                            <li class="on" data-page="2" data-flh="shenghuo" style="width: 70.5882px; margin-left: 0px; margin-right: 0px;"><span>生活</span></li>
-                            <li class="on" data-page="2" data-flh="wenjiao" style="width: 70.5882px; margin-left: 0px; margin-right: 0px;"><span>文教</span></li>
-                        </ul>
+        <div class="sellHotNavWrap">
+            <div class="sellHotNavFixed">
+                    <div class="sellHotNav wrapper" id="retr" style="touch-action: pan-y pinch-zoom;">
+                        <div class="dropnav scroller tab">
+                            <ul class="sort_tab" id="ulSort">
+                                <li class="cur" data-page="2" data-flh="" style="width: 70.5882px; margin-left: 0px; margin-right: 0px;"><span>总榜</span></li>
+                                <li class="on" data-page="2" data-flh="wenxue" style="width: 70.5882px; margin-left: 0px; margin-right: 0px;"><span>文学</span></li>
+                                <li class="on" data-page="2" data-flh="sheke" style="width: 70.5882px; margin-left: 0px; margin-right: 0px;"><span>社科</span></li>
+                                <li class="on" data-page="2" data-flh="shaoer" style="width: 70.5882px; margin-left: 0px; margin-right: 0px;"><span>少儿</span></li>
+                                <li class="on" data-page="2" data-flh="yishu" style="width: 70.5882px; margin-left: 0px; margin-right: 0px;"><span>艺术</span></li>
+                                <li class="on" data-page="2" data-flh="shenghuo" style="width: 70.5882px; margin-left: 0px; margin-right: 0px;"><span>生活</span></li>
+                                <li class="on" data-page="2" data-flh="wenjiao" style="width: 70.5882px; margin-left: 0px; margin-right: 0px;"><span>文教</span></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
-</div>
-<div class="selHotBook content">
+    </div>
+<div class="selHotBook">
     <div class="sellHotList">
-        <ul></ul>
+        <ul>
+       
+        </ul>
         <div class="more">
-            <a href="###">进入畅销榜>></a>
+            <a href="###">进入畅销榜&gt;&gt;</a>
         </div>
+
 
     </div>
 
@@ -409,6 +416,7 @@
 
                
     </div>
+</div>
     <!-- js -->
 
     <script src="js/swiper.min.js"></script>
@@ -422,6 +430,7 @@
     <!-- 横向tab切换 -->
    <script>
       var li = document.querySelectorAll(".tab li");
+     
       var myscroll = new IScroll(".tab", {
         bounce: false,
         // 允许水平滚动
@@ -445,6 +454,7 @@
         })(i);
       }
   
+      
       
 
 

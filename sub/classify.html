@@ -12,7 +12,7 @@
         <script src="../js/swiper.min.js"></script>
         <script src="../js/rem.js"></script>
         <script src="../js/iscroll.js"></script>
-         <script src="../js/jquery.js"></script>
+        <script src="../js/jquery.js"></script>
 
 </head>
 
@@ -97,18 +97,18 @@
                         </div>
                         <!-- 畅销和新上架 -->
                         <div class="hotLink">
-                                <ul>
-                                        <li class="li1">
-                                                <a href="###" id="linkChang">
-                                                        <img src="../images/classify/hot.png" />
-                                                </a>
-                                        </li>
-                                        <li class="li2">
-                                                <a href="###">
-                                                        <img src="../images/classify/new.png" />
-                                                </a>
-                                        </li>
-                                </ul>
+
+                                <div>
+                                        <a href="###" id="linkChang">
+                                                <img src="../images/classify/hot.png" />
+                                        </a>
+                                </div>
+                                <div>
+                                        <a href="###" id="link">
+                                                <img src="../images/classify/new.png" />
+                                        </a>
+                                </div>
+
                         </div>
                         <!-- tab图书部分 -->
                         <div class="menu-right-content" id="menuRight">
@@ -2615,18 +2615,12 @@
                 </div>
         </div>
 
+        <!-- 左侧目录的事件 -->
         <script>
                 var myScrollLeft = new IScroll('#menuLeft', {
                         mouseWheel: true,
                         scrollbars: true
                 });
-                var myScrollRight = new IScroll('#menuRight', {
-                        mouseWheel: true,
-                        scrollbars: true
-                });
-        </script>
-
-        <script>
 
                 var swiper = new Swiper('.swiper-container', {
                         pagination: {
@@ -2635,7 +2629,15 @@
                         autoplay: 1000,
                         loop: true,
                 });
+
+                var li = document.getElementById("liTemp");
+
+
+
+
         </script>
+
+
 
         <script>
         </script>

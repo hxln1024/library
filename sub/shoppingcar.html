@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/shoppingcar.css">
+    <link rel="stylesheet" href="../css/mui.min.css">
+    <script src="../js/mui.min.js"></script>
+    <script src="../js/rem.js"></script>
+</head>
+
+<body>
+    <!-- 购物车头部 -->
+    <header class="header">
+        <div class="headerInner">
+            <div class="returnBtn"><a href="###"></a></div>
+            <div class="head_lable">
+                <span>购物车</span>
+            </div>
+            <div class="editBtn" id="editBtn">编辑</div>
+            <div class="shortCut" id="shortCut"></div>
+            <div class="shortCutLayer">
+                <div class="shortCutInner">
+                    <ul>
+                        <li class="homeLink"><a href="###">首页</a></li>
+                        <li class="tstLink"><a href="###">淘书团</a></li>
+                        <li class="searchLink"><a href="###">搜索分类</a></li>
+                        <li class="carLink"><a href="###">购物车</a></li>
+                        <li class="accountLink"><a href="###">我的账户</a></li>
+                    </ul>
+                    <span class="uptriangle"></span>
+                </div>
+
+            </div>
+        </div>
+    </header>
+    <!-- 购物车导航 -->
+    <div class="carNav">
+        <ul>
+            <li class="cur shopCar"><a href="###">购物车</a></li>
+            <li class="tstCar"><a href="###">淘书团购物车</a></li>
+        </ul>
+    </div>
+    <!-- 加购商品以后显示商品框 -->
+    <div class="content">
+        <div class="shopCarContent">
+            <div class="carList">
+                <div class="active">
+                    <div class="activeTit">
+                        <div class="flag">满减</div>
+                        <div class="activeMsg">
+                            <a href="###">
+                            <div class="activeName"><span>5万种图书|每满75减20</span></div>
+                            <div class="activeStatus"><span></span></div>
+                            </a>
+                        </div>
+                        <div class="activeLink"><a href="###">去凑单&gt;&gt;</a></div>
+                    </div>
+                    <div class="activeList">
+                        <ul>
+                            <li>
+                             <div class="listCheckBox  selected">选中</div>
+                             <div class="book">
+                                <div class="bookInner">
+                                 <div class="bookCover"><a href="###"><img src="../images/shoppingcar-imgs/buy1.jpg"></a>
+                               </div>
+                               <div class="bookText">
+                                   <div class="bookname"><a href="###">避暑地的猫-修订版</a></div>
+                                   <div class="priceWrap">
+                                       <span class="salesPrice">¥11.7</span>
+                                       <span class="price">¥28</span>
+                                   </div>
+                                   <div class="oparateArea">
+                                       <div class="countEdit">
+                                          <span class="decrement"></span>
+                                          <input type="text" value="1">
+                                          <span class="increment"></span>
+
+                                       </div>
+                                       <div class="otherEdit">
+                                            <i class="addFav">收藏</i> 
+                                            <i class="delete" id='confirmBtn'>删除</i>
+                                            <div id="info"></div>
+                                         </div>
+                                   </div>
+                                   <div class="activeSelect"><i>促销活动</i><span>2个可选</span></div>
+                                  
+                               </div>
+                                </div>
+                             </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 购物车商品框 -->
+    <div class="noProductWrap">
+        <div class="noProductIcon">
+            <img src="../images/shoppingcar-imgs/noproduct.png">
+            <span>您的购物车暂无商品</span>
+            <a href="###">随便逛逛</a>
+        </div>
+
+    </div>
+    <!-- 购物车底部结算 -->
+    <div class="footer">
+        <div class="checkgroup">
+        <div class="allSelect selectAll">全选</div>
+        <div class="totalWrap">
+            <div class="settlement cur">去结算<span>(4)</span></div>
+            <div class="carResult">
+            <div class="totalMoney">总计：<i>¥48.6</i></div>
+            <div class="totalDiscount">已优惠：<i>¥0</i></div>
+            </div>
+        </div>
+        <div class="editWrap">
+                <div class="clearnoStock">清除缺货</div>
+                <div class="deleteSelcted">移入收藏夹</div>
+                <div class="colectSelcted">删除</div>
+            </div>
+    </div>
+
+    </div>
+    <!-- 为你推荐 -->
+    <div class="recommendWrap">
+        <div class="recomandTit">
+            <img src="../images/shoppingcar-imgs/personRecommend.jpg">
+        </div>
+    </div>
+    <div class="recomandCon">
+        <ul>
+
+        </ul>
+    </div>
+    <!-- ================================== -->
+   
+    <!-- <div class="mui-content">
+            <div class="mui-content-padded" style="margin: 5px;text-align: center;">
+                <button id='alertBtn' type="button" class="mui-btn mui-btn-blue mui-btn-outlined">警告消息框</button>
+                <div id="info"></div>
+            </div>
+        </div> -->
+    <script src="../js/jquery.1.11.3.min.js"></script>
+    <script src="../js/jquery.lazyload.js"></script>
+    <script src="../js/shoppingcar.js"></script>
+</body>
+
+</html>

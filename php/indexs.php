@@ -1,6 +1,6 @@
  <?php
  header("content-type:text/html;charset=utf-8");
- include "inc/dbconn.php";
+ include "dbconn.php";
 $cid=$_REQUEST["cid"];
 
 $sql="select * from indexs where cid='$cid'";
