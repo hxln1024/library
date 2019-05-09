@@ -84,18 +84,7 @@ textarea {
 .textarea-msg{
     float: right;
 }
-.ok {
-    color: green;
-    font-size: 14px;
-    margin-left: 0.15rem;
-}
-
-.error {
-    color: red;
-    font-size: 14px;
-    margin-left: 0.15rem;
-}
 span{
     font-size: 14px;
-    
+    font-size: blue
 }

@@ -18,63 +18,54 @@
     // }
 })()
 // 输入框验证
-!(function(){
+// !(function(){
     var span = document.getElementsByClassName("hint");
     var input = document.getElementsByTagName("input");
     console.log(span)
     console.log(input)
-    function usercheck() {
+    input[0].onblur=function() {
         var usermsgreg = /^\w{6,20}$/;
-        console.log(input[0])
         if (usermsgreg.test(input[0].value)) {
-            span[0].className = "ok"
             span[0].innerHTML = "√"
 
         } else if (input[0].value == "") {
-            span[0].className = "error"
             alert("用户名不能为空!") 
         } else {
-            span[0].className = "error"
             span[0].innerHTML = "×"
             input[0].value = ""
         }
-        submitcheck();
+        // submitcheck();
 
     }
-    function telcheck() {
+    input[1].onblur = function () {
         var telmsgreg =  /^1\d{10}$/;
-        if (telmsgreg.test(input[1].value)|| input[1].value=="") {
-            span[1].className = "ok"
+        if (telmsgreg.test(input[1].value)) {
             span[1].innerHTML = "√"
 
         }else if (input[1].value == "") {
-            span[1].className = "error"
             alert("手机号不能为空!") 
         }
          else {
-            span[1].className = "error"
             span[1].innerHTML = "×"
             input[1].value = ""
         }
-        submitcheck();
+        // submitcheck();
 
     }
-    function emailcheck() {
+
+    input[2].onblur = function () {
         var emailmsgreg = /^\w{6,20}@\w{2,3}\.[A-z]{1,6}$/;
         // /\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/
         if (emailmsgreg.test(input[2].value)) {
-            span[2].className = "ok"
             span[2].innerHTML = "√"
 
         } else if (input[2].value == "") {
-            span[2].className = "error"
             span[2].innerHTML = "邮件不能为空!"
         } else {
-            span[2].className = "error"
             span[2].innerHTML = "×"
             input[2].value = ""
         }
-        submitcheck();
+        // submitcheck();
 
     }
     
@@ -84,7 +75,7 @@
         console.log(submit)
         submit.onclick=function(){
             console.log(input[0].value)
-           if (input[0].value == "" && input[1].value && input[2].value){
+            if (input[0].value == "" && input[1].value == "" && input[2].value == ""){
             alert("留言内容不能为空！")
         } 
         }
@@ -105,4 +96,4 @@
 
     }
     submitcheck();
-})()
+// })()
