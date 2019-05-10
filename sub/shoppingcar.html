@@ -63,7 +63,7 @@
                     <div class="activeList">
                         <ul>
                             <li>
-                             <div class="listCheckBox  selected">选中</div>
+                             <div class="listCheckBox J_check selected">选中</div>
                              <div class="book">
                                 <div class="bookInner">
                                  <div class="bookCover"><a href="###"><img src="../images/shoppingcar-imgs/buy1.jpg"></a>
@@ -74,17 +74,22 @@
                                        <span class="salesPrice">¥11.7</span>
                                        <span class="price">¥28</span>
                                    </div>
-                                   <div class="oparateArea">
+                                   <div class="oparateArea mui-numbox"  data-numbox-min='1'>
                                        <div class="countEdit">
-                                          <span class="decrement"></span>
-                                          <input type="text" value="1">
-                                          <span class="increment"></span>
+                                          <span class="decrement mui-btn mui-numbox-btn-minus"></span>
+                                          <input class="mui-numbox-input" type="text">
+                                          <span class="increment mui-btn mui-numbox-btn-plus"></span>
 
                                        </div>
+                                       <!-- <div class="mui-numbox" data-numbox-step='10' data-numbox-min='0' data-numbox-max='100'>
+                                        <button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+                                        <input class="mui-numbox-input" type="number" />
+                                        <button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+                                       </div> -->
                                        <div class="otherEdit">
                                             <i class="addFav">收藏</i> 
                                             <i class="delete" id='confirmBtn'>删除</i>
-                                            <div id="info"></div>
+                                            <!-- <div id="info"></div> -->
                                          </div>
                                    </div>
                                    <div class="activeSelect"><i>促销活动</i><span>2个可选</span></div>
@@ -93,6 +98,42 @@
                                 </div>
                              </div>
                             </li>
+                            <li>
+                                    <div class="listCheckBox J_check selected">选中</div>
+                                    <div class="book">
+                                       <div class="bookInner">
+                                        <div class="bookCover"><a href="###"><img src="../images/shoppingcar-imgs/buy1.jpg"></a>
+                                      </div>
+                                      <div class="bookText">
+                                          <div class="bookname"><a href="###">避暑地的猫-修订版</a></div>
+                                          <div class="priceWrap">
+                                              <span class="salesPrice">¥11.7</span>
+                                              <span class="price">¥28</span>
+                                          </div>
+                                          <div class="oparateArea mui-numbox"  data-numbox-min='1'>
+                                              <div class="countEdit">
+                                                 <span class="decrement mui-btn mui-numbox-btn-minus"></span>
+                                                 <input class="mui-numbox-input" type="text">
+                                                 <span class="increment mui-btn mui-numbox-btn-plus"></span>
+       
+                                              </div>
+                                              <!-- <div class="mui-numbox" data-numbox-step='10' data-numbox-min='0' data-numbox-max='100'>
+                                               <button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+                                               <input class="mui-numbox-input" type="number" />
+                                               <button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+                                              </div> -->
+                                              <div class="otherEdit">
+                                                   <i class="addFav">收藏</i> 
+                                                   <i class="delete" id='confirmBtn'>删除</i>
+                                                   <!-- <div id="info"></div> -->
+                                                </div>
+                                          </div>
+                                          <div class="activeSelect"><i>促销活动</i><span>2个可选</span></div>
+                                         
+                                      </div>
+                                       </div>
+                                    </div>
+                                   </li>
                         </ul>
                     </div>
                 </div>
@@ -111,9 +152,9 @@
     <!-- 购物车底部结算 -->
     <div class="footer">
         <div class="checkgroup">
-        <div class="allSelect selectAll">全选</div>
+        <div class="allSelect  J_selectALL selectAll">全选</div>
         <div class="totalWrap">
-            <div class="settlement cur">去结算<span>(4)</span></div>
+            <div class="settlement cur" id="J_submitBtn">去结算<span>(4)</span></div>
             <div class="carResult">
             <div class="totalMoney">总计：<i>¥48.6</i></div>
             <div class="totalDiscount">已优惠：<i>¥0</i></div>
@@ -138,15 +179,7 @@
 
         </ul>
     </div>
-    <!-- ================================== -->
-   
-    <!-- <div class="mui-content">
-            <div class="mui-content-padded" style="margin: 5px;text-align: center;">
-                <button id='alertBtn' type="button" class="mui-btn mui-btn-blue mui-btn-outlined">警告消息框</button>
-                <div id="info"></div>
-            </div>
-        </div> -->
-    <script src="../js/jquery.1.11.3.min.js"></script>
+  <script src="../js/jquery.1.11.3.min.js"></script>
     <script src="../js/jquery.lazyload.js"></script>
     <script src="../js/shoppingcar.js"></script>
 </body>

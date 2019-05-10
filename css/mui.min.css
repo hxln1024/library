@@ -970,7 +970,7 @@ p {
     }
 }
 
-.mui-btn,
+/* .mui-btn,
 button,
 input[type=button],
 input[type=reset],
@@ -1001,7 +1001,7 @@ input[type=submit] {
     border-bottom-left-radius: 3px;
     background-color: #fff;
     background-clip: padding-box
-}
+} */
 
 .mui-btn.mui-active:enabled,
 .mui-btn:enabled:active,
@@ -2433,7 +2433,7 @@ textarea:focus {
     -webkit-user-modify: read-write-plaintext-only
 }
 
-input[type=color],
+/* input[type=color],
 input[type=date],
 input[type=datetime-local],
 input[type=datetime],
@@ -2460,7 +2460,7 @@ textarea {
     outline: 0;
     background-color: #fff;
     -webkit-appearance: none
-}
+} */
 
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
@@ -4133,7 +4133,7 @@ body>.mui-progressbar {
     background-color: #323232
 }
 
-.mui-numbox {
+/* .mui-numbox {
     position: relative;
     display: inline-block;
     overflow: hidden;
@@ -4145,9 +4145,9 @@ body>.mui-progressbar {
     border: solid 1px #bbb;
     border-radius: 3px;
     background-color: #efeff4
-}
+} */
 
-.mui-numbox [class*=btn-numbox],
+/* .mui-numbox [class*=btn-numbox],
 .mui-numbox [class*=numbox-btn] {
     font-size: 18px;
     font-weight: 400;
@@ -4179,16 +4179,16 @@ body>.mui-progressbar {
     right: 0;
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px
-}
+} */
 
-.mui-numbox .mui-btn-numbox-minus,
+/* .mui-numbox .mui-btn-numbox-minus,
 .mui-numbox .mui-numbox-btn-minus {
     left: 0;
     border-top-left-radius: 3px;
     border-bottom-left-radius: 3px
-}
+} */
 
-.mui-numbox .mui-input-numbox,
+/* .mui-numbox .mui-input-numbox,
 .mui-numbox .mui-numbox-input {
     display: inline-block;
     overflow: hidden;
@@ -4203,7 +4203,7 @@ body>.mui-progressbar {
     border-right: solid 1px #ccc !important;
     border-left: solid 1px #ccc !important;
     border-radius: 0 !important
-}
+} */
 
 .mui-input-row .mui-numbox {
     float: right;

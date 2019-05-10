@@ -1,11 +1,18 @@
-document.getElementById("confirmBtn").addEventListener('tap', function() {
-    var btnArray = ['取消', '确认'];
-    mui.confirm('您确定要删除该商品吗？',  function(e) {
-        // if (e.index == 1) {
-        //     info.innerText = '你刚确认MUI是个好框架';
-        // } else {
-        //     info.innerText = 'MUI没有得到你的认可，继续加油'
-        // }
+
+$(document).ready(function(e) {
+    $(".shortCut").click(function(e) {
+        $(".shortCutLayer").toggle();
+    });
+});
+// 弹框
+document.getElementsByClassName("confirmBtn").addEventListener('tap', function() {
+    // var btnArray = ['取消', '确认'];
+    mui.confirm('您确定要删除该商品吗？', function(e) {
+        console.log(e.index);
+        if (e.index == 1) {
+        
+        //   $(".activeList ul").remove()
+        } 
     })
 });
 // 为你推荐
@@ -38,3 +45,29 @@ $(function () {
 
     })
 })
+
+function isSelectAll() {
+    var isSelectall = false;
+    $(".J_check").each(function () {
+        console.log($('.J_check'))
+        if (!$(this).hasClass("selected")) {
+            isSelectall = true;
+            return false;
+        }
+    })
+    if (isSelectall) { $(".J_selectALL").removeClass("selectAll"); } else { $(".J_selectALL").addClass("selectAll"); }
+    var isSubmit = false;
+    $(".J_check").each(function () {
+        if ($(this).hasClass("selected")) {
+            isSubmit = true;
+            return false;
+        }
+    })
+    if (isSubmit) { $("#J_submitBtn").addClass("cur") } else { $("#J_submitBtn").removeClass("cur") }
+}
+//  换购商品切
+
+
+// var tst = document.querySelector("mui .mui-popup-buttons");
+
+// console.log(tst);
