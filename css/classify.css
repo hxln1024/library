@@ -6,7 +6,9 @@
   font-size: 0.16rem;
   font-family: Microsoft Yahei,Helvetica,Arial;
 }
-
+.classify a{
+  text-decoration: none;
+}
 
 .classify .search-top {
   width: 6.4rem;
@@ -108,9 +110,9 @@
 
 .menu-right-content .content-item ul li {
   float: left;
-  padding: 0 0.1rem;
+  /* padding: 0 0.1rem; */
   width: 33.3333%;
-  text-align: center;
+  text-align: center; 
   margin-top: 0.2rem;
 }
 

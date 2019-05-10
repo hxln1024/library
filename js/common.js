@@ -4,6 +4,7 @@
         $('.shortCutLayer').toggle('slow');
     })
 })()
+// 快速导航
 !(function () {
     $(".sidebarNav dl dt").click(function () {
         console.log($('.sidebarNav dl dd'))

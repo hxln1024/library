@@ -1,0 +1,90 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, 'Microsoft YaHei';
+}
+
+table {
+    width: 85%;
+    max-width: 10rem;
+    margin: 0 auto;
+    font-size: 14px;
+    color: #000;
+    background-color: transparent;
+    margin-top: 0.15rem;
+}
+
+td {
+    font: normal normal normal 12px/160% Arial, Microsoft YaHei;
+    font-size: 14px;
+    padding: 0 0 0.24rem 0;
+    color: #333;
+    vertical-align: top;
+}
+
+input {
+    box-sizing: content-box;
+    padding: 0.125rem 2%;
+    line-height: 160%;
+    font-size: 12px;
+    border: 1px solid rgb(233, 233, 233);
+    height: 0.375rem;
+    width: 90%;
+    margin: 0.125rem 0px 0.062rem;
+    color: rgb(124, 124, 124);
+    background: rgb(255, 255, 255);
+    margin: 0 auto;
+}
+.focusInput {border:2px solid #99CC33;}
+.form-info {
+    box-sizing: content-box;
+    display: none;
+    color: #EF7208;
+}
+
+textarea {
+    margin: 0.125rem 0px 0px;
+    line-height: 160%;
+    font-size: 12px;
+    border: 1px solid rgb(233, 233, 233);
+    color: rgb(124, 124, 124);
+    width: 96%;
+    height: 140px;
+    background: rgb(255, 255, 255);
+}
+
+/* textarea-msg_content {
+    position: static;
+    left: auto;
+    top: 310px;
+    right: 15px;
+    bottom: auto;
+    box-sizing: content-box;
+    color: rgb(204, 204, 204);
+    font-size: 12px;
+    line-height: 160%;
+    background-color: transparent;
+} */
+
+.chat-view-button {
+    padding: 0px 0.3rem;
+    line-height: 50px;
+    color: rgb(255, 255, 255);
+    height: 0.78rem;
+    width: 90%;
+    border-radius: 5px;
+    text-align: center;
+    -webkit-appearance: none;
+    visibility: visible;
+    opacity: 1;
+    display: block;
+    background: rgb(50, 168, 245);
+}
+
+.textarea-msg{
+    float: right;
+}
+span{
+    font-size: 14px;
+    font-size: blue
+}
