@@ -13,6 +13,9 @@
 .wrap{
     margin: 0 auto;
 }
+p,a{
+    text-decoration: none;
+}
 /* 头部 */
 .header.header-positive {
     position: fixed;

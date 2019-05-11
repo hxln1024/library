@@ -18,3 +18,74 @@
         }
     })
 })()
+// php请求数据
+function Ajax(page){
+    $.ajax({
+        type:"POST",
+        url:"../php/bestdetails.php", 
+        data : "cid="+page,
+        success:function(result){
+            var data=JSON.parse(result);
+            // console.log(data);
+            var str="";
+            for(var i=0;i<data.length;i++){
+                str+=`<li>
+                <a href="###">
+                    <div class="bookWrap">
+                        <div class="cover">
+                            <img src="${data[i].picture}"
+                                alt="${data[i].named}" class="">
+                        </div>
+                        <p class="name">${data[i].named}</p>
+                        <p class="author">${data[i].author}</p>
+                        <div class="priceWrap"><span class="price">¥22.5</span><span
+                                class="original">¥46.0</span></div>
+                    </div>
+                </a>
+            </li>`
+            }  
+            $(".fiveStartList1 ul").html(str); 
+        }
+    })
+}
+Ajax(2);
+$(".fiveStartMoreLink a").click(function(){
+    Ajax(3)
+})
+function last(page){
+    $.ajax({
+        type:"POST",
+        url:"../php/bestdetails.php", 
+        data : "cid="+page,
+        success:function(result){
+            var data=JSON.parse(result);
+            // console.log(data);
+            var str="";
+            for(var i=0;i<data.length;i++){
+                str+=`<li>
+                <a href="###">
+                    <div class="bookWrap">
+                        <div class="cover">
+                            <img src="${data[i].picture}"
+                                alt="${data[i].named}" class="">
+                        </div>
+                        <p class="name">${data[i].named}</p>
+                        <div class="priceWrap"><span class="price">${data[i].price}</span><span
+                                class="original">${data[i].cost}</span></div>
+                    </div>
+                </a>
+            </li>`
+            }  
+            $(".fiveStartList ul").html(str); 
+        }
+    })
+}
+last(3)
+// ...
+$(".shortCut").click(function() {
+    if($(".shortCutLayer").css("display")=="none"){
+        $(".shortCutLayer").show(1500);
+    }else {
+        $(".shortCutLayer").hide("slow");
+    }
+});

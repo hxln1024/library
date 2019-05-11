@@ -13,6 +13,115 @@
 .wrap{
     margin: 0 auto;
 }
+/* 头部 */
+
+.header {
+    background: #fff;
+    box-shadow: 0px 0px 0.1rem #d4d2d3;
+    position: relative;
+    z-index: 901;
+}
+.header .headerInner {
+    position: relative;
+    height: 0.88rem;
+}
+.header .headerInner .returnBtn {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.header .headerInner .returnBtn a {
+    display: block;
+    height: 0.88rem;
+    width: 0.6rem;
+    background: url(../images/bestseller-imgs/returnbtnicon.png) no-repeat center;
+    background-size: 0.2rem 0.35rem;
+}
+.header .head_lable {
+    text-align: center;
+    height: 0.88rem;
+    line-height: 0.88rem;
+}
+.header .head_lable span {
+    font-size: 0.30rem;
+    color: #333333;
+    display: block;
+}
+.header .shareBtn {
+    display: none;
+    position: absolute;
+    width: 0.85rem;
+    height: 0.88rem;
+    right: 0.75rem;
+    top: 0;
+    background: url(../images/bestseller-imgs/sharebtn.png) no-repeat center;
+    background-size: 0.34rem 0.32rem;
+    cursor: pointer;
+}
+.header .shortCut {
+    position: absolute;
+    width: 0.75rem;
+    height: 0.88rem;
+    right: 0;
+    top: 0;
+    background: url(../images/bestseller-imgs/shortcut.png) no-repeat center;
+    background-size: 0.35rem 0.06rem;
+    cursor: pointer;
+}
+/* 隐藏的导航栏 */
+.header .shortCutLayer {
+    position: absolute;
+    top: 0.68rem;
+    right: 0.1rem;
+    display: none;
+}
+.header .shortCutLayer .shortCutInner {
+    position: relative;
+    padding-top: 0.2rem;
+}
+.header .shortCutLayer ul {
+    background: url(../images/bestdetails-imgs/dot.png) repeat;
+    border-radius: 0.1rem;
+    padding: 0 0.1rem;
+}
+.header .shortCutLayer ul li.homeLink {
+    background: url(../images/bestdetails-imgs/homeShortCut.png) no-repeat 0.17rem;
+    background-size: 0.34rem 0.34rem;
+}
+.header .shortCutLayer ul li a {
+    color: #ffffff;
+    font-size: 0.24rem;
+    display: block;
+    height: 0.7rem;
+    line-height: 0.7rem;
+    line-height: 0.7rem;
+    padding-left: 0.77rem;
+}
+.header .shortCutLayer ul li.tstLink {
+    background: url(../images/bestdetails-imgs/tstShortCut.png) no-repeat 0.17rem;
+    background-size: 0.34rem 0.34rem;
+}
+.header .shortCutLayer ul li.searchLink {
+    background: url(../images/bestdetails-imgs/searchshortCut.png) no-repeat 0.17rem;
+    background-size: 0.34rem 0.34rem;
+}
+.header .shortCutLayer ul li.carLink {
+    background: url(../images/bestdetails-imgs/carshortCut.png) no-repeat 0.17rem;
+    background-size: 0.34rem 0.34rem;
+}
+.header .shortCutLayer ul li.accountLink {
+    background: url(../images/bestdetails-imgs/accountShortCut.png) no-repeat 0.17rem;
+    background-size: 0.32rem 0.32rem;
+}
+.header .shortCutLayer .shortCutInner .uptriangle {
+    position: absolute;
+    background: url(../images/bestdetails-imgs/Triangle.png) no-repeat center;
+    background-size: 0.36rem 0.22rem;
+    width: 0.36rem;
+    height: 0.22rem;
+    right: 0.1rem;
+    top: 0;
+}
 /* 畅销榜 */
 .content{
     border-top: 0.02rem solid #f3f3f3;
@@ -368,7 +477,7 @@ div {
 }
 /* 回到顶部 */
 .backTop {
-    /* display: none; */
+    display: none;
     position: fixed;
     bottom: 1.1rem;
     right: 0;
