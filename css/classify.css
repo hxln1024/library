@@ -3,43 +3,86 @@
   max-height: 10rem;
   margin: 0  auto;
   position: relative;
-  font-size: 0.16rem;
+  font-size: 15px;
   font-family: Microsoft Yahei,Helvetica,Arial;
 }
 .classify a{
   text-decoration: none;
 }
 
-.classify .search-top {
-  width: 6.4rem;
-  height: 1rem;
-  background-color: red;   
+/* 头部搜索 */
+.searchBar {
+  position:fixed;
+   left:0;
+  top:0;
+  background-color:#e70002;
+  width:100%;
+  height:0.88rem;
+  z-index:900;
+
+}
+.searchInner {
+  position:relative;
+  height:0.88rem;
+  width:100%;
+  overflow:hidden;
+}
+.searchWrap {
+  margin:0 0.66rem 0 1.94rem;
+}
+.searchBar h1 {
+  position:absolute;
+  left:0;
+  top:0;
+  height:0.6rem;
+  margin-top:0.14rem;
+}
+.searchBar h1 img {
+  width:1.84rem;
+}
+.searchBar  .searchWrap  {
+  height:0.6rem;
+  margin-top:0.14rem;
+  border-radius:0.6rem;
+  line-height:0.6rem;
+  background:#fff;
+}
+.searchBar .searchWrap span {
+  color:#8e8e8e;
+  font-size:0.24rem;
+  display:block;
+  text-indent:0.2rem;
+}
+.searchBar .searchBtn {
   position: absolute;
+  right: 0;
   top: 0;
-  left: 0;
+  width: 0.6rem;
+  height: 0.88rem;
+  text-indent: -999px;
+  overflow: hidden;
+  font-size: 0;
+  background: url('../images/classify/seach.png') no-repeat center;
+  background-size: 0.34rem 0.34rem;
 }
-.classify .search-top  div{
-  width: 1.6rem;
-  height:0.6rem;
-  line-height: 0.6rem;
-  margin-top: 0.2rem
 
-}
 
-.classify .search-top div img{
-  width: 1.6rem;
-  height:0.6rem;
-}
+
 .classify .menu-left {
   width: 1.6rem;
   height: 10rem;
   position: absolute;
   top: 1rem;
   left: 0;
-  background-color: #F3F3F3;
+  /* background-color: #F3F3F3; */
   overflow: hidden;
 }
 
+.classify .menu-left  .on{
+  background-color: #F3F3F3;
+  border-left: 1px solid red;
+  color: red
+}
 
 .classify .menu-left .menu-left-li {
   width: 1.6rem;
