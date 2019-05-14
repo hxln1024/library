@@ -71,7 +71,8 @@
         submit.onclick=function(){
             console.log(input[0].value)
             if (input[0].value == "" && input[1].value == "" && input[2].value == ""){
-            alert("留言内容不能为空！")
+            // alert("留言内容不能为空！")
+            window.location.href="rebot.html"
         } 
         }
         
