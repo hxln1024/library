@@ -66,19 +66,24 @@ function Ajax(page){
             // console.log(data);
             // var str="";
             for(var i=0;i<data.length;i++){
-                str+='<li><a href="/sub/bestdetails.html"><div class="bookWrap"><div class="left"><img src="'+data[i].picture+'" alt=""></div><div class="right"><p class="p-name">'+data[i].named+'</p><p class="p-author"><span>'+data[i].author+'</span><span>'+data[i].press+'</span></p><div class="p-comm"><img src="../images/bestseller-imgs/full.png" alt=""><img src="../images/bestseller-imgs/full.png" alt=""><img src="../images/bestseller-imgs/full.png" alt=""><img src="../images/bestseller-imgs/full.png" alt=""><img src="../images/bestseller-imgs/full.png" alt=""><span>'+data[i].comments+'评论</span></div><div class="pSize"><p class="p-size">领劵满200减100</p></div><p class="p-price"><span class="sellprice">'+data[i].price+'</span><span class="discount">('+data[i].discount+')</span><span class="price">'+data[i].cost+'</span></p><p class="p-shopping"><i class="addCar"></i><i class="collect confirmBtn" ></i></p></div></div></a></li>'
+                str+='<li><a href="/sub/bestdetails'+i+'.html"><div class="bookWrap"><div class="left"><img data-original="'+data[i].picture+'" alt="" class="lazyImg" src="../images/bestseller-imgs/zwt.jpg"></div><div class="right"><p class="p-name">'+data[i].named+'</p><p class="p-author"><span>'+data[i].author+'</span><span>'+data[i].press+'</span></p><div class="p-comm"><img src="../images/bestseller-imgs/full.png" alt=""><img src="../images/bestseller-imgs/full.png" alt=""><img src="../images/bestseller-imgs/full.png" alt=""><img src="../images/bestseller-imgs/full.png" alt=""><img src="../images/bestseller-imgs/full.png" alt=""><span>'+data[i].comments+'评论</span></div><div class="pSize"><p class="p-size">领劵满200减100</p></div><p class="p-price"><span class="sellprice">'+data[i].price+'</span><span class="discount">('+data[i].discount+')</span><span class="price">'+data[i].cost+'</span></p><p class="p-shopping"><i class="addCar"></i><i class="collect confirmBtn" ></i></p></div></div></a></li>'
             }  
             $(".substance ul").html(str); 
 
             var lists=document.getElementsByClassName("confirmBtn");  
             for(var j=0;j<lists.length;j++){
                 // 弹框
-                lists[j].addEventListener('tap', function() {
+                lists[j].addEventListener('click', function() {
                     mui.confirm(' ','你还未登录,是否登陆?', function() {
                     
                     })
                 }); 
             } 
+        },
+        complete:function(){
+            $("img.lazyImg").lazyload({
+                effect:"fadeIn"
+            })
         }
     })
 }

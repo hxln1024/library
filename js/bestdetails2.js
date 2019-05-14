@@ -94,7 +94,7 @@ function detail(page){
         }
     })
 }
-detail(1)
+detail(5)
 //
 function Ajax(page){
     $.ajax({

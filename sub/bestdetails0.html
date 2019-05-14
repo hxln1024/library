@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/bestdetails.css">
+    <script src="../js/mobile.js"></script>
+</head>
+
+<body>
+    <script src="../js/zepto.js"></script>
+    <!-- 头部 -->
+    <div class="wrap" id="pageWrap">
+        <div class="header header-positive">
+            <div class="headerInner">
+                <div class="returnBtn">
+                    <a href="javascript:history.back(-1);"></a>
+                </div>
+                <nav class="detailNav">
+                    <ul>
+                        <li class="current"><a href="#book">图书<span></span></a></li>
+                        <li class=""><a href="#comment">评论<span></span></a></li>
+                        <li class=""><a href="#details">详情<span></span></a></li>
+                    </ul>
+                </nav>
+                <div class="shareBtn" id="shareBtn" style="display: block;"></div>
+                <div class="shortCut" id="shortCut"></div>
+                <div class="shortCutLayer">
+                    <div class="shortCutInner">
+                        <ul>
+                            <li class="homeLink"><a href="../index.html">首页</a></li>
+                            <li class="tstLink"><a href="../index.html">淘书团</a></li>
+                            <li class="searchLink"><a href="../index.htmlt">分类搜索</a></li>
+                            <li class="carLink"><a href="../sub/shoppingcar.html" class="cart">购物车</a></li>
+                            <li class="accountLink"><a href="###" class="user">我的帐户</a></li>
+                        </ul>
+                        <span class="uptriangle"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 内容详情 -->
+        <div class="content">
+            <!-- 1111 -->
+            <div class="bookProduct" id="book">
+               <!-- <div class="bookCover">
+                    <div class="bookPic">
+                        <img src="../images/bestdetails-imgs/1.jpg" alt="我们-反乌托邦小说系列·插图珍藏版" id="imgBook">
+                        <div class="tejiaIcon"></div>
+                    </div>
+                    <div class="rederScore">
+                        <div class="rederScoreInner"><span> 读者评分<br>4.8分</span> </div>
+                    </div>
+                </div>
+                <div class="bookInfor">
+                    <h1>我们-反乌托邦小说系列·插图珍藏版</h1>
+                    <p>日记体科幻讽刺小说，综合运用幻想、象征、荒诞、讽刺、现实等手法，描绘了千年之后的一个极权主义社会:大一统王国。</p>
+                </div>
+                <div class="bookPrice">
+
+                    <div class="salePrice" id="divPrice">
+                        <span class="urerLeave">1星价</span>
+                        <span class="price">¥8.9</span>
+                        <span class="discount">(3.0折)</span>
+                    </div>
+                    <div class="otherPrice">
+                        <span class="startPrice">
+                            2星价￥8.9
+                        </span>
+                        <span class="originalPrice">
+                            定价￥29.8
+                        </span>
+                    </div>
+                </div>
+                <div class="activeList">
+                    <a href="###">5万种图书|每满75减20</a>
+
+                </div>
+                <div class="inforLInk">
+                    <div class="inforLinkItem" id="lblAuthor">
+                        <a
+                            href="###">作者：[俄]叶·伊·扎米亚金
+                            著,顾亚铃 译</a>
+                    </div>
+                    <div class="inforLinkItem" id="divPublish">
+                        <a href="###">出版社：江苏文艺出版社<span class="arrowIcon"></span></a>
+                    </div>
+                    <div class="inforLinkItem">
+                        <a href="###">排名：小说畅销榜 <i>1</i> 位<span class="arrowIcon"></span></a>
+                    </div>
+
+
+                    <div class="inforLinkItem">
+                        <a href="###">分类：小说 &gt; 外国小说 &gt; 俄罗斯 </a><span class="arrowIcon"></span>
+                    </div>
+                </div>
+
+                <div class="service">
+                    <ul>
+                        <li>正版好图书</li>
+                        <li>全场满69包邮</li>
+                        <li>特价书1折起</li>
+                    </ul>
+                </div>
+                <div class="reminder">
+                    <p>温馨提示：5折以下图书主要为出版社尾货，大部分为全新，个别图书品相8.9成新、切口有划线标记、光盘等附件不全</p>
+                </div> -->
+            </div>
+            <!-- 2222 -->
+            <div class="BookComment" id="comment">
+                <div class="commentTit">
+                    <b>商品评论</b><span>（12条）</span> </div>
+                <div class="commentContent">
+                    <div class="commentItem">
+                        <div class="ItemTit">
+                            <div class="userInfor"><a href="###"><span
+                                        class="userName">gos***</span></a><span class="userLeave">（三星用户）</span></div>
+                            <div class="startWrap"><span class="full"></span><span class="full"></span><span
+                                    class="full"></span><span class="full"></span><span class="full"></span></div>
+                        </div>
+                        <div class="userComment">
+                            <p><b></b></p>
+                            <p>反乌托邦三部曲之一，《1984》、《美丽新世界》都看过了，这次补上这本。
+                                PS:书有塑封，品相还不错～</p>
+                        </div>
+                        <div class="commentFoot">
+                            <div class="commentTime">
+                                <span>2019-05-04 20:31:03</span>
+                            </div>
+                            <div class="commentOparate" data-rid="791877" data-bid="5884709">
+                                <span class="supportBtn">0</span>
+                                <span class="oppositionBtn">0</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="commentItem">
+                        <div class="ItemTit">
+                            <div class="userInfor"><a href="###"><span
+                                        class="userName">二十三***</span></a><span class="userLeave">（一星用户）</span></div>
+                            <div class="startWrap"><span class="full"></span><span class="full"></span><span
+                                    class="full"></span><span class="full"></span><span class="full"></span></div>
+                        </div>
+                        <div class="userComment">
+                            <p><b></b></p>
+                            <p>我们，动物庄园，1987</p>
+                        </div>
+                        <div class="commentFoot">
+                            <div class="commentTime">
+                                <span>2019-04-29 13:23:36</span>
+                            </div>
+                            <div class="commentOparate" data-rid="790511" data-bid="5884709">
+                                <span class="supportBtn">0</span>
+                                <span class="oppositionBtn">0</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="commentLink">
+                    <a href="###">查看全部评论</a>
+                </div>
+                <!-- 3333 -->
+                <div class="bookinforDetail" id="details">
+                    <div class="DetailTit">图文详情</div>
+                    <div class="baseInfor">
+                        <ul>
+                            <li>ISBN：9787539960562</li>
+                            <li>装帧：简裝本</li>
+                            <li>版次：1</li>
+                            <li>册数：暂无</li>
+                            <li>重量：暂无</li>
+                            <li>印刷次数：1</li>
+                            <li>开本：32开</li>
+                            <li>页数：232页</li>
+                            <li>出版时间：2013-06-01</li>
+                            <li style="width:100%;">条形码：9787539960562 ; 978-7-5399-6056-2</li>
+                        </ul>
+                    </div>
+                    <div class="detaiInfor">
+                        <div class="detailList">
+                            <h2 class="tit"><span>本书特色</span></h2>
+                            <p>
+                                <br> 　　焚书年代的文学奇品 反乌托邦文学开山之作
+                                <br>　　直接影响《动物庄园》《1984》
+                                <br>　　王小波、村上春树致敬推荐
+                                <br>　　白银时代新现实主义小说一代宗师叶·伊·扎米亚金代表作
+                                <br>　　直面人类心灵深处最恐惧的梦魇——我们是谁？ </p>
+                        </div>
+                        <div class="detailList">
+                            <h2 class="tit"><span>内容简介</span></h2>
+                            <p>
+                                <br>
+                                <br>　　《我们》是一部日记体科幻讽刺小说，综合运用幻想、象征、荒诞、讽刺、现实等手法，描绘了千年之后的一个极权主义社会——大一统王国。大恩主是这个王国的统治者，凭借铁腕使所有公民成为幸福者——幸福就是不自由。所有公民生活在一个由玻璃或者其他透明材料制作或建造的城里，他们没有姓名，只有编号，严格按照统一的守时戒律表作息，根据有关机构的指定确定性生活对象……д-503是“一统”号飞船的首席设计师，以笔记的形式记录了他遇到一群试图推翻大恩主统治争取自由的人之前之后的经历。1924年，《我们》被译成英语，首次出版，被视为反乌托邦文学的开山之作。之后出版的《动物庄园》《1984》和《美丽新世界》都受其影响。
+                            </p>
+                        </div>
+                        <div class="catalog" id="catalog">
+                            <h2 class="tit"><span>目录</span></h2>
+                            <div class="detaimulu">
+                                <div id="catalogSwitch">
+
+                                    <br>记事一 提要
+                                    <br>公告。最英明的线。史诗。
+                                    <br>记事二 提要
+                                    <br>芭蕾舞。和谐的四方形。未知数x。
+                                    <br>记事三 提要
+                                    <br>男式上装。大墙。时间表。
+                                    <br>记事四 提要
+                                    <br>有晴雨计的野蛮人。羊角风。假如。
+                                    <br>记事五 提要
+                                    <br>正方形。世界的主宰。愉快又有益的功能。
+                                    <br>记事六 提要
+                                    <br>意外事件。该死的“明白”。24小时。
+                                    <br>记事七 提要
+                                    <br>一根眼睫毛。泰勒。天仙子和铃兰。
+                                    <br>记事八 提要
+                                    <br>无理根。r-13。三角形。
+                                    <br>记事九 提要
+                                    <br>大祭。抑扬格和扬抑格。铁手。
+                                    <br>记事十 提要
+                                    <br>信。音响振动膜片。毛茸茸的我。
+                                    <br>记事十一 提要
+                                    <br>……不，我不能。就不写提要吧。
+                                    <br>记事十二 提要
+                                    <br>对无穷大的限制。天使。对诗歌的思考。
+                                    <br>记事十三 提要
+                                    <br>雾。你。荒唐透顶的事。
+                                    <br>记事十四 提要
+                                    <br>&nbsp;“我的”。不准许。冰冷的地板。
+                                    <br>记事十五 提要
+                                    <br>气钟罩。明净如镜的海面。我命该永远心急如焚。
+                                    <br>记事十六 提要
+                                    <br>黄颜色。一个二维影子。不可救药的灵魂。
+                                    <br>记事十七 提要
+                                    <br>透过大墙玻璃。我死了。长廊。
+                                    <br>记事十八 提要
+                                    <br>逻辑的迷宫。伤口和膏药。从此洗手不干。
+                                    <br>记事十九 提要
+                                    <br>第三级数的无限小。蹙额的人。越过栏墙。
+                                    <br>记事二十 提要
+                                    <br>放电。思想的材料。零度岩石。
+                                    <br>记事二十一 提要
+                                    <br>作者的责任。坚冰将溶化。好事多磨的爱情。
+                                    <br>记事二十二 提要
+                                    <br>凝固的波浪。一切都在完善之中。我是个细菌。
+                                    <br>记事二十三 提要
+                                    <br>鲜花。晶体的溶化。只要。
+                                    <br>记事二十四 提要
+                                    <br>函数的极限。复活节。全部划掉。
+                                    <br>记事二十五 提要
+                                    <br>自天而降。历史上最大的灾祸。已知的到此结束。
+                                    <br>记事二十六 提要
+                                    <br>世界是存在的。斑疹。41℃体温。
+                                    <br>记事二十七 提要
+                                    <br>不能没有提要。
+                                    <br>记事二十八 提要
+                                    <br>她俩。熵与力。人体中不透明的部位。
+                                    <br>记事二十九 提要
+                                    <br>脸上的线条。萌芽。反常的压缩。
+                                    <br>记事三十 提要
+                                    <br>最后的数。伽利略的错误。岂不更好吗？
+                                    <br>记事三十一 提要
+                                    <br>伟大的手术。我宽恕了一切。列车相撞。
+                                    <br>记事三十二 提要
+                                    <br>我不相信。拖拉机。小小的身影。
+                                    <br>记事三十三 提要
+                                    <br>（这篇是无提要的急就章。最后的。）
+                                    <br>记事三十四 提要
+                                    <br>获释的奴隶。阳光明媚的夜。无线电瓦尔基里女神
+                                    <br>记事三十五 提要
+                                    <br>被箍住了。胡萝卜。杀人。
+                                    <br>记事三十六 提要
+                                    <br>空白页。基督教的上帝。我的母亲。
+                                    <br>记事三十七 提要
+                                    <br>鞭毛虫。世界末日。她的房间。
+                                    <br>记事三十八 提要
+                                    <br>我不知道怎么写提要。也许整个提要可以一言蔽之：被扔掉的香烟。
+                                    <br>记事三十九 提要
+                                    <br>结局。
+                                    <br>记事四十 提要
+                                    <br>事实。气钟罩。我确信。
+                                </div>
+                            </div>
+                            <div class="switch"><span id="openCatalog">展开全部<i class="icon"></i></span></div>
+                        </div>
+                        <div class="detailList">
+                            <h2 class="tit"><span>相关资料</span></h2>
+                            <p>
+                                <br> 　　我所创作过的最滑稽、最真切的一部作品。
+                                <br>　　——（俄）叶·伊·扎米亚金
+                                <br>　　在听说有这么一本书的几年后，我终于得到了一本扎米亚金的《我们》，它是这个焚书年代的文学奇品之一……依我所见，它并非一本一流的书，但无疑是本不寻常的书，令人吃惊的是，英国的出版商无一有足够胆识重出这本书。
+                                <br>
+                                <br>　　——（英）乔治·奥威尔 </p>
+                        </div>
+                        <div class="detailList">
+                            <h2 class="tit"><span>作者简介</span></h2>
+                            <p>
+                                <br>
+                                <br>　　叶·伊·扎米亚金（1884—1937），俄罗斯白银时代作家，被称为“语言艺术大师”“新现实主义小说的一代宗师”。其作品融幻想、象征和现实为一体，风格独具。代表作有长篇小说《我们》，中篇小说《省城轶事》《在遥远的地方》《岛民》。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="relativeBook">
+                        <!--本类五星书-->
+                        <div class="bookList">
+                            <div class="fiveStartBook">
+                                <div class="tit">
+                                    本类五星书
+                                </div>
+                                <div class="fiveStartList fiveStartList1">
+                                    <ul></ul>
+                                    <!-- <ul>
+                                        <li>
+                                            <a href="###">
+                                                <div class="bookWrap">
+                                                    <div class="cover">
+                                                        <img src="../images/bestdetails-imgs/2.jpg"
+                                                            alt="外国文学经典·名家名译(全译本) 萨特小说选 (精)" class="">
+                                                    </div>
+                                                    <p class="name">外国文学经典·名家名译(全译本) 萨特小说选 (精)</p>
+                                                    <p class="author">〔法〕萨特 著</p>
+                                                    <div class="priceWrap"><span class="price">¥22.5</span><span
+                                                            class="original">¥46.0</span></div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="###">
+                                                <div class="bookWrap">
+                                                    <div class="cover">
+                                                        <img src="../images/bestdetails-imgs/3.jpg"
+                                                            alt="外国文学经典·名家名译(全译本):茨威格中短篇小说精选集(精)" class="">
+                                                    </div>
+                                                    <p class="name">外国文学经典·名家名译(全译本):茨威格中短篇小说精选集(精)</p>
+                                                    <p class="author">[奥] 茨威格 著，高中甫，韩耀成 译</p>
+                                                    <div class="priceWrap"><span class="price">¥25.0</span><span
+                                                            class="original">¥48.0</span></div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="###">
+                                                <div class="bookWrap">
+                                                    <div class="cover">
+                                                        <img src="../images/bestdetails-imgs/4.jpg"
+                                                            alt="七年" class="">
+                                                    </div>
+                                                    <p class="name">七年</p>
+                                                    <p class="author">巫马赫连</p>
+                                                    <div class="priceWrap"><span class="price">¥19.0</span><span
+                                                            class="original">¥28.0</span></div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="###">
+                                                <div class="bookWrap">
+                                                    <div class="cover">
+                                                        <img src="../images/bestdetails-imgs/5.jpg"
+                                                            alt="名著名译丛书:好兵帅克历险记(精装版)" class="">
+                                                    </div>
+                                                    <p class="name">名著名译丛书:好兵帅克历险记(精装版)</p>
+                                                    <p class="author">（捷克）雅·哈谢克</p>
+                                                    <div class="priceWrap"><span class="price">¥39.4</span><span
+                                                            class="original">¥58.0</span></div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="###">
+                                                <div class="bookWrap">
+                                                    <div class="cover">
+                                                        <img src="../images/bestdetails-imgs/6.jpg"
+                                                            alt="金阁寺" class="">
+                                                    </div>
+                                                    <p class="name">金阁寺</p>
+                                                    <p class="author">（日本）三岛由纪夫</p>
+                                                    <div class="priceWrap"><span class="price">¥19.0</span><span
+                                                            class="original">¥28.0</span></div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="###">
+                                                <div class="bookWrap">
+                                                    <div class="cover">
+                                                        <img src="../images/bestdetails-imgs/7.jpg"
+                                                            alt="悲剧人偶" class="">
+                                                    </div>
+                                                    <p class="name">悲剧人偶</p>
+                                                    <p class="author">东野圭吾</p>
+                                                    <div class="priceWrap"><span class="price">¥33.7</span><span
+                                                            class="original">¥49.5</span></div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul> -->
+                                </div>
+
+                                <div class="fiveStartMoreLink ">
+                                    <a href="###">更多&gt;&gt;</a>
+                                </div>
+
+                            </div>
+
+                            <div class="historyBook">
+                                <div class="tit" style="margin-top:0">
+                                    浏览历史
+                                </div>
+                                <div class="historyList">
+                                    <ul>
+                                        <li>
+                                            <a href="###">
+                                                <div class="bookWrap">
+                                                    <div class="cover">
+                                                        <img src="../images/bestdetails-imgs/1.jpg"
+                                                            alt="我们-反乌托邦小说系列·插图珍藏版" class="">
+                                                    </div>
+                                                    <p class="name">我们-反乌托邦小说系列·插图珍藏版</p>
+                                                    <p class="author">[俄]叶·伊·扎米亚金 著,顾亚铃 译</p>
+                                                    <div class="priceWrap"><span class="price">¥8.9</span><span
+                                                            class="original">¥29.8</span></div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="hotSaleBook">
+                                <div class="tit">
+                                    本类畅销
+                                </div>
+                                <div class="fiveStartList">
+                                    <ul></ul>
+                                    <!-- <ul>
+                                        <li>
+                                            <a href="###">
+                                                <div class="bookWrap">
+                                                    <div class="cover">
+                                                        <img src="../images/bestdetails-imgs/8.jpg"
+                                                            alt="随风飘舞的塑料布" class="">
+                                                    </div>
+                                                    <p class="name">随风飘舞的塑料布</p>
+                                                    <div class="priceWrap"><span class="price">¥8.1</span><span
+                                                            class="original">¥29.8</span></div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="###">
+                                                <div class="bookWrap">
+                                                    <div class="cover">
+                                                        <img src="../images/bestdetails-imgs/1.jpg"
+                                                            alt="我们-反乌托邦小说系列·插图珍藏版" class="">
+                                                    </div>
+                                                    <p class="name">我们-反乌托邦小说系列·插图珍藏版</p>
+                                                    <div class="priceWrap"><span class="price">¥8.9</span><span
+                                                            class="original">¥29.8</span></div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="###">
+                                                <div class="bookWrap">
+                                                    <div class="cover">
+                                                        <img src="../images/bestdetails-imgs/9.jpg"
+                                                            alt="和我们的女儿谈话" class="">
+                                                    </div>
+                                                    <p class="name">和我们的女儿谈话</p>
+                                                    <div class="priceWrap"><span class="price">¥10.9</span><span
+                                                            class="original">¥26.0</span></div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="###">
+                                                <div class="bookWrap">
+                                                    <div class="cover">
+                                                        <img src="../images/bestdetails-imgs/10.jpg"
+                                                            alt="无影灯:渡边淳一自选集" class="">
+                                                    </div>
+                                                    <p class="name">无影灯:渡边淳一自选集</p>
+                                                    <div class="priceWrap"><span class="price">¥11.2</span><span
+                                                            class="original">¥35.0</span></div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="###">
+                                                <div class="bookWrap">
+                                                    <div class="cover">
+                                                        <img src="../images/bestdetails-imgs/11.jpg"
+                                                            alt="灰故事-楚尘文化" class="">
+                                                    </div>
+                                                    <p class="name">灰故事-楚尘文化</p>
+                                                    <div class="priceWrap"><span class="price">¥8.9</span><span
+                                                            class="original">¥29.8</span></div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="###">
+                                                <div class="bookWrap">
+                                                    <div class="cover">
+                                                        <img src="../images/bestdetails-imgs/12.jpg"
+                                                            alt="泡沫-渡边淳一自选集" class="">
+                                                    </div>
+                                                    <p class="name">泡沫-渡边淳一自选集</p>
+                                                    <div class="priceWrap"><span class="price">¥15.6</span><span
+                                                            class="original">¥39.0</span></div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="###">
+                                                <div class="bookWrap">
+                                                    <div class="cover">
+                                                        <img src="../images/bestdetails-imgs/13.jpg"
+                                                            alt="天行者" class="">
+                                                    </div>
+                                                    <p class="name">天行者</p>
+                                                    <div class="priceWrap"><span class="price">¥7.7</span><span
+                                                            class="original">¥18.0</span></div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="###">
+                                                <div class="bookWrap">
+                                                    <div class="cover">
+                                                        <img src="../images/bestdetails-imgs/14.jpg"
+                                                            alt="多斯的城堡" class="">
+                                                    </div>
+                                                    <p class="name">多斯的城堡</p>
+                                                    <div class="priceWrap"><span class="price">¥11.3</span><span
+                                                            class="original">¥29.8</span></div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="###">
+                                                <div class="bookWrap">
+                                                    <div class="cover">
+                                                        <img src="../images/bestdetails-imgs/15.jpg"
+                                                            alt="爱伦·坡暗黑故事全集" class="">
+                                                    </div>
+                                                    <p class="name">爱伦·坡暗黑故事全集</p>
+                                                    <div class="priceWrap"><span class="price">¥15.5</span><span
+                                                            class="original">¥29.8</span></div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="###">
+                                                <div class="bookWrap">
+                                                    <div class="cover">
+                                                        <img src="../images/bestdetails-imgs/16.jpg"
+                                                            alt="尴尬风流" class="">
+                                                    </div>
+                                                    <p class="name">尴尬风流</p>
+                                                    <div class="priceWrap"><span class="price">¥14.0</span><span
+                                                            class="original">¥39.0</span></div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="###">
+                                                <div class="bookWrap">
+                                                    <div class="cover">
+                                                        <img src="../images/bestdetails-imgs/17.jpg"
+                                                            alt="啼笑因缘" class="">
+                                                    </div>
+                                                    <p class="name">啼笑因缘</p>
+                                                    <div class="priceWrap"><span class="price">¥11.5</span><span
+                                                            class="original">¥25.0</span></div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="###">
+                                                <div class="bookWrap">
+                                                    <div class="cover">
+                                                        <img src="../images/bestdetails-imgs/18.jpg"
+                                                            alt="施托姆中短篇小说经典-新陆文库·德语卷" class="">
+                                                    </div>
+                                                    <p class="name">施托姆中短篇小说经典-新陆文库·德语卷</p>
+                                                    <div class="priceWrap"><span class="price">¥13.5</span><span
+                                                            class="original">¥45.0</span></div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="###">
+                                                <div class="bookWrap">
+                                                    <div class="cover">
+                                                        <img src="../images/bestdetails-imgs/19.jpg"
+                                                            alt="七声" class="">
+                                                    </div>
+                                                    <p class="name">七声</p>
+                                                    <div class="priceWrap"><span class="price">¥13.7</span><span
+                                                            class="original">¥28.0</span></div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="###">
+                                                <div class="bookWrap">
+                                                    <div class="cover">
+                                                        <img src="../images/bestdetails-imgs/20.jpg"
+                                                            alt="刺青时代" class="">
+                                                    </div>
+                                                    <p class="name">刺青时代</p>
+                                                    <div class="priceWrap"><span class="price">¥11.3</span><span
+                                                            class="original">¥23.0</span></div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="###">
+                                                <div class="bookWrap">
+                                                    <div class="cover">
+                                                        <img src="../images/bestdetails-imgs/21.jpg"
+                                                            alt="渡边淳一自选集002－白色猎人" class="">
+                                                    </div>
+                                                    <p class="name">渡边淳一自选集002－白色猎人</p>
+                                                    <div class="priceWrap"><span class="price">¥9.9</span><span
+                                                            class="original">¥22.0</span></div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="###">
+                                                <div class="bookWrap">
+                                                    <div class="cover">
+                                                        <img src="../images/bestdetails-imgs/22.jpg"
+                                                            alt="边城" class="">
+                                                    </div>
+                                                    <p class="name">边城</p>
+                                                    <div class="priceWrap"><span class="price">¥14.6</span><span
+                                                            class="original">¥28.0</span></div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="###">
+                                                <div class="bookWrap">
+                                                    <div class="cover">
+                                                        <img src="../images/bestdetails-imgs/23.jpg"
+                                                            alt="闷与狂" class="">
+                                                    </div>
+                                                    <p class="name">闷与狂</p>
+                                                    <div class="priceWrap"><span class="price">¥12.2</span><span
+                                                            class="original">¥38.0</span></div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="###">
+                                                <div class="bookWrap">
+                                                    <div class="cover">
+                                                        <img src="../images/bestdetails-imgs/24.jpg"
+                                                            alt="海琳日记" class="">
+                                                    </div>
+                                                    <p class="name">海琳日记</p>
+                                                    <div class="priceWrap"><span class="price">¥9.0</span><span
+                                                            class="original">¥25.0</span></div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="###">
+                                                <div class="bookWrap">
+                                                    <div class="cover">
+                                                        <img src="../images/bestdetails-imgs/25.jpg"
+                                                            alt="洞灵小志 续志 补志-民国的聊斋 最后的搜神" class="">
+                                                    </div>
+                                                    <p class="name">洞灵小志 续志 补志-民国的聊斋 最后的搜神</p>
+                                                    <div class="priceWrap"><span class="price">¥18.0</span><span
+                                                            class="original">¥48.6</span></div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="###">
+                                                <div class="bookWrap">
+                                                    <div class="cover">
+                                                        <img src="../images/bestdetails-imgs/26.jpg"
+                                                            alt="姑妈的宝刀" class="">
+                                                    </div>
+                                                    <p class="name">姑妈的宝刀</p>
+                                                    <div class="priceWrap"><span class="price">¥14.7</span><span
+                                                            class="original">¥30.0</span></div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul> -->
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <!-- 底部 -->
+        <div class="footer">
+            <div class="footerInner">
+                <div class="btn_bar">
+                    <div class="iconBtn" id="customerService">
+                        <div class="iconBtnInner">
+                            <i class="icon"></i>
+                            <span class="txt">客服</span>
+                        </div>
+                    </div>
+                    <div class="iconBtn" id="collection" >
+                        <div class="iconBtnInner">
+                            <i class="icon"></i>
+                            <span class="txt">收藏</span>
+                        </div>
+                    </div>
+                    <div class="iconBtn" id="gotoCart" onclick="window.location = 'shoppingcar.html'">
+                        <div class="iconBtnInner" style="border:none">
+                            <span class="add_num" id="popone">0</span>
+                            <i class="icon"></i>
+                            <span class="txt">购物车</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn_group">
+                    <div class="de_row">
+                        <div class="btn btn_red" id="addCart">
+                            <span class="txt">加入购物车</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- 蒙版 -->
+        <div class="maskLayer"></div>
+        <!-- 侧边栏 -->
+        <div class="backTop"><a href="javascript:scrollTo(0,0)"></a></div>
+        <div class="sidebarNav">
+            <dl>
+                <dt><span>快速<br>导航</span></dt>
+                <dd>
+                    <ul>
+                        <li><a href="###"><span class="sideIcon"><img src="../images/bestseller-imgs/sidebarnav1.png" alt="首页"></span><b>首页</b></a></li>
+                        <li><a href="###"><span class="sideIcon"><img src="../images/bestseller-imgs/sidebarnav2.png" alt="淘书团"></span><b>淘书团</b></a></li>
+                        <li><a href="###"><span class="sideIcon"><img src="../images/bestseller-imgs/sidebarnav3.png" alt="分类搜索"></span><b>分类搜索</b></a></li>
+                        <li><a href="###"><span class="sideIcon"><img src="../images/bestseller-imgs/sidebarnav5.png" alt="购物车"></span><b>购物车</b></a></li>
+                        <li><a href="###"><span class="sideIcon"><img src="../images/bestseller-imgs/sidebarnav6.png" alt="我的账户"></span><b>我的账户</b></a></li>
+                    </ul>
+                </dd>
+            </dl>
+        </div>
+    </div>
+</body>
+<script src="../js/jquery.1.11.3.min.js"></script>
+<script src="../js/bestdetails.js"></script>
+<script src="../js/jquery.lazyload.js"></script>
+</html>
