@@ -1,0 +1,852 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.wrap{
+    margin: 0 auto;
+}
+p,a{
+    text-decoration: none;
+}
+/* 头部 */
+.header.header-positive {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 900;
+}
+.header {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background: #fff;
+    box-shadow: 0px 0px 10px #d4d2d3;
+    z-index: 900;
+}
+.header .headerInner {
+    position: relative;
+    height: 0.88rem;
+    padding: 0 1.45rem 0 0.4rem;
+}
+.header .headerInner .returnBtn {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.header .headerInner .returnBtn a {
+    display: block;
+    height: 0.88rem;
+    width: 0.6rem;
+    background: url(../images/bestdetails-imgs/returnbtnicon.png) no-repeat center;
+    background-size: 0.2rem 0.35rem;
+}
+.header .headerInner .detailNav ul {
+    overflow: hidden;
+    padding: 0 0.4rem;
+}
+.header .headerInner .detailNav ul li {
+    float: left;
+    width: 33.33%;
+    height: 0.88rem;
+    text-align: center;
+    line-height: 0.88rem;
+}
+.header .headerInner .detailNav ul li.current a {
+    color: #e60000;
+}
+.header .headerInner .detailNav ul li a {
+    font-size: 0.24rem;
+    color: #333333;
+    display: block;
+    height: 0.88rem;
+    position: relative;
+}
+.header .headerInner .detailNav ul li.current span {
+    background: #e60000;
+}
+.header .headerInner .detailNav ul li span {
+    position: absolute;
+    height: 0.06rem;
+    background: #fff;
+    bottom: 0;
+    width: 0.5rem;
+    left: 50%;
+    margin-left: -0.25rem;
+}
+.header .shareBtn {
+    position: absolute;
+    width: 0.85rem;
+    height: 0.88rem;
+    right: 0.75rem;
+    top: 0;
+    background: url(../images/bestdetails-imgs/sharebtn.png) no-repeat center;
+    background-size: 0.34rem 0.32rem;
+    cursor: pointer;
+}
+.header .shortCut {
+    position: absolute;
+    width: 0.75rem;
+    height: 0.88rem;
+    right: 0;
+    top: 0;
+    background: url(../images/bestdetails-imgs/shortcut.png) no-repeat center;
+    background-size: 0.35rem 0.06rem;
+    cursor: pointer;
+}
+/* 隐藏的导航栏 */
+.header .shortCutLayer {
+    position: absolute;
+    top: 0.68rem;
+    right: 0.1rem;
+    display: none;
+}
+.header .shortCutLayer .shortCutInner {
+    position: relative;
+    padding-top: 0.2rem;
+}
+.header .shortCutLayer ul {
+    background: url(../images/bestdetails-imgs/dot.png) repeat;
+    border-radius: 0.1rem;
+    padding: 0 0.1rem;
+}
+.header .shortCutLayer ul li.homeLink {
+    background: url(../images/bestdetails-imgs/homeShortCut.png) no-repeat 0.17rem;
+    background-size: 0.34rem 0.34rem;
+}
+.header .shortCutLayer ul li a {
+    color: #ffffff;
+    font-size: 0.24rem;
+    display: block;
+    height: 0.7rem;
+    line-height: 0.7rem;
+    line-height: 0.7rem;
+    padding-left: 0.77rem;
+}
+.header .shortCutLayer ul li.tstLink {
+    background: url(../images/bestdetails-imgs/tstShortCut.png) no-repeat 0.17rem;
+    background-size: 0.34rem 0.34rem;
+}
+.header .shortCutLayer ul li.searchLink {
+    background: url(../images/bestdetails-imgs/searchshortCut.png) no-repeat 0.17rem;
+    background-size: 0.34rem 0.34rem;
+}
+.header .shortCutLayer ul li.carLink {
+    background: url(../images/bestdetails-imgs/carshortCut.png) no-repeat 0.17rem;
+    background-size: 0.34rem 0.34rem;
+}
+.header .shortCutLayer ul li.accountLink {
+    background: url(../images/bestdetails-imgs/accountShortCut.png) no-repeat 0.17rem;
+    background-size: 0.32rem 0.32rem;
+}
+.header .shortCutLayer .shortCutInner .uptriangle {
+    position: absolute;
+    background: url(../images/bestdetails-imgs/Triangle.png) no-repeat center;
+    background-size: 0.36rem 0.22rem;
+    width: 0.36rem;
+    height: 0.22rem;
+    right: 0.1rem;
+    top: 0;
+}
+/* 内容详情 */
+.content{
+    margin: 51px 0;
+}
+/* 1111 */
+.content .bookCover {
+    position: relative;
+    padding: 0.3rem 0;
+    background: #fff;
+}
+.content .bookCover .bookPic {
+    border: 1px solid #fef0f0;
+    text-align: center;
+    width: 3.52rem;
+    margin: auto;
+    position: relative;
+}
+.content .bookCover .bookPic img {
+    max-width: 100%;
+    height: 3.5rem;
+}
+img {
+    border: none;
+    vertical-align: top;
+    font-size: 12px;
+}
+.content .bookCover .bookPic .tejiaIcon {
+    position: absolute;
+    background: url(../images/bestdetails-imgs/tejiaIcon.png) no-repeat;
+    background-size: cover;
+    height: 0.69rem;
+    width: 0.69rem;
+    top: 0;
+    right: 0;
+}
+.content .bookCover .rederScore {
+    position: absolute;
+    right: 0;
+    bottom: 0.3rem;
+    height: 0.68rem;
+    border: 2px solid #ff551e;
+    border-right: none;
+    border-radius: 0.64rem 0 0 0.64rem;
+    display: table;
+    padding: 0 0.2rem;
+}
+.content .bookCover .rederScoreInner {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    line-height: 0.3rem;
+}
+.content .bookCover .rederScoreInner span {
+    font-size: 0.2rem;
+    color: #ff551e;
+    display: block;
+}
+.content .bookInfor {
+    padding: 0.25rem 0.2rem 0;
+    background: #fff;
+}
+.content .bookInfor h1 {
+    font-size: 0.28rem;
+    line-height: 0.38rem;
+    color: #000;
+}
+.content .bookInfor p {
+    margin-top: 0.1rem;
+    color: #333333;
+    font-size: 0.2rem;
+    line-height: 0.3rem;
+}
+.content .bookPrice {
+    overflow: hidden;
+    background: #fff;
+    padding: 0.15rem 0.2rem 0;
+}
+.content .bookPrice .salePrice {
+    float: left;
+    overflow: hidden;
+    line-height: 0.4rem;
+}
+.content .bookPrice .salePrice .urerLeave {
+    font-size: 0.2rem;
+    color: #e60000;
+    margin: 0.02rem 0.06rem 0 0;
+}
+.content .bookPrice .salePrice span {
+    float: left;
+}
+.content .bookPrice .salePrice .price {
+    font-size: 0.3rem;
+    color: #e60000;
+    font-weight: bold;
+}
+.content .bookPrice .salePrice .discount {
+    font-size: 0.2rem;
+    color: #333333;
+    margin: 0.02rem 0 0 0.15rem;
+}
+.content .bookPrice .otherPrice {
+    float: right;
+    overflow: hidden;
+    line-height: 0.4rem;
+}
+.content .bookPrice .otherPrice .startPrice {
+    float: left;
+    color: #666666;
+    font-size: 0.2rem;
+    margin: 0.02rem 0.28rem 0 0;
+}
+.content .bookPrice .otherPrice .originalPrice {
+    float: left;
+    color: #666666;
+    font-size: 0.2rem;
+    margin: 0.02rem 0 0 0;
+}
+.content .activeList {
+    overflow: hidden;
+    padding: 0 0.2rem 0.2rem;
+    background: #fff;
+}
+.content .activeList a {
+    float: left;
+    border: 2px solid #e60000;
+    color: #e60000;
+    height: 0.6rem;
+    line-height: 0.54rem;
+    font-size: 0.22rem;
+    padding: 0 0.2rem;
+    margin-right: 0.2rem;
+    margin-top: 0.2rem;
+    border-radius: 0.05rem;
+}
+.content .inforLInk {
+    padding: 0 0.2rem;
+    background: #fff;
+    margin-top: 0.16rem;
+}
+.content .inforLInk .inforLinkItem {
+    border-bottom: 0.02rem solid #f3f3f3;
+    height: 0.7rem;
+    line-height: 0.68rem;
+    position: relative;
+}
+.content .inforLInk .inforLinkItem a {
+    display: block;
+    height: 0.68rem;
+    color: #333;
+    font-size: 0.22rem;
+    background: url(../images/bestdetails-imgs/rightarrow.png) no-repeat right;
+    background-size: 0.16rem 0.28rem;
+}
+.content .inforLInk .inforLinkItem span {
+    background: url(../images/bestdetails-imgs/rightarrow.png) no-repeat center;
+    background-size: 0.16rem 0.28rem;
+    height: 0.68rem;
+    width: 0.16rem;
+    top: 0;
+    right: 0.1rem;
+    position: absolute;
+    display: none;
+}
+.content .inforLInk .inforLinkItem a i {
+    color: #e60000;
+    margin: 0 0.13rem;
+}
+.content .service {
+    padding: 0 0.2rem;
+}
+.content .service ul {
+    overflow: hidden;
+}
+.content .service ul li {
+    height: 0.66rem;
+    line-height: 0.66rem;
+    float: left;
+    font-size: 0.22rem;
+    color: #333333;
+    background: url(../images/bestdetails-imgs/seviceIcon.png) no-repeat left;
+    background-size: 0.26rem;
+    padding-left: 0.42rem;
+    margin-right: 0.2rem;
+}
+.content .reminder {
+    padding: 0.15rem 0.2rem;
+    background: #fff;
+}
+.content .reminder p {
+    color: #e60000;
+    font-size: 0.2rem;
+    line-height: 0.3rem;
+}
+/* 2222 */
+.content .BookComment {
+    margin-top: 0.16rem;
+    background: #fff;
+}
+.BookComment .commentTit {
+    position: relative;
+}
+.BookComment .commentTit {
+    box-shadow: 0px 0px 10px #dddcdd;
+    height: 0.7rem;
+    line-height: 0.68rem;
+    overflow: hidden;
+    padding: 0 0.2rem;
+}
+.BookComment .commentTit b {
+    color: #333333;
+    font-size: 0.26rem;
+    float: left;
+    height: 0.68rem;
+}
+b, em, i, strong {
+    font-style: normal;
+    font-weight: 400;
+}
+.BookComment .commentTit span {
+    font-size: 0.26rem;
+    color: #e60000;
+    margin-left: 0.13rem;
+    height: 0.68rem;
+    float: left;
+}
+.BookComment .commentContent {
+    padding: 0 0.2rem;
+}
+.BookComment .commentContent .commentItem {
+    border-bottom: 2px solid #f3f3f3;
+}
+.BookComment .commentContent .commentItem .ItemTit {
+    overflow: hidden;
+    margin-top: 0.15rem;
+}
+.BookComment .commentContent .commentItem .userInfor {
+    float: left;
+    overflow: hidden;
+    line-height: 0.3rem;
+}
+.BookComment .commentContent .commentItem .userInfor .userName {
+    float: left;
+    font-size: 0.2rem;
+    color: #666666;
+}
+.BookComment .commentContent .commentItem .userInfor .userLeave {
+    float: left;
+    font-size: 0.2rem;
+    color: #e60000;
+    margin-left: 0.1rem;
+}
+.BookComment .commentContent .commentItem .startWrap {
+    overflow: hidden;
+    line-height: 0.2rem;
+    margin-top: 0.05rem;
+    float: right;
+}
+.BookComment .commentContent .commentItem .startWrap span.full {
+    background-image: url(../images/bestdetails-imgs/full.png);
+    background-size: 0.2rem 0.2rem;
+}
+.BookComment .commentContent .commentItem .startWrap span {
+    float: left;
+    height: 0.2rem;
+    width: 0.2rem;
+    margin: 0 0 0 0.05rem;
+}
+.BookComment .commentContent .commentItem .userComment p {
+    line-height: 0.34rem;
+    color: #333333;
+    font-size: 0.22rem;
+    overflow: hidden;
+}
+.BookComment .commentContent .commentItem .userComment b {
+    font-weight: bold;
+    font-size: 0.24rem;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0.08rem 1.5rem 0.08rem 0;
+}
+.BookComment .commentContent .commentItem .userComment p {
+    line-height: 0.34rem;
+    color: #333333;
+    font-size: 0.22rem;
+    overflow: hidden;
+}
+.BookComment .commentFoot {
+    overflow: hidden;
+    line-height: 0.32rem;
+    margin-top: 0.2rem;
+    padding-bottom: 0.1rem;
+}
+.BookComment .commentFoot .commentTime {
+    float: left;
+}
+.BookComment .commentFoot .commentTime span {
+    display: block;
+    color: #666666;
+    font-size: 0.18rem;
+}
+.BookComment .commentFoot .commentOparate {
+    float: right;
+    overflow: hidden;
+}
+.BookComment .commentFoot .commentOparate span.supportBtn {
+    background: url(../images/bestdetails-imgs/supportBtn.png) no-repeat left;
+    background-size: 0.22rem;
+}
+.BookComment .commentFoot .commentOparate span {
+    cursor: pointer;
+    float: left;
+    color: #999999;
+    font-size: 0.22rem;
+    width: 0.65rem;
+    padding-left: 0.34rem;
+}
+.BookComment .commentFoot .commentOparate span.oppositionBtn {
+    background: url(../images/bestdetails-imgs/oppositionBtn.png) no-repeat left;
+    background-size: 0.22rem;
+}
+.BookComment .commentLink {
+    overflow: hidden;
+    background: #fff;
+    padding: 0.2rem 0.2rem 0.22rem;
+}
+.BookComment .commentLink a {
+    display: block;
+    border: 1px solid #999999;
+    text-align: center;
+    height: 0.44rem;
+    line-height: 0.42rem;
+    color: #666666;
+    font-size: 0.24rem;
+    width: 60%;
+    margin: auto;
+    border-radius: 0.05rem;
+}
+/* 3333 */
+.bookinforDetail {
+    margin-top: 0.16rem;
+    background: #fff;
+}
+.bookinforDetail .DetailTit {
+    padding: 0.21rem 0 0.24rem;
+    background: #fff;
+    text-align: center;
+    box-shadow: 0px 0px 10px #dddcdd;
+    font-size: 0.26rem;
+    color: #333;
+    text-align: center;
+    font-weight: bold;
+}
+.bookinforDetail .baseInfor {
+    padding: 0.2rem;
+    border-bottom: 1px solid #f3f3f3;
+}
+.bookinforDetail .baseInfor ul {
+    overflow: hidden;
+}
+.bookinforDetail .baseInfor ul li {
+    float: left;
+    width: 50%;
+    font-size: 0.2rem;
+    color: #333;
+    line-height: 0.4rem;
+}
+.bookinforDetail .detaiInfor {
+    padding: 0 0.2rem;
+}
+.bookinforDetail .detaiInfor .tit {
+    font-size: 0.26rem;
+    color: #333;
+    font-weight: bold;
+    line-height: 0.36rem;
+    margin: 0.4rem 0 0.1rem;
+}
+.bookinforDetail .detaiInfor p {
+    color: #333;
+    font-size: 0.22rem;
+    line-height: 0.36rem;
+}
+.bookinforDetail .detaimulu {
+    color: #333;
+    font-size: 0.22rem;
+    line-height: 0.36rem;
+}
+.bookinforDetail .detaimulu #catalogSwitch {
+    overflow: hidden;
+}
+.bookinforDetail .switch {
+    display: none;
+    height: 0.6rem;
+    margin: 0.28rem 0 0;
+    background: #f3f3f3;
+    text-align: center;
+    font-size: 0.22rem;
+    line-height: 0.6rem;
+    cursor: pointer;
+}
+.bookinforDetail .switch span {
+    display: block;
+    height: 0.6rem;
+    color: #333;
+}
+.bookinforDetail .switch span .icon {
+    display: inline-block;
+    background: url(../images/bestdetails-imgs/downarrow.png) no-repeat center;
+    background-size: cover;
+    margin-left: 0.1rem;
+    width: 0.24rem;
+    height: 0.13rem;
+}
+/* 本类五星书 */
+.relativeBook .tit {
+    padding: 0 0.2rem;
+    height: 0.68rem;
+    line-height: 0.68rem;
+    background: #f3f3f3;
+    font-size: 0.26rem;
+    color: #333333;
+    margin-top: 0.3rem;
+    font-weight: bold;
+}
+.relativeBook ul {
+    overflow: hidden;
+    background: #f3f3f3;
+}
+.relativeBook ul li {
+    float: left;
+    width: 50%;
+    overflow: hidden;
+    padding: 0 2px 2px 0;
+}
+.relativeBook ul li a {
+    display: block;
+}
+.relativeBook ul li .bookWrap {
+    background: #fff;
+    padding: 0.15rem 0 0.17rem 0;
+}
+.relativeBook ul li .cover {
+    text-align: center;
+    padding: 0.05rem 0;
+}
+.relativeBook ul li .cover img {
+    max-width: 100%;
+    height: 2rem;
+}
+.relativeBook ul li .name {
+    color: #000;
+    font-size: 0.22rem;
+    line-height: 0.3rem;
+    margin-top: 0.12rem;
+    height: 0.3rem;
+    padding: 0 0.15rem 0 0.2rem;
+    height: 0.3rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.relativeBook ul li .author {
+    color: #666666;
+    font-size: 0.2rem;
+    line-height: 0.3rem;
+    height: 0.3rem;
+    margin-top: 0.07rem;
+    padding: 0 0.15rem 0 0.2rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.relativeBook ul li .priceWrap {
+    overflow: hidden;
+    padding: 0 0.1rem 0 0.2rem;
+    line-height: 0.3rem;
+    margin-top: 0.07rem;
+}
+.relativeBook ul li .priceWrap .price {
+    float: left;
+    color: #e60000;
+    font-size: 0.24rem;
+}
+.relativeBook ul li .priceWrap .original {
+    float: left;
+    color: #999999;
+    font-size: 0.22rem;
+    margin-left: 0.12rem;
+    text-decoration: line-through;
+}
+.fiveStartMoreLink a {
+    display: block;
+    height: 0.82rem;
+    line-height: 0.82rem;
+    background: #fff;
+    color: #757575;
+    font-size: 0.24rem;
+    text-align: center;
+}
+/* 底部导航 */
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 0.88rem;
+    box-shadow: -1px -1px 10px #d8d8d8;
+    z-index: 900;
+    background: #fff;
+    width: 100%;
+}
+.footer .footerInner {
+    position: relative;
+    padding-left: 3.28rem;
+    font-size: 12px;
+    background: #fff;
+}
+.footer .btn_bar {
+    position: absolute;
+    width: 3.28rem;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+}
+.footer .btn_bar .iconBtn {
+    width: 33.33333%;
+    height: 0.88rem;
+    float: left;
+    text-align: center;
+    cursor: pointer;
+}
+.footer .btn_bar .iconBtn .iconBtnInner {
+    border-right: 2px solid #f3f3f3;
+    height: 0.88rem;
+    overflow: hidden;
+    position: relative;
+}
+.footer .btn_bar #customerService .icon {
+    background: url(../images/bestdetails-imgs/cumthor.png) no-repeat center;
+    background-size: cover;
+}
+.footer .btn_bar .iconBtn .icon {
+    height: 0.36rem;
+    width: 0.36rem;
+    margin: 0.12rem auto 0;
+    display: block;
+}
+.footer .btn_bar .iconBtn .txt {
+    text-align: center;
+    color: #666666;
+    font-size: 0.22rem;
+}
+.footer .btn_bar #collection .icon {
+    background: url(../images/bestdetails-imgs/nocollection.png) no-repeat center;
+    background-size: cover;
+}
+.footer .btn_bar .iconBtn .iconBtnInner .add_num {
+    position: absolute;
+    font-size: 12px;
+    text-align: center;
+    min-width: 0.25rem;
+    height: 0.25rem;
+    line-height: 0.25rem;
+    color: #fff;
+    border-radius: 0.2rem;
+    background: #e60000;
+    left: 50%;
+    top: 0.1rem;
+}
+.footer .btn_bar #gotoCart .icon {
+    background: url(../images/bestdetails-imgs/gotocar.png) no-repeat center;
+    background-size: cover;
+}
+.footer .btn_group {
+    width: 100%;
+    height: 0.88rem;
+    line-height: 0.88rem;
+    text-align: center;
+}
+.footer .btn_group .btn_red {
+    background: #e60000;
+}
+.footer .btn_group span {
+    font-size: 0.3rem;
+    color: #fff;
+}
+/* 蒙版 */
+.maskLayer {
+    position: fixed;
+    z-index:899;
+    background: rgba(0,0,0,0.5);
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+ /* 侧边栏  */
+ /* 回到顶部 */
+.backTop {
+    /* display: none; */
+    position: fixed;
+    bottom: 1.1rem;
+    right: 0;
+    border-radius: 0.05rem 0 0 0.05rem;
+    background: rgba(0,0,0,0.7) url(../images/bestseller-imgs/sidebarbacktop.png) no-repeat center;
+    background-size: 0.23rem 0.33rem;
+    z-index: 992;
+}
+.backTop a {
+    display: block;
+    height: 0.7rem;
+    width: 0.9rem;
+}
+
+/* 快速导航 */
+.sidebarNav {
+    position: fixed;
+    right: -1px;
+    bottom: 1.2rem;
+    z-index: 995;
+}
+.sidebarNav dl {
+    overflow: hidden;
+    font-size: 12px;
+    padding-left: 0.9rem;
+    position: relative;
+    height: 1.96rem;
+}
+.sidebarNav dl dt {
+    width: 0.9rem;
+    height: 0.7rem;
+    cursor: pointer;
+    border-radius: 0.05rem 0 0 0.05rem;
+    padding-left: 0.1rem;
+    text-align: center;
+    line-height: 0.22rem;
+    background: rgba(0,0,0,0.7);
+    display: table;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -0.35rem;
+}
+.sidebarNav dl dt span {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 0.2rem;
+    color: #fff;
+    background: url(../images/bestseller-imgs/sidebarrightarrow.png) no-repeat left;
+    background-size: 0.11rem 0.23rem;
+}
+.sidebarNav dl dd {
+    width: 4.08rem;
+    padding: 0.1rem 0.1rem;
+    background: #fff;
+    display: none;
+    border-radius: 0.05rem 0 0 0.05rem;
+}
+.sidebarNav dl dd ul {
+    overflow: hidden;
+}
+.sidebarNav dl dd ul li {
+    float: left;
+    width: 25%;
+    margin: 0.08rem 0;
+}
+.sidebarNav dl dd ul li a {
+    display: block;
+    color: #7e7b7f;
+    text-align: center;
+}
+.sidebarNav dl dd ul li .sideIcon {
+    display: block;
+}
+.sidebarNav dl dd ul li .sideIcon img {
+    width: 0.4rem;
+    font-size: 12px;
+    display: block;
+    margin: auto;
+}
+.sidebarNav dl dd ul li b {
+    display: block;
+    font-size: 0.18rem;
+    height: 0.28rem;
+    line-height: 0.28rem;
+    margin-top: 0.04rem;
+}
+b, em, i, strong {
+    font-style: normal;
+    font-weight: 400;
+}

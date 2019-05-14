@@ -1,0 +1,624 @@
+*{box-sizing: border-box;} 
+body {
+    background: #f3f3f3;
+    padding: 0.88rem 0 1rem;
+}
+
+ a{text-decoration: none;color: inherit;}
+i{
+    font-style: normal;
+    font-weight: 400;
+}
+img{
+    border:none;
+    vertical-align: top;
+    font-size: 12px;
+}
+/* 购物车头部 */
+.header {
+    background: #fff;
+    box-shadow: 0px 0px 10px #d4d2d3;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 900;
+}
+.header .headerInner {
+    position: relative;
+    height: 0.88rem;
+}
+.header .headerInner {
+    position: relative;
+    height: 0.88rem;
+}
+.header .headerInner .returnBtn {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.header .headerInner .returnBtn a {
+    display: block;
+    height: 0.88rem;
+    width: 0.6rem;
+    background: url(../images/shoppingcar-imgs/returnbtnicon.png) no-repeat center;
+    background-size: 0.2rem 0.35rem;
+}
+.header .head_lable {
+    text-align: center;
+    height: 0.88rem;
+    line-height: 0.88rem;
+}
+.header .head_lable span {
+    display: block;
+    font-size: 0.3rem;
+    color: #333333;
+}
+.header .editBtn {
+    position: absolute;
+    width: 0.85rem;
+    height: 0.88rem;
+    line-height: 0.88rem;
+    text-align: center;
+    right: 0.75rem;
+    top: 0;
+    cursor: pointer;
+    font-size: 0.22rem;
+    color: #333;
+}
+.header .shortCut {
+    position: absolute;
+    width: 0.75rem;
+    height: 0.88rem;
+    right: 0;
+    top: 0;
+    background: url(../images/shoppingcar-imgs/shortcut.png) no-repeat center;
+    background-size: 0.35rem 0.06rem;
+    cursor: pointer;
+}
+.header .shortCutLayer {
+    position: absolute;
+    top: 0.68rem;
+    right: 0.1rem;
+    display: none;
+}
+.header .shortCutLayer .shortCutInner {
+    position: relative;
+    padding-top: 0.2rem;
+}
+.header .shortCutLayer ul {
+    background: url(../images/shoppingcar-imgs/dot.png) repeat;
+    border-radius: 0.1rem;
+    padding: 0 0.1rem;
+}
+.header .shortCutLayer ul li {
+    border-bottom: 1px solid #999999;
+    width: 2rem;
+}
+.header .shortCutLayer ul li.homeLink {
+    background: url(../images/shoppingcar-imgs/homeShortCut.png) no-repeat 0.17rem;
+    background-size: 0.34rem 0.34rem;
+}
+.header .shortCutLayer ul li.tstLink {
+    background: url(../images/shoppingcar-imgs/tstShortCut.png) no-repeat 0.17rem;
+    background-size: 0.34rem 0.34rem;
+}
+.header .shortCutLayer ul li.searchLink {
+    background: url(../images/shoppingcar-imgs/searchshortCut.png) no-repeat 0.17rem;
+    background-size: 0.34rem 0.34rem;
+}
+.header .shortCutLayer ul li.carLink {
+    background: url(../images/shoppingcar-imgs/carshortCut.png) no-repeat 0.17rem;
+    background-size: 0.34rem 0.34rem;
+}
+.header .shortCutLayer ul li.accountLink {
+    background: url(../images/shoppingcar-imgs/accountShortCut.png) no-repeat 0.17rem;
+    background-size: 0.32rem 0.32rem;
+}
+.header .shortCutLayer ul li:last-child {
+    border-bottom: none;
+}
+.header .shortCutLayer ul li a {
+    color: #ffffff;
+    font-size: 0.24rem;
+    display: block;
+    height: 0.7rem;
+    line-height: 0.7rem;
+    padding-left: 0.77rem;
+}
+/* 购物车导航 */
+.carNav ul {
+    overflow: hidden;
+    background: #fff;
+}
+.carNav ul li {
+    float: left;
+    width: 50%;
+    border-top: 0.03rem solid #fff;
+    text-align: center;
+}
+.carNav ul li.cur {
+    border-top: 0.03rem solid #c40000;
+}
+.carNav ul li.shopCar.cur {
+    border-right: 0.02rem solid #f3f3f3;
+}
+.carNav ul li a {
+    display: block;
+    font-size: 0.3rem;
+    color: #333333;
+    font-family: 'Microsoft YaHei';
+    height: 0.84rem;
+    line-height: 0.84rem;
+}
+.carNav ul li.cur a {
+    color: #e60000;
+}
+.header .shortCutLayer .shortCutInner .uptriangle {
+    position: absolute;
+    background: url(../images/shoppingcar-imgs/Triangle.png) no-repeat center;
+    background-size: 0.36rem 0.22rem;
+    width: 0.36rem;
+    height: 0.22rem;
+    right: 0.1rem;
+    top: 0;
+}
+
+/* 购物车商品框 */
+.noProductIcon{
+    text-align:center;
+    background:#fff;
+    overflow:hidden;
+    margin-top:0.1rem;
+}
+.noProductIcon img{
+   display:block;
+   width: 0.75rem;
+   margin:0.75rem auto 0;
+}
+.noProductIcon span{
+    color:#333;
+    font-size: 0.22rem;
+    display:block;
+    line-height: 0.32rem;
+    margin-top: 0.15rem;
+}
+.noProductIcon a{
+    display:block;
+    width:4rem;
+    margin:0.45rem auto 0.55rem;
+    background:#e60000;
+    text-align:center;
+    color:#fff;
+    font-size: 0.26rem;
+    height:0.66rem;
+    line-height: 0.66rem;
+    border-radius: 0.66rem;
+}
+/* 为你推荐 */
+.recommendWrap{
+    margin-top: 0.1rem;
+}
+.recommendWrap .recomandTit{
+    position: relative;
+    z-index:2;
+    box-shadow: 1px 0px 3px #dddcdd;
+    text-align: center;
+    background:#fff;
+    line-height:0;
+    height: 0.68rem;
+    overflow:hidden;
+
+}
+.recommendWrap .recomandTit img{
+    height:0.68rem;
+    display: block;
+    margin: auto;
+}
+.recomandCon{
+    background: #fff;
+    position: relative;
+    z-index:1;
+}
+.recomandCon ul {
+    overflow: hidden;
+}
+.recomandCon ul li {
+    float: left;
+    width: 50%;
+    background: #fff;
+    border-bottom: 2px solid #f3f3f3;
+    border-right: 2px solid #f3f3f3;
+}
+.recomandCon ul li a {
+    display: block;
+}
+.recomandCon ul li .cover {
+    padding: 0.17rem 0.15rem 0.1rem;
+    text-align: center;
+}
+.recomandCon ul li .cover img {
+    height: 2rem;
+    max-width: 100%;
+    font-size: 12px;
+}
+.recomandCon ul li .name {
+    padding: 0 0.15rem;
+    font-size: 0.22rem;
+    line-height: 0.3rem;
+    height: 0.6rem;
+    color: #000000;
+    overflow: hidden;
+}
+.recomandCon ul li .priceWrap {
+    overflow: hidden;
+    line-height: 0.34rem;
+    padding: 0.05rem 0.15rem 0.15rem;
+}
+.recomandCon ul li .priceWrap span {
+    float: left;
+    color: #e60000;
+    font-size: 0.24rem;
+    font-weight: bold;
+}
+.recomandCon ul li .priceWrap del {
+    float: left;
+    font-size: 0.2rem;
+    color: #999999;
+    margin-left: 0.17rem;
+}
+/* 加购商品以后显示商品框  */
+/* .content{
+    display:none;
+} */
+.carLsit {
+    margin-top: 0.1rem;
+}
+.active {
+    margin-top: 0.2rem;
+}
+.activeTit {
+    overflow: hidden;
+    position: relative;
+    padding: 0.2rem 0.2rem 0.17rem 0.24rem;
+    background: #fff;
+    border-bottom: 0.02rem solid #f3f3f3;
+}
+.activeTit .flag {
+    position: absolute;
+    height: 0.36rem;
+    text-align: center;
+    border-radius: 0.36rem;
+    line-height: 0.36rem;
+    color: #fff;
+    font-size: 0.22rem;
+    font-family: 'Microsoft YaHei';
+    width: 0.74rem;
+    left: 0.2rem;
+    top: 0.2rem;
+    background: #e60000;
+}
+.activeMsg {
+    padding: 0 1.1rem 0 0.83rem;
+    overflow: hidden;
+}
+.activeMsg a {
+    display: block;
+}
+.activeName {
+    line-height: 0.34rem;
+    margin-top: 0.02rem;
+}
+.activeName span {
+    font-size: 0.24rem;
+    color: #333;
+    font-family: 'Microsoft YaHei';
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.activeStatus {
+    line-height: 0.3rem;
+    margin-top: 0.1rem;
+}
+.activeStatus span {
+    color: #e60000;
+    font-size: 0.2rem;
+    font-family: 'Microsoft YaHei';
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.activeLink {
+    position: absolute;
+    right: 0.2rem;
+    top: 0.2rem;
+    color: #e60000;
+    line-height: 0.42rem;
+}
+.activeLink a {
+    color: #e60000;
+    font-size: 0.22rem;
+    display: block;
+    height: 0.42rem;
+    font-family: 'Microsoft YaHei';
+}
+.activeList {
+    background: #fff;
+    padding-bottom: 0.2rem;
+}
+.activeList ul li {
+    padding: 0 0.2rem;
+    position: relative;
+}
+.activeList ul li .listCheckBox {
+    cursor: pointer;
+    position: absolute;
+    width: 0.8rem;
+    height: 100%;
+    font-size: 0px;
+    text-indent: -999px;
+    overflow: hidden;
+    background: url(../images/shoppingcar-imgs/checkboxicon.png) no-repeat 0.2rem 0.77rem;
+    left: 0;
+    top: 0;
+    background-size: 0.32rem;
+    cursor: pointer;
+    z-index: 100;
+}
+.activeList ul li .listCheckBox.selected {
+    background: url(../images/shoppingcar-imgs/carselected.png) no-repeat 0.2rem 0.77rem;
+    background-size: 0.32rem;
+}
+.activeList ul li .book {
+    border-bottom: 1px solid #f2f2f2;
+    padding: 0.25rem 0 0.3rem 0.4rem;
+    font-size: 12px;
+    position: relative;
+}
+.activeList ul li .book .bookInner {
+    position: relative;
+    padding-left: 1.607rem;
+    min-height: 1.25rem;
+}
+.activeList ul li .book .bookCover {
+    outline: 1px solid #ddd;
+    position: absolute;
+    height: 1.25rem;
+    width: 1.25rem;
+    left: 0.06rem;
+    top: 0.07rem;
+    line-height: 1.25rem;
+    text-align: center;
+}
+.activeList ul li .book .bookCover a {
+    display: block;
+}
+.activeList ul li .book .bookCover img {
+    height: 1.25rem;
+    max-width: 1.25rem;
+}
+.activeList ul li .bookText .priceWrap {
+    overflow: hidden;
+    font-size: 0.22rem;
+    line-height: 0.32rem;
+    margin-top: 0.12rem;
+    font-family: 'Microsoft YaHei';
+}
+.activeList ul li .bookText .salesPrice {
+    float: left;
+    color: #e60000;
+}
+.activeList ul li .bookText .price {
+    float: left;
+    color: #999999;
+    margin-left: 0.26rem;
+    text-decoration: line-through;
+}
+.activeList ul li .bookText .oparateArea {
+    overflow: hidden;
+    margin-top: 0.16rem;
+}
+.activeList ul li .bookText .countEdit {
+    float: left;
+    overflow: hidden;
+    border: 0.02rem solid #f3f3f3;
+}
+.activeList ul li .bookText .countEdit span {
+    float: left;
+    width: 0.44rem;
+    height: 0.4rem;
+    text-indent: -999px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.activeList ul li .bookText .countEdit span.decrement {
+    background: url(../images/shoppingcar-imgs/carreduce.png) no-repeat center;
+    background-size: 0.22rem 0.03rem;
+    border-right: 1px solid #f3f3f3;
+}
+/* input[type=text] {
+    -webkit-appearance: none;
+    outline: 0;
+} */
+.activeList ul li .bookText .countEdit input {
+    float: left;
+    height: 0.38rem;
+    border: none;
+    width: 0.56rem;
+    margin: 0 0.1rem;
+    text-align: center;
+    line-height: 0.38rem;
+    color: #333;
+    font-size: 0.22rem;
+}
+.activeList ul li .bookText .countEdit span.increment {
+    background: url(../images/shoppingcar-imgs/carplus.png) no-repeat center;
+    background-size: 0.22rem;
+    border-left: 1px solid #f3f3f3;
+}
+.activeList ul li .otherEdit {
+    float: right;
+    overflow: hidden;
+}
+
+.activeList ul li .otherEdit .addFav {
+    float: left;
+    height: 0.4rem;
+    width: 0.4rem;
+    background: url(../images/shoppingcar-imgs/carslec.png) no-repeat center;
+    background-size: 0.3rem 0.29rem;
+    text-indent: -999px;
+    overflow: hidden;
+    margin-right: 0.28rem;
+    cursor: pointer;
+}
+.activeList ul li .otherEdit .delete {
+    float: left;
+    height: 0.4rem;
+    width: 0.4rem;
+    background: url(../images/shoppingcar-imgs/cardelet.png) no-repeat center;
+    background-size: 0.34rem;
+    text-indent: -999px;
+    overflow: hidden;
+    cursor: pointer;
+}
+/* 购物车底部结算 */
+.footer {
+    position: fixed;
+    width: 100%;
+    height: 1rem;
+    bottom: 0;
+    left: 0;
+    background: #fff;
+    font-size: 12px;
+    z-index: 101;
+    box-shadow: 0 0 0.1rem #e3e2e2;
+}
+.checkgroup {
+    overflow: hidden;
+    position: relative;
+}
+.footer .allSelect {
+    cursor: pointer;
+    float: left;
+    width: 1.18rem;
+    text-align: right;
+    height: 1rem;
+    line-height: 1rem;
+    color: #333333;
+    font-size: 0.24rem;
+    background: url(../images/shoppingcar-imgs/checkboxicon.png) no-repeat 0.2rem center;
+    background-size: 0.32rem;
+}
+.footer .allSelect.selectAll {
+    background: url(../images/shoppingcar-imgs/carselected.png) no-repeat 0.2rem center;
+    background-size: 0.32rem;
+}
+.footer .totalWrap {
+    position: absolute;
+    right: 0;
+    top: 0;
+    overflow: hidden;
+}
+.footer .settlement {
+    float: right;
+    width: 2.2rem;
+    height: 1rem;
+    line-height: 1rem;
+    text-align: center;
+    background: #B0B0B0;
+    font-size: 0.3rem;
+    color: #fff;
+    font-family: 'Microsoft YaHei';
+    cursor: pointer;
+}
+.footer .settlement.cur {
+    background: #e60000;
+}
+.footer .settlement.cur {
+    background: #e60000;
+}
+.footer .carResult {
+    float: right;
+    text-align: right;
+    overflow: hidden;
+    margin-right: 0.2rem;
+}
+.footer .carResult .totalMoney {
+    font-size: 0.22rem;
+    line-height: 0.32rem;
+    color: #333;
+    font-family: 'Microsoft YaHei';
+    margin-top: 0.18rem;
+}
+.footer .carResult .totalMoney i {
+    color: #e60000;
+}
+.footer .carResult .totalDiscount {
+    font-size: 0.18rem;
+    line-height: 0.28rem;
+    color: #e60000;
+    font-family: 'Microsoft YaHei';
+    margin-top: 0.07rem;
+}
+.footer .editWrap {
+    float: right;
+    overflow: hidden;
+    text-align: center;
+    display: none;
+}
+.footer .editWrap .clearnoStock {
+    cursor: pointer;
+    float: left;
+    height: 1rem;
+    line-height: 1rem;
+    color: #666666;
+    font-size: 0.24rem;
+    width: 1.8rem;
+}
+.footer .editWrap .deleteSelcted {
+    cursor: pointer;
+    float: left;
+    height: 1rem;
+    line-height: 1rem;
+    color: #666666;
+    font-size: 0.24rem;
+    width: 1.6rem;
+}
+.footer .editWrap .colectSelcted {
+    cursor: pointer;
+    float: left;
+    height: 1rem;
+    line-height: 1rem;
+    color: #fff;
+    font-size: 0.24rem;
+    background: #ff4f1a;
+    width: 1.6rem;
+}
+.activeSelect {
+    overflow: hidden;
+    cursor: pointer;
+    margin-top: 0.2rem;
+}
+.activeSelect i {
+    float: left;
+    height: 0.32rem;
+    border: 0.02rem solid #e60000;
+    line-height: 0.28rem;
+    border-radius: 0.05rem;
+    padding: 0 0.06rem;
+    color: #e60000;
+}
+.activeSelect span {
+    float: right;
+    background: url(../images/shoppingcar-imgs/activeselcetdown.png) no-repeat right center;
+    padding-right: 0.28rem;
+    height: 0.32rem;
+    line-height: 0.32rem;
+    color: #333333;
+    font-size: 0.2rem;
+    background-size: 0.15rem 0.08rem;
+}

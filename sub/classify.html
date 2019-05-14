@@ -12,23 +12,34 @@
         <script src="../js/swiper.min.js"></script>
         <script src="../js/rem.js"></script>
         <script src="../js/iscroll.js"></script>
-        <script src="../js/jquery.js"></script>
-
+        <script src="../js/public.js"></script>
+        <script src="../js/zepto.js"></script>
+        <script src="../js/touch.js"></script>
 </head>
 
 <body>
         <div class="classify">
-                <div class="search-top">
-                        <div>
-                                <img src="../images/classify/log.png" alt="">
-                        </div>
-
+               <!-- 头部搜索 -->
+               <header class="header">
+                <div class="headerInner">
+                   
+                       <div class="searchBar" id="fixedtop">
+            <div class="searchInner">
+                <h1><img src="../images/classify/logo.png" alt="中国图书网"></h1>
+                <div class="searchWrap">
+                    <span>新妖怪志</span>
                 </div>
+                <div class="searchBtn">
+          
+                </div>
+            </div>
+        </div>
+                </div>
+            </header>
                 <!-- 左侧目录 -->
-
                 <div class="menu-left" id="menuLeft">
                         <ul class="menu-left-ul" id="ulFoot">
-                                <li class="menu-left-li on"><a href="###" data-id="54000000">小说</a></li>
+                                <li class="menu-left-li active on"><a href="###" data-id="54000000">小说</a></li>
                                 <li class="menu-left-li "><a href="###" data-id="53000000">文学</a></li>
                                 <li class="menu-left-li "><a href="###" data-id="47000000">少儿</a></li>
                                 <li class="menu-left-li "><a href="###" data-id="37000000">历史</a></li>
@@ -2614,33 +2625,8 @@
 
                 </div>
         </div>
+           <script src="../js/classify.js"></script>
 
-        <!-- 左侧目录的事件 -->
-        <script>
-                var myScrollLeft = new IScroll('#menuLeft', {
-                        mouseWheel: true,
-                        scrollbars: true
-                });
-
-                var swiper = new Swiper('.swiper-container', {
-                        pagination: {
-                                el: '.swiper-pagination',
-                        },
-                        autoplay: 1000,
-                        loop: true,
-                });
-
-                var li = document.getElementById("liTemp");
-
-
-
-
-        </script>
-
-
-
-        <script>
-        </script>
 </body>
 
 </html>
