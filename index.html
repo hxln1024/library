@@ -7,11 +7,17 @@
         content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, width=device-width">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/resets.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/layui.css">
     <link rel="stylesheet" href="css/indexs.css">
     <link rel="stylesheet" href="css/swiper.min.css">
     <link rel="stylesheet" href="css/animate.min.css">
     <script src="js/rem.js"></script>
+    <script src="js/jquery.1.11.3.min.js"></script>
+    <script src="js/layui.js"></script>
+    
+   
 </head>
 
 <body>
@@ -27,6 +33,7 @@
                         <div class="searchWrap">
                             <span>说魂儿-扪虱谈鬼录之二</span>
                         </div>
+                     
                         <div class="searchBtn">
                             搜索
 
@@ -58,14 +65,14 @@
         <nav>
             <ul class="index-nav">
                 <li>
-                    <a href="###">
+                    <a href="sub/bestseller.html">
                         <img src="images/indexs/changxiaobang.png" alt="畅销榜" />
                         <b>畅销榜</b>
                     </a>
                 </li>
 
                 <li>
-                    <a href="###">
+                    <a href="sub/bookshops.html">
                         <img src="images/indexs/taoshutuan.png" alt="淘书团" />
                         <b>淘书团</b>
                     </a>
@@ -416,9 +423,60 @@
 
                
     </div>
+     <!-- 上箭头 -->
+     <div class="backTop"><a href="javascript:scrollTo(0,0)"><img src="../images/common/backtop.png" alt="返回顶部"></a></div>
+     <!-- 底部说明 -->
+     <div class="pagefoot">
+         <div class="actions-wrap">
+             <a href="../login.html">登录</a>
+             <a href="../resigst.html">注册</a>
+         </div>
+         <nav class="b-nav">
+             <a class="red" href="javascript:void(0);">触屏版</a><a href="http://www.bookschina.com/#m">电脑版</a><a
+                 href="###">帮助</a>
+         </nav>
+         <div class="copyRight">Copyright 中国图书网©2018 m.BooksChina.com</div>
+     </div>
+     <!-- 底部菜单 -->
+     <div class="webNav">
+         <ul>
+             <li class="cur">
+                 <a href="../index.html">
+                     <img src="../images/common/home.png">
+                     <b>首页</b>
+                 </a>
+             </li>
+             <li class="">
+                 <a href="classify.html">
+                     <img src="../images/common/kind.png">
+                     <b>分类</b>
+                 </a>
+             </li>
+             <li class="" id="kf8">
+                 <a href="message.html">
+                     <img src="../images/common/service.png">
+                     <b>客服</b>
+                 </a>
+             </li>
+             <li class="">
+                 <a href="shopping.html">
+                     <img src="../images/common/cart.png">
+                     <b>购物车</b>
+                 </a>
+             </li>
+             <li class="">
+                 <a href="../login.html">
+                     <img src="../images/common/redcapationl1.png">
+                     <b>我</b>
+                 </a>
+             </li>
+         </ul>
+     </div>
 </div>
-    <!-- js -->
 
+    <!-- js -->
+    <script src="js/jquery.js"></script>
+    <script src="js/common.js"></script>
     <script src="js/swiper.min.js"></script>
 
     <script src="js/swiper.animate.min.js"></script>
