@@ -18,7 +18,7 @@
     // }
 })()
 // 输入框验证
-// !(function(){
+!(function(){
     var span = document.getElementsByClassName("hint");
     var input = document.getElementsByTagName("input");
     console.log(span)
@@ -28,8 +28,6 @@
         if (usermsgreg.test(input[0].value)) {
             span[0].innerHTML = "√"
 
-        } else if (input[0].value == "") {
-            alert("用户名不能为空!") 
         } else {
             span[0].innerHTML = "×"
             input[0].value = ""
@@ -42,8 +40,6 @@
         if (telmsgreg.test(input[1].value)) {
             span[1].innerHTML = "√"
 
-        }else if (input[1].value == "") {
-            alert("手机号不能为空!") 
         }
          else {
             span[1].innerHTML = "×"
@@ -59,9 +55,8 @@
         if (emailmsgreg.test(input[2].value)) {
             span[2].innerHTML = "√"
 
-        } else if (input[2].value == "") {
-            span[2].innerHTML = "邮件不能为空!"
-        } else {
+        } 
+        else {
             span[2].innerHTML = "×"
             input[2].value = ""
         }
@@ -80,20 +75,7 @@
         } 
         }
         
-        // var n = 0;
-        // for (var i = 0; i < span.length; i++) {
-        //     if (span[i].innerHTML != "√") {
-        //         submit.disabled=true;
-        //         break;
-        //     }
-        //     n++;
-        // }
-        // console.log(span)
-        // console.log(n)
-        // if ( n==span.length ) {
-        //     submit.disabled = false;
-        // }
 
     }
     submitcheck();
-// })()
+})()

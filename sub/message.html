@@ -6,9 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/resets.css">
     <link rel="stylesheet" href="../css/common.css">
     <link rel="stylesheet" href="../css/message.css">
+    <!-- <link href="https://cdn.bootcss.com/mui/3.7.1/css/mui.min.css" rel="stylesheet"> -->
+    <!-- <link rel="stylesheet" href="../css/layui.css">
+    <script src="../js/layui.js"></script> -->
     <style>
         .focusInput {
             border: 1px solid #99CC33;
@@ -17,7 +20,7 @@
 </head>
 
 <body>
-    <div>
+    <div id="message">
         <header class="header">
             <div class="headerInner">
                 <div class="returnBtn">
@@ -26,24 +29,13 @@
                 <div class="head_lable">
                     <span>留言</span>
                 </div>
-                <!-- <div class="shareBtn layui-btn" id="shareBtn" data-method="confirmTrans"></div>
-                <div class="shortCut" id="shortCut"></div>
-                <div class="shortCutLayer">
-                    <div class="shortCutInner">
-                        <ul>
-                            <li class="homeLink"><a href="../index.html">首页</a></li>
-                            <li class="tstLink"><a href="###">淘书团</a></li>
-                            <li class="kindLink"><a href="###">分类搜索</a></li>
-                            <li class="carLink"><a href="###">购物车</a></li>
-                            <li class="accountLink"><a href="###">我的账户</a></li>
-                        </ul>
-                        <span class="uptriangle"></span>
-                    </div>
-                </div> -->
-
             </div>
         </header>
+
+        <!-- <input data-index="1" type="text" name="msg_tel" placeholder="请填写固定或移动电话号码(必填)" value="" maxlength="32" onblur="this.value=this.value.replace(/[^0-9-]+/, '');"
+                                        onkeyup="var keyCode=(event || window.event).keyCode; if( !/16|17|35|36|37|38|39|40/i.test(keyCode) ){this.value=this.value.replace(/[^0-9-]+/, '');}"> -->
         <div classs="table">
+            
             <table cellspacing="0" cellpadding="0">
                 <tbody>
                     <tr>
@@ -59,8 +51,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <!-- <input data-index="1" type="text" name="msg_tel" placeholder="请填写固定或移动电话号码(必填)" value="" maxlength="32" onblur="this.value=this.value.replace(/[^0-9-]+/, '');"
-                                onkeyup="var keyCode=(event || window.event).keyCode; if( !/16|17|35|36|37|38|39|40/i.test(keyCode) ){this.value=this.value.replace(/[^0-9-]+/, '');}"> -->
+                            
                                 <input type="text" placeholder="请填写固定或移动电话号码(必填)" maxlength="32">
                                 <span class="hint"></span>
                         </td>
@@ -80,8 +71,8 @@
                     </tr>
                     <tr>
                         <td>
-                            <input type="submit" class="chat-view-button" value="提交">
-                            <!-- <span class="submit_message_complete">留言提交成功！</span> -->
+                            <input type="submit" class="chat-view-button  layui-btn" value="提交">
+                            
                         </td>
                     </tr>
                 </tbody>
