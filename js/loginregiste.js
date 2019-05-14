@@ -44,34 +44,34 @@ $(".input").each(function (key, val) {
         } else {
             $this.parent(".userInput").find(".clearInput").hide();
         }
-        changeBtn();
+
     })
 })
 
 
 
-// 改变提交按钮状态，封装了一个函数
-function changeBtn() {
-    var flag = true;
-    // 当用户输入框的长度大于0和值不为空的时候flag为false
-    if ($("#userName").length > 0 && $.trim($("#userName").val()) == "") {
-        flag = false;
-    }
-    // 当密码输入框的长度大于0和值不为空的时候flag为false
-    if ($("#userPas").length > 0 && $.trim($("#userPas").val()) == "") {
-        flag = false;
-    }
-    // 当图形验证码输入框的长度大于0和值不为空的时候和没有hidden属性时flag为false
-    if ($("#imgcode").length > 0 && $.trim($("#imgcode").val()) == "" && !$("#imgcode").is(":hidden")) {
-        flag = false;
-    }
-    // 判断flag时添加btnOk类名、
-    if (flag) {
-        $(".nextLogin").addClass("btnOk");
-    } else {
-        $(".nextLogin").removeClass("btnOk");
-    }
-}
+// // 改变提交按钮状态，封装了一个函数
+// function changeBtn() {
+//     var flag = true;
+//     // 当用户输入框的长度大于0和值不为空的时候flag为false
+//     if ($("#userName").length > 0 && $.trim($("#userName").val()) == "") {
+//         flag = false;
+//     }
+//     // 当密码输入框的长度大于0和值不为空的时候flag为false
+//     if ($("#userPas").length > 0 && $.trim($("#userPas").val()) == "") {
+//         flag = false;
+//     }
+//     // 当图形验证码输入框的长度大于0和值不为空的时候和没有hidden属性时flag为false
+//     if ($("#imgcode").length > 0 && $.trim($("#imgcode").val()) == "" && !$("#imgcode").is(":hidden")) {
+//         flag = false;
+//     }
+//     // 判断flag时添加btnOk类名、
+//     if (flag) {
+//         $(".nextLogin").addClass("btnOk");
+//     } else {
+//         $(".nextLogin").removeClass("btnOk");
+//     }
+// }
 
 
 
@@ -79,7 +79,7 @@ function changeBtn() {
 $(".clearInput").tap(function () {
     $(this).parent(".userInput").find("input").val("");
     $(this).hide();
-    changeBtn();
+    // changeBtn();
 })
 
 
@@ -96,8 +96,7 @@ $(".eye").tap(function () {
 })
 
 
-
-// 点击自动更换图形验证码
+// // 点击自动更换图形验证码
 function identifyImg() {
     $(".imgWrap canvas").attr("src", "https://login.yiguo.com/verifycode?_t=" + new Date().getTime());
 }
@@ -114,16 +113,34 @@ $(function () {
     })
     $(".nextLogin").on('click', function () {
         var val = $("#imgInput").val().toLowerCase();  //转换成小写
-        console.log(val);
+
+        var error = $('.error');
+        var errText = $('.err-text')
+        console.log(error)
         var num = show_num.join("");
         if (val == '') {
-            alert('请输入验证码！');
+            error.css("display", "block")
+            errText.text("请输入验证码");
+            setTimeout(() => {
+                error.css("display", "none")
+            }, 1000)
+
         } else if (val == num) {
-            alert('提交成功！');
+            error.css('display', 'block')
+            // errText.text("请稍后...")
+            setTimeout(() => {
+                // location.href="index.html"
+            }, 1000)
             $("#imgInput").val('');
             draw(show_num);
+            return true;
         } else {
-            alert('验证码错误！请重新输入！');
+            // alert('验证码错误！请重新输入！');
+            error.css('display', 'block');
+            errText.text("验证码错误，请重新输入！");
+            setTimeout(() => {
+                error.css('display', 'none')
+            }, 1000)
             $("#verification").val('');
             draw(show_num);
         }
@@ -197,53 +214,89 @@ function randomColor() {//得到随机的颜色值
 // 登录时验证用户名和密码的有效性  
 //用户名:#userName    密码:#userPas   图形验证码:#imgInput 
 // 错误信息弹出:.error
-var uname = $("#userName");
-var pwd = $('#userPas');
-var error = $('.error');
-var btn = $(".nextLogin")
 
-var flagname = true;
-var flagpwd = true;
-var result = "";
-$(".nextLogin").on('click', function () {
-    if (flagname && flagpwd) {
-        // 验证数据的有效性
-        ajax({
-            url: "php/checkuser&pwd.php",
-            param: "uname=" + uname.value + "&pwd=" + pwd.value,
-            async: false,
+// 验证用户名的有效性
+$(function () {
+    var btn = $(".nextLogin");
+    var errText = $('.err-text');
+    var uname = $("#userName");
+    var error = $('.error');
+    var pwd = $('#userPas');
+    uname.on("blur", function () {
+        //用户名正则，4到16位（字母，数字，下划线，减号）
+        var reg = /^[a-zA-Z0-9_-]{4,16}$/
+        if (reg.test(uname.val())) {
+
+        } else if (reg.test(uname.val() == "")) {
+            errText.text("用户名不能为空！")
+            $('.error').css('display', 'block')
+            setTimeout(() => {
+                error.css('display', 'none')
+            }, 1000)
+        } else{
+            errText.text("用户名输入有误，请重新输入")
+            $('.error').css('display', 'block')
+            setTimeout(() => {
+                error.css('display', 'none')
+            }, 1000)
+        }
+
+    })
+    // 验证密码的有效性
+    pwd.on("blur", function () {
+        //用户名正则，4到16位（字母，数字，下划线，减号）
+        var reg = /^[a-zA-Z0-9_-]{4,16}$/
+        if (reg.test(pwd.val())) {
+
+        } else if (reg.test(uname.val() == "")) {
+            errText.text("密码不能为空！")
+            $('.error').css('display', 'block')
+            setTimeout(() => {
+                error.css('display', 'none')
+            }, 1000)
+        } else{
+            errText.text("密码输入有误，请重新输入")
+            $('.error').css('display', 'block')
+            setTimeout(() => {
+                error.css('display', 'none')
+            }, 1000)
+        }
+
+    })
+})
+
+
+// 点击登陆，请求login.php,访问sql中的login数据库，进行登录
+$(function () {
+    $(".nextLogin").tap(function () {
+
+        var uname = $("#userName").val()
+
+
+        var pwd = $("#userPas").val();
+
+        $.ajax({
+            url: "php/login.php",
+            data: "uname" + uname + "&pwd=" + pwd,
             success: function (data) {
-                console.log(data)
-                result = data;
-                // console.log(result);
-                if (result == "验证通过") {
-                    //密码要md5 加密
-                    var expire = new Date();
-                    expire.setDate(expire.getDate() + 7);
-                    document.cookie = "uname=" + uname.value + ";expires=" + expire
-                        .toGMTString();
-                    document.cookie = "pwd=" + pwd.value + ";expires=" + expire
-                        .toGMTString();
-                    window.location.href = "index.html";
+                if (data == "验证通过") {
+                    document.cookie = "uname=" + uname.value;
+                    document.cookie = "pwd=" + pwd.value;
+                    window.location.href = "index.html"
                 } else {
-                    // alert("用户名或密码错误！");
-                    error.css({
-                        "display":"block"
-                    });
+                    // var error = $('.error');
+                    // var errText = $('.err-text');
+                    // errText.text("请稍后...")
+                    // $('.error').css('display', 'block')
+                    // setTimeout(() => {
+                    //     error.css('display', 'none')
+                    // }, 1000)
+                    // alert("cuowu");  
                     return false;
                 }
             }
         })
-    } else {
-        //阻止浏览器的默认行为提交
-        error.css({
-            "display":"block"
-        })
-        return false;
-    }
+      
+    })
 })
 
-// 点击任意位置让错误提示信息隐藏
-$(window).tap(function () {
-    $(".error").css({'display':'none'});
-})

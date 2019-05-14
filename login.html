@@ -11,17 +11,18 @@
     <script src="js/rem.js"></script>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/login.css">
-    <script src="js/public.js"></script>
+    <!-- <script src="js/public.js"></script> -->
     <script>
-        ajax({
-            url: "php/checkuser&pwd.php",
-            async: false,
-            success: function (data) {
-                if (data== "验证通过") {
-                    location.href = "index.html";
-                }
-            }
-        })
+        // ajax({
+        //     url: "php/checkuser&pwd.php",
+        //     async: false,
+        //     success: function (data) {
+        //         if (data== "验证通过") {
+        //             location.href = "index.html";
+        //         }
+        //     }
+        // })
+        
     </script>
 </head>
 
@@ -133,13 +134,13 @@
     <div class="error">
         <div>
             <p>
-                <span>账号或密码输入错误，请重新输入</span>
+                <span class="err-text">账号或密码输入错误，请重新输入</span>
             </p>
         </div>
     </div>
  
     <script src="js/zepto.min.js"></script>
-  
+  <script src="js/cookie.js"></script>
     <script src="js/touch.js"></script>
 <script src="js/fx.js"></script>
     <script src="js/loginregiste.js"></script> 
