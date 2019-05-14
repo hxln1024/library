@@ -7,8 +7,6 @@
 // 快速导航
 !(function () {
     $(".sidebarNav dl dt").click(function () {
-        console.log($('.sidebarNav dl dd'))
-        console.log($('.sidebarNav dl dd').position().left)
         if(($('.sidebarNav dl dd').position().left)>=54){
             $(".sidebarNav dl dt span").html("快速<br>导航") 
             $(".sidebarNav dl dt span").css({
@@ -101,5 +99,24 @@
         }
     }
 })()
+
+// 底部菜单切换
+!(function(){
+   $(".webNav li").click(function () {
+    $(this).addClass("cur");
+    $(this).siblings().removeClass("cur");
+       if ($(this).index() == 0) {
+           $(this).find("img").attr("src", "../images/common/home.png");
+           $(".kind").find("img").attr("src", "../images/common/kind.png");
+       }    
+       if ($(this).index()==1){
+           console.log($(".home").find("img"))
+           $(this).find("img").attr("src", "../images/common/kind1.png");
+           $(".home").find("img").attr("src", "../images/common/home1.png");
+       }    
+}) 
+})()
+
+
 
 
