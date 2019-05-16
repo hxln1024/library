@@ -27,7 +27,7 @@ $(window).click(function () {
 
 // 删除弹框
 var lists=document.getElementsByClassName("confirmBtn")
-console.log(lists)
+// console.log(lists)
 for(var i=0;i<lists.length;i++){
     
     lists[i].addEventListener('click', function() {
@@ -75,145 +75,136 @@ $(function () {
     })
 })
 
-
-// 增加
+//增加
 $(".increment").on("click", function () {
-    // $(".settlement").addClass("cur")
     var a=$(this).parent().parent().parent().prev().parent().parent().prev().addClass("selected")
     console.log(a)
-    var check = $(".listCheckBox").length;
-    console.log(check)
-    var checked = $(".selected").length;
-    console.log(checked)
-    if (check == checked) {
-        $(".allSelect").addClass("selectAll");
-    } else {
-        $(".allSelect").removeClass("selectAll");
-    }
-   
     var num = $(this).prev().val(); //获取商品初始数量1
     console.log(num)
     $(this).prev().val(Number(num) + 1); //此时已将数字直接写入标签内，是动作
-    var buynum = $(this).prev().val(); //得到+1之后的商品数量，即购买数量
-    console.log(buynum)
-    var price = $(this).parent().parent().prev().children().html(); //获取商品单价
-    console.log(price)
-   var a=$(this).parents(".content").next().next().children().children(".totalWrap").children(".carResult").children(".totalMoney").children().html((buynum * Number(price)).toFixed(2))
-   console.log(a)
    
-    //        console.log(smallPrice);
-    // allPrice();
-    // checkNum();
+    var buynum = $(this).prev().val(); //得到+1之后的商品数量，即购买数量
+    console.log(222,buynum)
+    var price = $(this).parent().parent().prev().children().children().html(); //获取商品单价
+    console.log(price)
+  $(this).parent().parent().prev().children(".total").html(parseFloat((buynum * Number(price)).toFixed(2)))
+  console.log((buynum * Number(price)).toFixed(2))
+   
+  
+   //        console.log(smallPrice);
+    allPrice();
+    checkNum();
 });
-// 减少
+//减少
 $(".decrement").on("click", function () {
     var a=$(this).parent().parent().parent().prev().parent().parent().prev().addClass("selected")
     console.log(a)
-    var check = $(".listCheckBox").length;
-    console.log(check)
-    var checked = $(".selected").length;
-    console.log(checked)
-    if (check == checked) {
-        $(".allSelect").addClass("selectAll");
-    } else {
-        $(".allSelect").removeClass("selectAll");
-    }
-    
     var num = $(this).next().val(); //获取此时商品数量
     if (num > 1) {
         $(this).next().val(Number(num) - 1); //此时已将数字直接写入标签内，是动作
         var buynum = $(this).next().val(); //得到-1之后的商品数量，即购买数量
-        var price = $(this).parent().parent().prev().children().html(); //获取商品单价
-        $(this).parents(".content").next().next().children().children(".totalWrap").children(".carResult").children(".totalMoney").children().html((buynum * Number(price)).toFixed(2))
+        var price = $(this).parent().parent().prev().children().children().html(); //获取商品单价
+        console.log(price)
+        $(this).parent().parent().prev().children(".total").html(parseFloat((buynum * Number(price)).toFixed(2)))
    
     } else {
-        mui.confirm('您确定要删除该商品吗？', function(e) {
-            console.log(e.index);
-            if (e.index == 1) {
-           
-            // thisNode.remove()
-            } 
-        })
+        alert("再点就没了");
     }
-    // allPrice();
-    // checkNum();
+    allPrice();
+    checkNum();
 });
-// $("body").delegate(".J_check", "click", function () {
-//     // var sid = $(this).attr("sid");
-//     if ($(this).hasClass("selected")) {
-//        $(this).removeClass("selected")
-//     } else {
-//        $(this).addClass("selected")
-//     }
-// })
-//单选
-$(".listCheckBox").on("click",function(){
-    if($(this).hasClass("selected")){
-        $(this).removeClass("selected")
-        // $(this).parents(".content").next().next().children().children(".totalWrap").children(".settlement").removeClass("cur")
-    }else{
-       
-        var num=0;
-        $(this).addClass("selected")
-        
-    //  $(this).parents(".content").next().next().children().children(".totalWrap").children(".settlement").addClass("cur")
-      
-
-        // var b = $($(this).next().children().children(".bookText").children(".oparateArea").children(".countEdit").children()[1]).val();
-        // num += Number(b);
-        // console.log(num)
-        // console.log(b);
-    }
-    var check = $(".listCheckBox").length;
-    console.log(check)
-    var checked = $(".selected").length;
-    console.log(checked)
-    if (check == checked) {
-        $(".allSelect").addClass("selectAll");
-    } else {
-        $(".allSelect").removeClass("selectAll");
-    }
-    
-})
-// 多选
+//全选
 $(".allSelect").click(function () {
 
     if ($(this).hasClass("selectAll")) {
         $(this).removeClass("selectAll")
         $(".listCheckBox").removeClass("selected");
+        $(".settlement").removeClass("cur")
         
     } else {
         $(this).addClass("selectAll")
         $(".listCheckBox").addClass("selected");
+        $(".settlement").addClass("cur")
+
+       
     }
-    // allPrice();
-    // checkNum();
+    
+    allPrice();
+    checkNum();
 });
 
-// function checkNum() {
-//     var num = 0;
-//     $(".listCheckBox").each(function () {
-//         console.log($(".listCheckBox"))
-//         if ($(this).hasClass("selected")) {
+//单选
+$(".listCheckBox").click(function () {
+
+    // var check = $(".check").length;
+    // console.log(check)
+    // var checked = $("check:checked").length;
+    // console.log(checked)
+    if ($(this).hasClass("selected")) {
+        $(this).removeClass("selected")
+       
+    } else {
+        $(this).addClass("selected")
+        $(".settlement").addClass("cur")
+       
+        var num = $(this).next().children().children(".bookText").children(".oparateArea").children(".countEdit").children("input").val(); //获取商品初始数量1
+        console.log(num)
+        // $(this).prev().val(Number(num) + 1); //此时已将数字直接写入标签内，是动作
+       
+        // var buynum = $(this).prev().val(); //得到+1之后的商品数量，即购买数量
+        // console.log(222,buynum)
+        var buynum=num;
+        var price = $(this).next().children().children(".bookText").children(".priceWrap").children(".salesPrice").children().html() //获取商品单价
+        console.log(price)
+        $(this).next().children().children(".bookText").children(".priceWrap").children(".total").html(parseFloat((buynum * Number(price)).toFixed(2)))
+        allPrice();
+        checkNum();
+      }
+    
+    var check = $(".listCheckBox").length;
+    console.log(check)
+    var checked = $(".selected").length;
+    console.log(checked)
+    
+    if (check == checked) {
+        $(".allSelect").addClass("selectAll");
+       
+       
+    } else {
+        $(".allSelect").removeClass("selectAll");
+       
+    }
+    if(checked==0){
+        $(".settlement").removeClass("cur")
+       
+    }
+    allPrice();
+    checkNum();
+});
+
+function checkNum() {
+    var num = 0;
+    $(".listCheckBox").each(function () {
+        if ($(this).hasClass("selected")) {
+            // console.log(this);
             
-//             var b = $($(this).parent().val());
-//             console.log(b);
-//             num += Number(b);
-//         }
-//     });
-
-//     // $(".fontColor1").html(num);
-// }
-
-// function allPrice() {
-//     var sum = 0;
-//     $(".check").each(function () {
-//         if (this.checked == true) {
-//             var a = $($(this).parent().next().next().next().next().next().next().children()[0]).html();
-//             //单类商品数量
-//             console.log($($(this).parent().next().next().next().next().next().next().children()[0]).html());
-//             sum += Number(a);
-//         }
-//     });
-//     $(".allPrice1").html(sum);
-// }
+            var b = $($(this).next().children().children(".bookText").children(".oparateArea").children(".countEdit").children()[1]).val();
+           
+            num += Number(b);
+        }
+    });
+    $(".settlement span i").html(num);
+}
+function allPrice() {
+    var sum = 0;
+    $(".listCheckBox").each(function () {
+        if ($(this).hasClass("selected")) {
+            var a = $($(this).next().children().children(".bookText").children(".priceWrap").children()[1]).html();
+            //单类商品数量
+            console.log(a);
+            sum +=Number(a);
+        }
+    });
+    $(".totalMoney .money").html(sum);
+    // console.log($(".totalMoney i"))
+}
