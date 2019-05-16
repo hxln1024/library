@@ -1,6 +1,6 @@
-.pageWrap {
+/* .pageWrap {
     padding: 0.88rem 0;
-}
+} */
 
 /* 首页头部搜索 */
 
@@ -79,7 +79,7 @@
 
 .header .headerInner {
     position: relative;
-    /* height: 0.88rem; */
+    height: 0.88rem;
 }
 
 /* 返回箭头 */
@@ -263,19 +263,19 @@
     height: 1.96rem;
 }
 .sidebarNav dl dt {
-width: 0.9rem;
-height: 0.7rem;
-cursor: pointer;
-border-radius: 0.05rem 0 0 0.05rem;
-padding-left: 0.1rem;
-text-align: center;
-line-height: 0.22rem;
-background: rgba(0,0,0,0.7);
-display: table;
-position: absolute;
-left: 0;
-top: 50%;
-margin-top: -0.35rem;
+    width: 0.9rem;
+    height: 0.7rem;
+    cursor: pointer;
+    border-radius: 0.05rem 0 0 0.05rem;
+    padding-left: 0.1rem;
+    text-align: center;
+    line-height: 0.22rem;
+    background: rgba(0,0,0,0.7);
+    display: table;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -0.35rem;
 }
 .sidebarNav dl dt span {
     display: table-cell;
@@ -328,7 +328,7 @@ margin-top: -0.35rem;
     bottom: 1.1rem;
     right: 0;
     border-radius: 0.05rem 0 0 0.05rem;
-    /* background: rgba(0,0,0,0.7) url('../images/common/sidebarbacktop.png') no-repeat center; */
+    background: rgba(0,0,0,0.7) url('../images/common/sidebarbacktop.png') no-repeat center;
     background-size: 0.23rem 0.33rem;
     z-index: 999;
   }
@@ -337,12 +337,6 @@ margin-top: -0.35rem;
     height: 0.7rem;
     width: 0.9rem;
   }
-  .backTop a img {
-    border: none;
-    vertical-align: top;
-    width: 100%;
-    font-size: 12px;
-}
 /* 底部说明 */
 
 .pagefoot {

@@ -174,9 +174,9 @@ $(function () {
   // }
   $(window).scroll(function () {
     var h = $(window).scrollTop();
-    console.log(h)
+    // console.log(h)
     var sellHotNav = $(".sellHotNavWrap").offset().top;
-    console.log(sellHotNav)
+    // console.log(sellHotNav)
     if (h >sellHotNav) {
 
         $(".sellHotNavFixed").addClass("fixed");
@@ -193,10 +193,11 @@ $(function () {
     // }
    if(h>sellHotNav) {$(".sort_tab li").click(function(){
       // console.log($(".sort_tab li"))
-      window.scrollTo(0, parseInt($(".sellHotNavWrap").offset().top) - 74)
+     
       $(".header").show();
       $(".sellHotNavFixed").removeClass("fixed");
     
     })}
 })
+
 

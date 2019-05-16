@@ -80,10 +80,6 @@ body{
     background: no-repeat url(../images/indexs/search.png) center;
     background-size: 0.34rem 0.34rem;
 }
-.header .headerInner {
-    position: relative;
-    height: 0;!important;
-}
 /* 轮播图 */
 .swiper-container{
     margin: 0 auto;

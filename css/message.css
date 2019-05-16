@@ -25,6 +25,7 @@ td {
 input {
     box-sizing: content-box;
     padding: 0.125rem 2%;
+    text-indent: 0.25em;
     /* line-height: 160%; */
     font-size: 0.19rem;
     border: 1px solid rgb(233, 233, 233);
@@ -35,7 +36,11 @@ input {
     background: rgb(255, 255, 255);
     margin: 0 auto;
 }
-.focusInput {border:0.031rem solid #99CC33;}
+
+.focusInput {
+    border: 0.031rem solid #99CC33;
+}
+
 .form-info {
     box-sizing: content-box;
     display: none;
@@ -45,11 +50,12 @@ input {
 textarea {
     margin: 0.125rem 0px 0px;
     line-height: 160%;
-    font-size:  0.19rem;
+    font-size: 0.19rem;
     border: 0.016rem solid rgb(233, 233, 233);
     color: rgb(124, 124, 124);
     width: 96%;
     height: 2.19rem;
+    text-indent: 1em;
     background: rgb(255, 255, 255);
 }
 
@@ -81,10 +87,20 @@ textarea {
     background: rgb(50, 168, 245);
 }
 
-.textarea-msg{
+.textarea-msg {
     float: right;
 }
-span{
+
+span {
     font-size: 14px;
     font-size: blue
+}
+
+/**
+         重定义 按钮颜色
+         */
+
+.mui-popup-button {
+    color: #9C27B0 !important;
+    background: rgba(255, 255, 255, .95) !important;
 }

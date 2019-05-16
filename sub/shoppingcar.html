@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="../css/mui.min.css">
     <script src="../js/mui.min.js"></script>
     <script src="../js/rem.js"></script>
-    
 </head>
 
 <body>
@@ -43,7 +42,7 @@
     <div class="carNav">
         <ul>
             <li class="cur shopCar"><a href="###">购物车</a></li>
-            <li class="tstCar"><a href="../login.html">淘书团购物车</a></li>
+            <li class="tstCar"><a href="###">淘书团购物车</a></li>
         </ul>
     </div>
     <!-- 加购商品以后显示商品框 -->
@@ -64,7 +63,7 @@
                     <div class="activeList">
                         <ul>
                             <li>
-                             <div class="listCheckBox J_check">选中</div>
+                             <div class="listCheckBox J_check selected">选中</div>
                              <div class="book">
                                 <div class="bookInner">
                                  <div class="bookCover"><a href="###"><img src="../images/shoppingcar-imgs/buy1.jpg"></a>
@@ -72,16 +71,14 @@
                                <div class="bookText">
                                    <div class="bookname"><a href="###">避暑地的猫-修订版</a></div>
                                    <div class="priceWrap">
-                                   
-                                       <span class="salesPrice">&yen;<i>11.7</i></span>
-                                       <span class="total"></span>
-                                       <span class="price">&yen;<i>28</i></span>
+                                       <span class="salesPrice">¥11.7</span>
+                                       <span class="price">¥28</span>
                                    </div>
-                                   <div class="oparateArea">
+                                   <div class="oparateArea mui-numbox"  data-numbox-min='1'>
                                        <div class="countEdit">
-                                          <span class="decrement"></span>
-                                          <input  type="text" value="1">
-                                          <span class="increment"></span>
+                                          <span class="decrement mui-btn mui-numbox-btn-minus"></span>
+                                          <input class="mui-numbox-input" type="text">
+                                          <span class="increment mui-btn mui-numbox-btn-plus"></span>
 
                                        </div>
                                        <!-- <div class="mui-numbox" data-numbox-step='10' data-numbox-min='0' data-numbox-max='100'>
@@ -91,7 +88,7 @@
                                        </div> -->
                                        <div class="otherEdit">
                                             <i class="addFav">收藏</i> 
-                                            <i class="delete confirmBtn">删除</i>
+                                            <i class="delete" id='confirmBtn'>删除</i>
                                             <!-- <div id="info"></div> -->
                                          </div>
                                    </div>
@@ -102,7 +99,7 @@
                              </div>
                             </li>
                             <li>
-                                    <div class="listCheckBox J_check">选中</div>
+                                    <div class="listCheckBox J_check selected">选中</div>
                                     <div class="book">
                                        <div class="bookInner">
                                         <div class="bookCover"><a href="###"><img src="../images/shoppingcar-imgs/buy1.jpg"></a>
@@ -110,15 +107,14 @@
                                       <div class="bookText">
                                           <div class="bookname"><a href="###">避暑地的猫-修订版</a></div>
                                           <div class="priceWrap">
-                                              <span class="salesPrice">&yen;<i>11.7</i></span>
-                                              <span class="total"></span>
-                                              <span class="price">&yen;<i>28</i></span>
+                                              <span class="salesPrice">¥11.7</span>
+                                              <span class="price">¥28</span>
                                           </div>
-                                          <div class="oparateArea">
+                                          <div class="oparateArea mui-numbox"  data-numbox-min='1'>
                                               <div class="countEdit">
-                                                 <span class="decrement"></span>
-                                                 <input type="text" value="1">
-                                                 <span class="increment"></span>
+                                                 <span class="decrement mui-btn mui-numbox-btn-minus"></span>
+                                                 <input class="mui-numbox-input" type="text">
+                                                 <span class="increment mui-btn mui-numbox-btn-plus"></span>
        
                                               </div>
                                               <!-- <div class="mui-numbox" data-numbox-step='10' data-numbox-min='0' data-numbox-max='100'>
@@ -128,7 +124,7 @@
                                               </div> -->
                                               <div class="otherEdit">
                                                    <i class="addFav">收藏</i> 
-                                                   <i class="delete confirmBtn">删除</i>
+                                                   <i class="delete" id='confirmBtn'>删除</i>
                                                    <!-- <div id="info"></div> -->
                                                 </div>
                                           </div>
@@ -156,12 +152,12 @@
     <!-- 购物车底部结算 -->
     <div class="footer">
         <div class="checkgroup">
-        <div class="allSelect  J_selectALL">全选</div>
+        <div class="allSelect  J_selectALL selectAll">全选</div>
         <div class="totalWrap">
-            <div class="settlement" id="J_submitBtn">去结算<span>(<i>0</i>)</span></div>
+            <div class="settlement cur" id="J_submitBtn">去结算<span>(4)</span></div>
             <div class="carResult">
-            <div class="totalMoney">总计：<i>&yen;</i><i class="money">0</i></div>
-            <div class="totalDiscount">已优惠：<i>&yen;0</i></div>
+            <div class="totalMoney">总计：<i>¥48.6</i></div>
+            <div class="totalDiscount">已优惠：<i>¥0</i></div>
             </div>
         </div>
         <div class="editWrap">
@@ -183,13 +179,9 @@
 
         </ul>
     </div>
-    
   <script src="../js/jquery.1.11.3.min.js"></script>
     <script src="../js/jquery.lazyload.js"></script>
-    <script src="../js/zepto.min.js"></script>
-    <script src="../js/touch.js"></script>
     <script src="../js/shoppingcar.js"></script>
-    
 </body>
 
 </html>

@@ -1,4 +1,4 @@
-;(function(){
+!(function(){
     function resize(){
         var html = document.documentElement;
         var w = html.getBoundingClientRect().width;

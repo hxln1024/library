@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/robot.css">
+    <link rel="stylesheet" href="../css/mer.css" />
+    <link rel="stylesheet" href="../css/common.css">
+    <script src="../js/jquery.1.11.3.min.js"></script>
+    <script src="../js/mer.js"></script>
+    
+</head>
+
+<body>
+    <div class="talk_con">
+        <header class="header">
+            <div class="headerInner">
+                <div class="returnBtn">
+                    <a></a>
+                </div>
+                <div class="head_lable">
+                    <span>客服</span>
+                </div>
+            </div>
+        </header>
+        <div class="talk_show" id="words">
+
+        </div>
+        <div class="talk_input">
+            <input type="text" class="talk_word" id="talkwords">
+            <input type="button" value="发送" id="send" class="talk_sub">
+        </div>
+    </div>
+    <script>
+        function ajax(option) {
+            var xhr = new XMLHttpRequest();
+            if (option.type == "GET") {
+                xhr.open("GET", option.url + "?" + option.param);
+                xhr.send();
+            } else {
+                xhr.open("POST", option.url);
+                xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                xhr.send(option.param);
+            }
+
+            xhr.onreadystatechange = function () {
+                if (xhr.status == 200 && xhr.readyState == 4) {
+                    var data = xhr.responseText;
+                    option.success(data);
+                }
+            }
+
+        }
+        var words = document.getElementById("words");
+        var talkwords = document.getElementById("talkwords");
+        var send = document.getElementById("send");
+        send.onclick = function () {
+            if (talkwords.value == "") {
+                // 消息为空时弹窗
+                alert("消息不能为空");
+                return;
+            }
+            var str = '<div class="aspeak"><img src="../images/common/robot1.png"><span>' + talkwords.value + '</span></div>'
+            words.innerHTML += str;
+            ajax({
+                type: "GET",
+                url: "   http://route.showapi.com/60-27",
+                param: "showapi_appid=87849&showapi_sign=ccaa08ffb66f4384ae4e98bc22728e82&info=" + talkwords.value,
+                success: function (data) {
+                    console.log(data)
+                    var jsonData = JSON.parse(data);
+                    var robotJson = jsonData.showapi_res_body.text;
+                    var str = '<div class="bspeak"><img src="../images/common/robot.jpg"><span>' + robotJson + '</span></div>'
+                    words.innerHTML += str;
+                }
+            })
+            talkwords.value = "";
+        }
+
+    </script>
+    <script src="../js/rem.js"></script>
+    <script>
+        var returnbtn=document.querySelector(".returnBtn a");
+        console.log(returnbtn)
+        returnbtn.onclick=function(){
+            alert("关闭会话自动跳转到上一页")
+            setTimeout(function () {
+                window.history.back(-1);
+            }, 1000);
+            
+        }
+    </script>
+</body>
+
+</html>
