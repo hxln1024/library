@@ -622,3 +622,6 @@ img{
     font-size: 0.2rem;
     background-size: 0.15rem 0.08rem;
 }
+.activeList ul li .bookText .priceWrap .total{
+    display: none;
+}

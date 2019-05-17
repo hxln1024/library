@@ -134,6 +134,8 @@ $(function () {
           data: "cid=" + page,
           success: function (result) {
             var data = JSON.parse(result);
+          //  console.log(data);
+          
             // console.log(data.length); //6
             var str1 = "";
             for (var i = 0; i < data.length; i++) {
@@ -163,15 +165,7 @@ $(function () {
 
   })()
 
-  // var navs=document.getElementsByClassName("sellHotNavFixed")[0];
-  // console.log(navs)
-  // window.onscroll=function(){
-  //   console.log(navs.getBoundingClientRect().top)
-  //   if(navs.getBoundingClientRect().top<=88){
-     
-  //   }
-
-  // }
+ 
   $(window).scroll(function () {
     var h = $(window).scrollTop();
     // console.log(h)
@@ -186,14 +180,10 @@ $(function () {
         $(".sellHotNavFixed").removeClass("fixed");
         $(".header").show();
     }
-    // if (h > 400) {
-    //     $('.fixed_box').show();
-    // } else {
-    //     $('.fixed_box').hide()
-    // }
+   
    if(h>sellHotNav) {$(".sort_tab li").click(function(){
       // console.log($(".sort_tab li"))
-     
+      window.scrollTo(0, parseInt($(".sellHotNavWrap").offset().top) - 74);
       $(".header").show();
       $(".sellHotNavFixed").removeClass("fixed");
     

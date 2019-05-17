@@ -28,6 +28,9 @@ body{
     
     
 }
+.header .headerInner{
+    height:0 !important;
+}
 .searchBar{
     position: fixed;
     left: 0;
