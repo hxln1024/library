@@ -118,9 +118,8 @@ body {
    .proggress{
    
         height: 100%;
-        width:0;
+       /* width:1rem ; */
        background: #fe5921;
-       
         border-radius:8px;
    }
    
