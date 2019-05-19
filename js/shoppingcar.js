@@ -3,7 +3,7 @@ function goBack()
   {
   window.history.back()
   }
-//头部列表点击实现
+//头部列表点击.实现
 $("#shortCut").click(function (event) {
     $(".shortCutLayer").toggle();
     event.stopPropagation();
@@ -17,6 +17,7 @@ $(window).click(function () {
 })
 // 删除弹框
 var lists=document.getElementsByClassName("confirmBtn")
+console.log(lists)
 // console.log(lists)
 for(var i=0;i<lists.length;i++){
     
@@ -65,6 +66,7 @@ $(function () {
     })
 })
 
+
 //增加
 $(".increment").on("click", function () {
     $(".settlement").addClass("cur");
@@ -111,7 +113,8 @@ $(".allSelect").click(function () {
     if ($(this).hasClass("selectAll")) {
         $(this).removeClass("selectAll")
         $(".listCheckBox").removeClass("selected");
-        $(".settlement").removeClass("cur")
+        $(".settlement").removeClass("cur");
+        
         
     } else {
         $(this).addClass("selectAll")
@@ -146,9 +149,10 @@ $(".listCheckBox").click(function () {
       }
     
     var check = $(".listCheckBox").length;
+    console.log(check)
     
     var checked = $(".selected").length;
-   
+    console.log(checked)
     
     if (check == checked) {
         $(".allSelect").addClass("selectAll");
@@ -192,3 +196,7 @@ function allPrice() {
     $(".totalMoney .money").html(sum.toFixed(1));
     // console.log($(".totalMoney i"))
 }
+
+
+
+
