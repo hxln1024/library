@@ -268,9 +268,9 @@ img{
     margin-left: 0.17rem;
 }
 /* 加购商品以后显示商品框  */
-/* .content{
+.content{
     display:none;
-} */
+}
 .carLsit {
     margin-top: 0.1rem;
 }
@@ -623,5 +623,8 @@ img{
     background-size: 0.15rem 0.08rem;
 }
 .activeList ul li .bookText .priceWrap .total{
+    display: none;
+}
+.footer{
     display: none;
 }
