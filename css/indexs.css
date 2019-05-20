@@ -33,7 +33,7 @@ body {
 
 /* 首页头部搜索 */
 
-/* .headers .searchBar {
+.headers .searchBar {
     position: fixed;
     left: 0;
     top: 0;
@@ -96,9 +96,9 @@ body {
     font-size: 0;
     background: no-repeat url(../images/index/search.png) center;
     background-size: 0.34rem 0.34rem;
-} */
+}
 
-.header .headerInner{
+/* .header .headerInner{
     height:0 !important;
 }
 .searchBar{
@@ -152,7 +152,7 @@ body {
     font-size: 0;
     background: no-repeat url(../images/indexs/search.png) center;
     background-size: 0.34rem 0.34rem;
-}
+} */
 
 /* 轮播图 */
 
