@@ -190,4 +190,72 @@ $(function () {
     })}
 })
 
+// 返回顶部
+!(function () {
+  var fixed_box = document.getElementsByClassName("fixed_box")[0];
+  var backTop = document.getElementsByClassName("backTop")[0];
+  function scroll() {
+    // 开始封装自己的scrollTop
+    if (window.pageYOffset !== undefined) {
+      // ie9+ 高版本浏览器
+      // 因为 window.pageYOffset 默认的是0,所以需要判断
+      return {
+        left: window.pageXOffset,
+        top: window.pageYOffset
+      }
+    }
+    else if (document.compatMode === "CSS1Compat") {
+      // 标准浏览器,来判断有没有声明DTD
+      return {
+        left: document.documentElement.scrollLeft,
+        top: document.documentElement.scrollTop
+      }
+    }
+    return {
+      // 未声明 DTD
+      left: document.body.scrollLeft,
+      top: document.body.scrollTop
+    }
+  }
+  // 用scroll事件模拟盒子距离最顶端的距离
+  window.onscroll = function () {
+    // 每次屏幕滑动，把屏幕卷去的值赋给leader，模拟获取显示区域距离顶部的距离
+    leader = scroll().top;
+    // console.log(leader);
+
+    if (leader >= 200) {
+      if (fixed_box) {
+        fixed_box.style.display = "block";
+      } else {
+        backTop.style.display = "block";
+      }
+
+    } else {
+      if (fixed_box) {
+        fixed_box.style.display = "none";
+      } else {
+        backTop.style.display = "none";
+      }
+    }
+  }
+})()
+
+// 底部菜单切换
+!(function () {
+  $(".webNav li").click(function () {
+    $(this).addClass("cur");
+    $(this).siblings().removeClass("cur");
+    if ($(this).index() == 0) {
+      $(this).find("img").attr("src", "images/common/home.png");
+      $(".kind").find("img").attr("src", "images/common/kind.png");
+    }
+    if ($(this).index() == 1) {
+      console.log($(".home").find("img"))
+      $(this).find("img").attr("src", "images/common/kind1.png");
+      $(".home").find("img").attr("src", "images/common/home1.png");
+    }
+  })
+})()
+
+
 

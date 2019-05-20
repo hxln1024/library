@@ -33,3 +33,20 @@ $('#ulFoot li').tap(function () {
     $(this).addClass('active').siblings().removeClass('active');
     $('.menu-right-content  .content-item').eq(i).show().siblings().hide();
 });
+
+// 底部菜单切换
+!(function () {
+    $(".webNav li").click(function () {
+        $(this).addClass("cur");
+        $(this).siblings().removeClass("cur");
+        if ($(this).index() == 0) {
+            $(this).find("img").attr("src", "../images/common/home.png");
+            $(".kind").find("img").attr("src", "../images/common/kind.png");
+        }
+        if ($(this).index() == 1) {
+            console.log($(".home").find("img"))
+            $(this).find("img").attr("src", "../images/common/kind1.png");
+            $(".home").find("img").attr("src", "../images/common/home1.png");
+        }
+    })
+})()

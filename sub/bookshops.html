@@ -9,11 +9,50 @@
     <script src="../js/rem.js"></script>
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/bookshops.css">
+    <link rel="stylesheet" href="../css/resets.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/layui.css">
+    <script src="../js/layui.js"></script>
 </head>
 
 <body>
     <!-- 最外面的整个div -->
     <div class="pageWrap">
+        <header class="header">
+            <div class="headerInner">
+                <div class="returnBtn">
+                    <a href="javascript:history.back(-1);"></a>
+                </div>
+                <div class="head_lable">
+                    <span>淘书团</span>
+                </div>
+                <div class="shareBtn layui-btn" id="shareBtn" data-method="confirmTrans"></div>
+                <div class="shortCut" id="shortCut"></div>
+                <div class="shortCutLayer">
+                    <div class="shortCutInner">
+                        <ul>
+                            <li class="homeLink">
+                                <a href="../index.html">首页</a>
+                            </li>
+                            <li class="tstLink">
+                                <a href="bookshops.html">淘书团</a>
+                            </li>
+                            <li class="kindLink">
+                                <a href="classify.html">分类搜索</a>
+                            </li>
+                            <li class="carLink">
+                                <a href="shoppingcar.html">购物车</a>
+                            </li>
+                            <li class="accountLink">
+                                <a href="../login.html">我的账户</a>
+                            </li>
+                        </ul>
+                        <span class="uptriangle"></span>
+                    </div>
+                </div>
+        
+            </div>
+        </header>
         <!-- 最上面的搜索框开始 -->
         <div class="searchWrap">
             <div class="searchInner">
@@ -789,6 +828,10 @@
             </div>
         </div>
     </div>
+    <script src="../js/commonul.js"></script>
+    <script src="../js/zepto.js"></script>
+    <script src="../js/touch.js"></script>
+    <script src="../js/common.js"></script>
 </body>
 
 </html>

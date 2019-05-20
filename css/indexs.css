@@ -1,33 +1,103 @@
-*{
+* {
     margin: 0;
     padding: 0;
     list-style: none;
     box-sizing: border-box;
 }
 
-img{
+img {
     border: none;
     vertical-align: top;
-    font-size:12px;
+    font-size: 12px;
 }
-a{
+
+a {
     text-decoration: none;
     color: inherit;
 }
-b{
+
+b {
     font-style: normal;
     font-weight: 400;
 }
-body{
+
+body {
     background: #f3f3f3;
 }
-.pageWrap{
+
+.pageWrap {
     padding: 0.88rem 0;
-    max-width:640px;
+    max-width: 640px;
     margin: 0 auto;
-    
-    
 }
+
+/* 首页头部搜索 */
+
+/* .headers .searchBar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: #e70002;
+    background: linear-gradient(to bottom, #fe2828 0%, #e60000 100%);
+    width: 100%;
+    height: 0.88rem;
+    z-index: 900;
+}
+
+.headers .searchInner {
+    position: relative;
+    height: 0.88rem;
+    width: 100%;
+    overflow: hidden;
+}
+
+.headers .searchBar h1 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 0.6rem;
+    margin-top: 0.14rem;
+    position: relative;
+}
+
+.headers .searchBar h1 img {
+    width: 1.84rem;
+}
+
+.headers .searchBar .searchWrap {
+    width: 60%;
+    height: 0.6rem;
+    border-radius: 0.6rem;
+    line-height: 0.6rem;
+    background: #fff;
+    border: none;
+    position: absolute;
+    left: 1.86rem;
+    top: 0.15rem;
+    text-indent: 2em;
+}
+
+.headers .searchBar .searchWrap span {
+    color: #8e8e8e;
+    font-size: 0.24rem;
+    display: block;
+    text-indent: 0.2rem;
+    height: 0.6rem;
+}
+
+.headers .searchBar .searchBtn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 0.6rem;
+    height: 0.88rem;
+    text-indent: -999px;
+    overflow: hidden;
+    font-size: 0;
+    background: no-repeat url(../images/index/search.png) center;
+    background-size: 0.34rem 0.34rem;
+} */
+
 .header .headerInner{
     height:0 !important;
 }
@@ -83,8 +153,10 @@ body{
     background: no-repeat url(../images/indexs/search.png) center;
     background-size: 0.34rem 0.34rem;
 }
+
 /* 轮播图 */
-.swiper-container{
+
+.swiper-container {
     margin: 0 auto;
     position: relative;
     overflow: hidden;
@@ -92,71 +164,81 @@ body{
     padding: 0;
     z-index: 1;
 }
-.swiper-wrapper{
+
+.swiper-wrapper {
     position: relative;
     width: 100%;
-    height:100%;
-    z-index:1;
+    height: 100%;
+    z-index: 1;
     display: flex;
     box-sizing: content-box;
-
 }
-.swiper-slide{
+
+.swiper-slide {
     flex-shrink: 0;
     height: 100%;
     position: relative;
-    transition-property: transform,-webkit-transform;
+    transition-property: transform, -webkit-transform;
 }
-.swiper-container img{
-    vertical-align:top;
+
+.swiper-container img {
+    vertical-align: top;
     width: 100%;
-   
 }
-.swiper-pagination{
+
+.swiper-pagination {
     vertical-align: middle;
     position: absolute;
     z-index: 10;
     text-align: center;
     overflow: hidden;
 }
-.swiper-container-horizontal>.swiper-pagination-bullets{
+
+.swiper-container-horizontal>.swiper-pagination-bullets {
     bottom: 0.1rem;
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     left: 0;
     width: 100%;
 }
-.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet{
+
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
     margin: 0 4px;
     vertical-align: middle;
     line-height: 0;
     display: inline-block;
     width: 0.1rem;
-    height:0.1rem;
+    height: 0.1rem;
     border: none;
-    cursor:pointer;
+    cursor: pointer;
     border-radius: 0.1rem;
     background: #fff;
 }
-.swiper-pagination-bullet-active{
+
+.swiper-pagination-bullet-active {
     background-color: #e60000 !important;
 }
+
 /* 快捷工具栏 */
-.index-nav{
+
+.index-nav {
     overflow: hidden;
     background-color: #fff;
     padding: 0.2rem 0 0 0.15rem;
 }
-.index-nav li{
+
+.index-nav li {
     /* display: inline-block; */
     width: 20%;
     float: left;
     text-align: center;
 }
-.index-nav li a{
+
+.index-nav li a {
     display: block;
 }
+
 .index-nav li img {
     display: block;
     margin: auto;
@@ -165,6 +247,7 @@ body{
     font-size: 12px;
     color: #666;
 }
+
 .index-nav li b {
     display: block;
     font-size: 0.22rem;
@@ -172,17 +255,21 @@ body{
     margin-top: 0.05rem;
     color: #333333;
 }
+
 /* 中图公告栏 */
+
 .reviewNews {
     background: #fff;
     height: 0.68rem;
     margin-top: 0.16rem;
 }
+
 .reviewNews dl {
     overflow: hidden;
     position: relative;
     padding-left: 1.72rem;
 }
+
 .reviewNews dl dt {
     width: 1.72rem;
     margin-top: 0.17rem;
@@ -192,60 +279,74 @@ body{
     left: 0;
     top: 0;
 }
+
 .reviewNews dl dt img {
     width: 1.41rem;
 }
+
 .reviewNews dl dd {
     overflow: hidden;
 }
+
 .reviewNews dl dd .notice_active {
     position: relative;
     height: 0.68rem;
     overflow: hidden;
 }
-.reviewNews dl dd ul{
+
+.reviewNews dl dd ul {
     position: relative;
     height: 100%;
     /* top: 0; */
     left: 0;
     width: 100%;
 }
+
 .reviewNews dl dd ul li {
     line-height: 0.68rem;
     height: 0.68rem;
     padding-right: 0.2rem;
 }
-.reviewNews dl dd ul li a{
-    display: block;height: 0.68rem;
+
+.reviewNews dl dd ul li a {
+    display: block;
+    height: 0.68rem;
     font-size: 0.24rem;
     line-height: 0.68rem;
-    white-space:nowrap;
+    white-space: nowrap;
     overflow: hidden;
     color: #333;
-    text-overflow:ellipsis;
+    text-overflow: ellipsis;
 }
+
 /* 广告栏 */
-.floorBanner{
+
+.floorBanner {
     margin-top: 0.16rem;
 }
-.floorBanner img{
+
+.floorBanner img {
     width: 100%；
 }
+
 /* 新到图书折上折 */
+
 .newBookTitle {
     background: #f9bd00;
     height: 0.68rem;
     position: relative;
 }
+
 .newBookTitle h2 {
     font-size: 0.26rem;
     margin-left: 0.2rem;
     line-height: 0.68rem;
     color: #fff;
     font-style: normal;
-    font-weight:normal;
+    font-weight: normal;
 }
-.newBookTitle a{
+
+.newBookTitle a {
     position: absolute;
     right: 0;
     top: 0;
@@ -257,32 +358,38 @@ body{
     border-radius: 0.28rem;
     margin-right: 0.1rem;
     padding: 0 0.16rem 0 0.16rem;
-    font-size:0.18rem;
+    font-size: 0.18rem;
     line-height: 0.28rem;
 }
+
 .newBookList ul {
     padding: 0 0.05rem;
     background: #fff;
     overflow: hidden;
     padding-bottom: 0.18rem;
 }
+
 .newBookList ul li {
     float: left;
     width: 33.33333333333%;
     padding: 0 0.05rem;
     margin-top: 0.2rem;
 }
+
 .newBookList ul li a {
     display: block;
 }
+
 .newBookList ul li .cover {
     text-align: center;
     padding: 0.05rem 0;
 }
+
 .newBookList ul li .cover img {
     max-width: 100%;
     height: 2rem;
 }
+
 .newBookList ul li .name {
     /* text-align: left; */
     color: #000;
@@ -297,17 +404,20 @@ body{
     display: -webkit-box;
     -webkit-box-orient: vertical;
 }
+
 .newBookList ul li .priceWrap {
     overflow: hidden;
     padding: 0 0.1rem;
     line-height: 0.3rem;
     margin-top: 0.07rem;
 }
+
 .newBookList ul li .priceWrap .price {
     float: left;
     color: #e60000;
     font-size: 0.24rem;
 }
+
 .newBookList ul li .priceWrap .original {
     float: left;
     color: #999999;
@@ -315,22 +425,29 @@ body{
     margin-left: 0.14rem;
     text-decoration: line-through;
 }
+
 /* 广告轮播图栏 */
+
 /* 淘书团 */
+
 .tstWrap {
-margin-top: 0.16rem;
+    margin-top: 0.16rem;
 }
+
 .tstTit {
     position: relative;
     background: #fff;
     padding-top: 0.08rem;
 }
+
 .tstTit h2 {
     height: 0.5rem;
 }
+
 .tstTit h2 img {
     width: 2.3rem;
 }
+
 .tstTit a {
     position: absolute;
     right: 0;
@@ -355,13 +472,16 @@ margin-top: 0.16rem;
     height: 0.11rem;
     margin: 0.08rem 0 0 0.08rem;
 }
+
 .tstList {
     background: #fff;
 }
+
 .tstList ul {
     overflow: hidden;
     padding: 0 0.05rem 0.1rem;
 }
+
 .tstList ul li {
     float: left;
     width: 50%;
@@ -369,6 +489,7 @@ margin-top: 0.16rem;
     padding: 0 0.05rem;
     /* background:rgb(243, 243, 243); */
 }
+
 .tstList ul li .name {
     /* position: relative; */
     color: #000000;
@@ -385,6 +506,7 @@ margin-top: 0.16rem;
     -webkit-box-orient: vertical;
     position: relative;
 }
+
 .tstList ul li .name span {
     border-radius: 0.03rem;
     position: absolute;
@@ -399,10 +521,12 @@ margin-top: 0.16rem;
     top: 0.02rem;
     text-indent: 0px;
 }
+
 .tstList ul li .cover img {
     width: 100%;
     font-size: 12px;
 }
+
 .tstList ul li .priceWrap .Tprice {
     padding: 0 0.1rem;
     color: #e60000;
@@ -410,14 +534,17 @@ margin-top: 0.16rem;
     line-height: 0.28rem;
     margin-top: 0.08rem;
 }
+
 .tstList ul li .priceWrap .Tprice span {
     font-size: 0.24rem;
 }
+
 .tstList ul li .priceWrap .discountWrap {
     padding: 0 0 0.16rem 0.1rem;
     overflow: hidden;
     margin-top: 0.04rem;
 }
+
 .tstList ul li .priceWrap .discountWrap .original {
     float: left;
     text-decoration: line-through;
@@ -425,6 +552,7 @@ margin-top: 0.16rem;
     font-size: 0.2rem;
     line-height: 0.3rem;
 }
+
 .tstList ul li .priceWrap .discountWrap .discount {
     float: right;
     height: 0.26rem;
@@ -435,29 +563,37 @@ margin-top: 0.16rem;
     border-radius: 0.26rem 0 0 0.26rem;
     padding: 0 0.06rem;
 }
+
 /* 读者热评 */
+
 .hottockWrap {
     margin-top: 0.16rem;
 }
+
 .hottockTit {
     position: relative;
     background: #fff;
     padding: 0.09rem 0 0.1rem;
     box-shadow: 0px 1px 2px #dddcdd;
 }
+
 .hottockTit h2 {
     height: 0.5rem;
 }
+
 .hottockTit h2 img {
     width: 2.3rem;
 }
+
 .hottockMain {
     padding: 0 0.2rem;
     background: #fff;
 }
+
 .hottockMain a {
     display: block;
 }
+
 .hottockMain .bookWrap {
     position: relative;
     margin-bottom: 2px;
@@ -465,6 +601,7 @@ margin-top: 0.16rem;
     overflow: hidden;
     min-height: 2.5rem;
 }
+
 .hottockMain .bookWrap .cover {
     margin: 0.15rem 0;
     height: 2.2rem;
@@ -475,10 +612,12 @@ margin-top: 0.16rem;
     text-align: center;
     /* background: #ff511c; */
 }
+
 .hottockMain .bookWrap .cover img {
     height: 2.2rem;
     max-width: 100%;
 }
+
 .hottockMain .bookWrap .name {
     color: #000;
     font-size: 0.22rem;
@@ -491,33 +630,39 @@ margin-top: 0.16rem;
     display: -webkit-box;
     -webkit-box-orient: vertical;
 }
+
 .hottockMain .bookWrap .startWrap {
     overflow: hidden;
     line-height: 0.2rem;
     margin-top: 0.1rem;
 }
+
 .hottockMain .bookWrap .startWrap span {
     float: left;
     height: 0.2rem;
     width: 0.2rem;
     margin: 0 0.05rem 0 0;
 }
+
 .hottockMain .bookWrap .startWrap b {
     float: left;
     font-size: 0.2rem;
     margin-left: 0.1rem;
     color: #ff511c;
 }
+
 .hottockMain .bookWrap .priceWrap {
     overflow: hidden;
     line-height: 0.3rem;
     margin-top: 0.07rem;
 }
+
 .hottockMain .bookWrap .priceWrap .price {
     float: left;
     color: #e60000;
     font-size: 0.24rem;
 }
+
 .hottockMain .bookWrap .priceWrap .original {
     float: left;
     color: #999999;
@@ -525,6 +670,7 @@ margin-top: 0.16rem;
     margin-left: 0.12rem;
     text-decoration: line-through;
 }
+
 .hottockMain .bookWrap .review {
     color: #666666;
     font-size: 0.2rem;
@@ -539,30 +685,36 @@ margin-top: 0.16rem;
     display: -webkit-box;
     -webkit-box-orient: vertical;
 }
+
 .hottockMain .bookWrap .review span {
     color: #e60000;
 }
+
 .hottockList ul {
     overflow: hidden;
 }
+
 .hottockList ul li {
     float: left;
     width: 50%;
     overflow: hidden;
     padding: 0 2px 2px 0;
-   
 }
+
 .hottockList ul li a {
     display: block;
 }
+
 .hottockList ul li .bookWrap {
     background: #fff;
     padding: 0.15rem 0 0.17rem 0;
 }
+
 .hottockList ul li .cover {
     text-align: center;
     padding: 0.05rem 0;
 }
+
 .hottockList ul li .name {
     color: #000;
     font-size: 0.22rem;
@@ -576,23 +728,27 @@ margin-top: 0.16rem;
     display: -webkit-box;
     -webkit-box-orient: vertical;
 }
+
 .hottockList ul li .startWrap b {
     float: left;
     font-size: 0.2rem;
     margin-left: 0.1rem;
     color: #ff511c;
 }
+
 .hottockList ul li .priceWrap {
     overflow: hidden;
     padding: 0 0.1rem 0 0.2rem;
     line-height: 0.3rem;
     margin-top: 0.07rem;
 }
+
 .hottockList ul li .priceWrap .price {
     float: left;
     color: #e60000;
     font-size: 0.24rem;
 }
+
 .hottockList ul li .priceWrap .original {
     float: left;
     color: #999999;
@@ -600,6 +756,7 @@ margin-top: 0.16rem;
     margin-left: 0.12rem;
     text-decoration: line-through;
 }
+
 .hottockList ul li .review {
     color: #666666;
     font-size: 0.2rem;
@@ -613,40 +770,46 @@ margin-top: 0.16rem;
     display: -webkit-box;
     -webkit-box-orient: vertical;
 }
+
 .hottockList .review span {
     color: #e60000;
 }
+
 .hottockList .startWrap span {
     float: left;
     height: 0.2rem;
     width: 0.2rem;
     margin: 0 0.05rem 0 0;
 }
-.hottockList  .bookWrap .full {
+
+.hottockList .bookWrap .full {
     background-image: url(../images/indexs/full.png);
     background-size: 0.2rem 0.2rem;
-    
 }
+
 .hottockList .startWrap span.half {
     background-image: url(../images/indexs/halfstart.png);
     background-size: 0.2rem 0.2rem;
 }
+
 .hottockList .bookWrap .startWrap {
     overflow: hidden;
     line-height: 0.2rem;
     margin-top: 0.1rem;
 }
+
 .hottockList ul li .cover img {
     max-width: 100%;
     height: 2rem;
-    
 }
+
 .hottockList ul li .startWrap {
     overflow: hidden;
     padding: 0 0 0 0.2rem;
     line-height: 0.2rem;
     margin-top: 0.1rem;
 }
+
 .fiveStarLink a {
     display: block;
     text-align: center;
@@ -656,85 +819,106 @@ margin-top: 0.16rem;
     line-height: 0.84rem;
     background: #efbf41;
 }
+
 /* 推荐书单 */
+
 .recommendWrap {
     margin-top: 0.16rem;
 }
+
 .recommendTit {
     position: relative;
     background: #fff;
     padding: 0.09rem 0 0.1rem;
     box-shadow: 0px 1px 2px #dddcdd;
 }
+
 .recommendTit h2 {
     height: 0.5rem;
 }
+
 .recommendTit h2 img {
     width: 2.3rem;
 }
+
 .recommenList {
     overflow: hidden;
     padding: 0.1rem 0.05rem;
     background: #fff;
 }
+
 .recommenList .recommenLeft {
     float: left;
     width: 50%;
     padding: 0 0.05rem;
 }
+
 .recommenList img {
     width: 100%;
 }
+
 .recommenList .recommenright {
     overflow: hidden;
     float: right;
     width: 50%;
     padding: 0 0.05rem;
 }
+
 .recommenList .recommenright a {
     float: left;
     width: 100%;
     margin-bottom: 0.1rem;
 }
+
 /* 新书速递 */
+
 .BookCourierWrap {
     margin-top: 0.16rem;
 }
+
 .BookCourierTit {
     position: relative;
     background: #fff;
     padding: 0.09rem 0 0.1rem;
     box-shadow: 0px 1px 2px #dddcdd;
 }
+
 .BookCourierTit h2 {
     height: 0.5rem;
 }
+
 .BookCourierTit h2 img {
     width: 2.3rem;
 }
+
 .courierList ul {
     padding: 0 0.05rem;
     background: #fff;
     overflow: hidden;
     padding-bottom: 0.18rem;
 }
+
 .courierList ul li {
     float: left;
     width: 33.33333333333%;
     padding: 0 0.05rem;
     margin-top: 0.2rem;
 }
+
 .courierList ul li a {
     display: block;
 }
+
 .courierList ul li .cover {
     text-align: center;
     padding: 0.05rem 0;
 }
+
 .courierList ul li .cover img {
     max-width: 100%;
     height: 2rem;
 }
+
 .courierList ul li .name {
     color: #000;
     font-size: 0.22rem;
@@ -748,17 +932,20 @@ margin-top: 0.16rem;
     display: -webkit-box;
     -webkit-box-orient: vertical;
 }
+
 .courierList ul li .priceWrap {
     overflow: hidden;
     padding: 0 0.1rem;
     line-height: 0.3rem;
     margin-top: 0.07rem;
 }
+
 .courierList ul li .priceWrap .price {
     float: left;
     color: #e60000;
     font-size: 0.24rem;
 }
+
 .courierList ul li .priceWrap .original {
     float: left;
     color: #999999;
@@ -766,30 +953,37 @@ margin-top: 0.16rem;
     margin-left: 0.14rem;
     text-decoration: line-through;
 }
+
 /* 畅销榜 */
+
 .sellHotWrap {
     margin-top: 0.16rem;
 }
+
 .sellHotTit {
     text-align: center;
     background: #fff;
     box-shadow: 0px 1px 0.1rem #dddcdd;
     line-height: 0.68rem;
 }
+
 .sellHotTit img {
     width: 2.5rem;
     padding: 0.2rem 0 0.24rem;
 }
+
 .sellHotNavWrap {
     height: 0.74rem;
     margin-top: 0.1rem;
 }
-.fixed{
+
+.fixed {
     position: fixed;
     width: 100%;
-   top: 0;
+    top: 0;
     left: 0;
 }
+
 .sellHotNav {
     position: relative;
     height: 0.74rem;
@@ -799,29 +993,32 @@ margin-top: 0.16rem;
     width: 100%;
     touch-action: pan-y pinch-zoom;
 }
+
 .sellHotNav .dropnav {
     width: 100vw;
     background: #fff;
     position: absolute;
-   left: 0;
+    left: 0;
     top: 0;
 }
+
 .sellHotNav .dropnav ul {
-     overflow: hidden;
+    overflow: hidden;
     background: #fff;
-    width:494px;
+    width: 494px;
     display: flex;
 }
+
 .sellHotNav .dropnav ul li {
     height: 0.74rem;
-    width: 70.5882px; 
-     cursor: pointer;
+    width: 70.5882px;
+    cursor: pointer;
     display: inline-block;
     text-align: center;
     margin-left: 0px;
-    margin-right: 0px; 
-   
+    margin-right: 0px;
 }
+
 .sellHotNav .dropnav ul li span {
     font-size: 0.22rem;
     color: #666666;
@@ -831,34 +1028,42 @@ margin-top: 0.16rem;
     line-height: 0.68rem;
     border-right: 1px solid #e5e5e5;
 }
+
 .sellHotNav .dropnav ul li.cur span {
     color: #e60000;
     border-top: solid #e60000 0.06rem;
 }
+
 .sellHotList ul {
     overflow: hidden;
 }
+
 .sellHotList ul li {
     float: left;
     width: 50%;
     overflow: hidden;
     padding: 0 2px 2px 0;
 }
+
 .sellHotList ul li a {
     display: block;
 }
+
 .sellHotList ul li .bookWrap {
     background: #fff;
     padding: 0.15rem 0 0.17rem 0;
 }
+
 .sellHotList ul li .cover {
     text-align: center;
     padding: 0.05rem 0;
 }
+
 .sellHotList ul li .cover img {
     max-width: 100%;
     height: 2rem;
 }
+
 .sellHotList ul li .name {
     color: #000;
     font-size: 0.22rem;
@@ -872,17 +1077,20 @@ margin-top: 0.16rem;
     display: -webkit-box;
     -webkit-box-orient: vertical;
 }
+
 .sellHotList ul li .priceWrap {
     overflow: hidden;
     padding: 0 0.1rem 0 0.2rem;
     line-height: 0.3rem;
     margin-top: 0.07rem;
 }
+
 .sellHotList ul li .priceWrap .price {
     float: left;
     color: #e60000;
     font-size: 0.24rem;
 }
+
 .sellHotList ul li .priceWrap .original {
     float: left;
     color: #999999;
@@ -890,13 +1098,152 @@ margin-top: 0.16rem;
     margin-left: 0.12rem;
     text-decoration: line-through;
 }
+
 .sellHotList .more {
     text-align: center;
     height: 0.8rem;
     line-height: 0.8rem;
 }
+
 .sellHotList .more a {
     font-size: 0.24rem;
     color: #8e8e8e;
     display: block;
-} 
+}
+
+/* 签到栏 */
+
+.sign_btn {
+    position: fixed;
+    z-index: 999;
+    right: 0rem;
+    bottom: 2rem;
+    height: 0.9rem;
+    width: 0.9rem;
+    line-height: 0.25rem;
+}
+
+.sign_btn a {
+    display: block;
+}
+
+.sign_btn a img {
+    width: 100%;
+    font-size: 12px;
+}
+
+/* 回到顶部 */
+
+.fixed_box {
+    display: none;
+    position: fixed;
+    right: 0em;
+    bottom: 1rem;
+    height: 0.9rem;
+    width: 0.9rem;
+    line-height: 0.25rem;
+}
+
+.fixed_box a {
+    display: block;
+}
+
+.fixed_box a img {
+    width: 100%;
+    font-size: 12px;
+}
+
+/* 底部说明 */
+
+.pagefoot {
+    background: #fff;
+}
+
+.pagefoot .actions-wrap {
+    text-align: center;
+    line-height: 0;
+    padding: 0.2rem 0;
+    border-bottom: 1px solid #f3f3f3;
+}
+
+.pagefoot .actions-wrap a {
+    display: inline-block;
+    border: 1px solid #999999;
+    height: 0.38rem;
+    line-height: 0.36rem;
+    color: #666666;
+    font-size: 0.24rem;
+    padding: 0 0.16rem;
+    border-radius: 0.04rem;
+}
+
+.pagefoot .b-nav {
+    text-align: center;
+    font-size: 0.22rem;
+    color: #666666;
+    line-height: 0.6rem;
+}
+
+.pagefoot .b-nav a.red {
+    color: #e60000;
+}
+
+.pagefoot .b-nav a {
+    margin: 0 0.22rem;
+    color: #666;
+}
+
+.pagefoot .copyRight {
+    font-size: 0.22rem;
+    color: #8e8e8e;
+    text-align: center;
+    line-height: 0.82rem;
+}
+
+/* 底部菜单 */
+
+.webNav {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    background: #fff;
+    box-shadow: 0px 0px 5px #8e8e8e;
+    z-index: 100;
+}
+
+.webNav ul {
+    overflow: hidden;
+}
+
+.webNav ul li {
+    float: left;
+    width: 20%;
+    text-align: center;
+    height: 0.88rem;
+}
+
+.webNav ul li.cur a {
+    color: #e60000;
+}
+
+.webNav ul li a {
+    color: #333333;
+    font-size: 0.22rem;
+    display: block;
+    height: 0.88rem;
+}
+
+.webNav ul li a img {
+    width: 0.36rem;
+    margin: auto;
+    display: block;
+    margin-top: 0.13rem;
+    height: 0.36rem;
+}
+
+.webNav ul li a b {
+    display: block;
+    text-align: center;
+    line-height: 0.5rem;
+}

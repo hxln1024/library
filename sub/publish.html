@@ -1,0 +1,551 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<title>出版社</title>
+<link rel="stylesheet" href="../css/resets.css">
+<link rel="stylesheet" href="../css/common.css">
+<link rel="stylesheet" href="../css/layui.css">
+<link href="../css/publish.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="../css/mer.css" />
+<script src="../js/jquery.1.11.3.min.js"></script>
+<script src="../js/mer.js"></script>
+<style>
+    /**
+     重定义 按钮颜色
+     */
+    .mui-popup-button {
+        color: #9C27B0 !important;
+        background: rgba(255, 255, 255, .95) !important;
+    }
+</style>
+<script src="../js/layui.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="headerInner">
+            <div class="returnBtn">
+                <a href="javascript:history.back(-1);"></a>
+            </div>
+            <div class="head_lable">
+                <span>出版社大全</span>
+            </div>
+            <div class="shareBtn layui-btn" id="shareBtn" data-method="confirmTrans"></div>
+            <div class="shortCut" id="shortCut"></div>
+            <div class="shortCutLayer">
+                <div class="shortCutInner">
+                    <ul>
+                        <li class="homeLink">
+                            <a href="../index.html">首页</a>
+                        </li>
+                        <li class="tstLink">
+                            <a href="bookshops.html">淘书团</a>
+                        </li>
+                        <li class="kindLink">
+                            <a href="classify.html">分类搜索</a>
+                        </li>
+                        <li class="carLink">
+                            <a href="shoppingcar.html">购物车</a>
+                        </li>
+                        <li class="accountLink">
+                            <a href="../login.html">我的账户</a>
+                        </li>
+                    </ul>
+                    <span class="uptriangle"></span>
+                </div>
+            </div>
+
+        </div>
+    </header>
+<!--显示点击的是哪一个字母-->
+<div id="showLetter" class="showLetter"><span>A</span></div>
+<!--城出版社索引查询-->
+<div class="letter">
+    <ul>
+      <li><a href="javascript:;">A</a></li>
+      <li><a href="javascript:;">B</a></li>
+      <li><a href="javascript:;">C</a></li>
+      <li><a href="javascript:;">D</a></li>
+      <li><a href="javascript:;">E</a></li>
+      <li><a href="javascript:;">F</a></li>
+      <li><a href="javascript:;">G</a></li>
+      <li><a href="javascript:;">H</a></li>
+      <li><a href="javascript:;">J</a></li>
+      <li><a href="javascript:;">K</a></li>
+      <li><a href="javascript:;">L</a></li>
+      <li><a href="javascript:;">M</a></li>
+      <li><a href="javascript:;">N</a></li>
+      <li><a href="javascript:;">P</a></li>
+      <li><a href="javascript:;">Q</a></li>
+      <li><a href="javascript:;">R</a></li>
+      <li><a href="javascript:;">S</a></li>
+      <li><a href="javascript:;">T</a></li>
+      <li><a href="javascript:;">W</a></li>
+      <li><a href="javascript:;">X</a></li>
+      <li><a href="javascript:;">Y</a></li>
+      <li><a href="javascript:;">Z</a></li>
+    </ul>
+  </div>
+<!--城出版社列表-->
+<div class="container">
+  <div class="city">
+    <div class="city-list"><span class="city-letter" id="A1">A</span>
+      <p data-id="210300">安徽大学出版社</p>
+      <p data-id="152900">安徽教育出版社</p>
+      <p data-id="340800">安徽教育电子音像出版社</p>
+      <p data-id="410500">安徽科学技术出版社</p>
+      <p data-id="542500">安徽美术出版社</p>
+      <p data-id="610900">安徽人民出版社</p>
+      <p data-id="520400">安徽人民出版社</p>
+      <p data-id="513200">安徽师范大学出版社</p>
+      <p data-id="659002">安徽文艺出版社</p>
+      <p data-id="652900">安徽音像出版社</p>
+    </div>
+    <div class="city-list"><span class="city-letter" id="B1">B</span>
+      <p data-id="220800">巴蜀书社</p>
+      <p data-id="150200">白山出版社</p>
+      <p data-id="150800">百花文艺出版社</p>
+      <p data-id="130600">百花洲文艺出版社</p>
+      <p data-id="210500">北方妇女儿童出版社</p>
+      <p data-id="220600">北方文艺出版社</p>
+      <p data-id="341600">北京北影录音录像公司</p>
+      <p data-id="340300">北京伯通电子出版社</p>
+      <p data-id="371600">北京财经电子音像出版社</p>
+      <p data-id="620400">北京出版社</p>
+      <p data-id="610300">北京大学出版社</p>
+      <p data-id="530500">北京大学医学出版社</p>
+      <p data-id="469030">北京大学音像出版社</p>
+      <p data-id="451000">北京电视艺术中心出版社</p>
+      <p data-id="522401">北京电子音像出版社</p>
+      <p data-id="450500">北京电子音像出版中心</p>
+      <p data-id="511900">北京东方影音公司</p>
+      <p data-id="469035">北京法制教育音像出版社</p>
+      <p data-id="652800">北京高教音像出版社</p>
+      <p data-id="652700">北京工业大学出版社</p>
+      <p data-id="110100">北京工艺美术出版社</p>
+      <p data-id="610300">北京古籍出版社</p>
+      <p data-id="530500">北京航空航天大学出版社</p>
+      <p data-id="469030">北京环球音像出版社</p>
+      <p data-id="451000">北京交通大学出版社</p>
+      <p data-id="522401">北京教育出版社</p>
+      <p data-id="450500">北京科海电子出版社</p>
+      <p data-id="511900">北京科学技术出版社</p>
+      <p data-id="469035">北京联合出版公司</p>
+      <p data-id="652800">北京美术摄影出版社</p>
+      <p data-id="652700">北京普教音像出版社</p>
+      <p data-id="110100">北京赛迪电子出版社</p>
+      <p data-id="610300">北京少年儿童出版社</p>
+      <p data-id="530500">北京师范大学出版社</p>
+      <p data-id="469030">北京十月文艺出版社</p>
+      <p data-id="451000">北京时代华文书局</p>
+      <p data-id="522401">北京世界知识音像电子出版社</p>
+      <p data-id="450500">北京出版社青少年音像出版社</p>
+      <p data-id="511900">北京出版社外文音像出版社</p>
+      <p data-id="469035">北京数通电子出版社</p>
+      <p data-id="652800">北京体育大学出版社</p>
+      <p data-id="652700">北京文化艺术音像出版社</p>
+      <p data-id="110100">北京希望电子出版社</p>
+    </div>
+    <div class="city-list"><span class="city-letter" id="C1">C</span>
+      <p data-id="140400">测绘出版社</p>
+      <p data-id="130900">长城出版社</p>
+      <p data-id="320400">长城艺术文化中心</p>
+      <p data-id="330282">长春出版社</p>
+      <p data-id="320581">长虹出版公司</p>
+      <p data-id="130800">长江出版社</p>
+      <p data-id="150400">长江少年儿童出版社</p>
+      <p data-id="220100">长江文艺出版社</p>
+      <p data-id="431000">长征出版社</p>
+      <p data-id="430100">朝华出版社</p>
+      <p data-id="341100">晨光出版社</p>
+      <p data-id="430700">成都地图出版社</p>
+      <p data-id="341400">成都科技大学出版社</p>
+      <p data-id="341700">成都时代出版社</p>
+      <p data-id="469027">崇文书局</p>
+      <p data-id="451400">春风文艺出版社</p>
+    </div>
+    <div class="city-list"><span class="city-letter" id="D1">D</span>
+      <p data-id="232700">大恒电子音像出版社</p>
+      <p data-id="140200">大连出版社</p>
+      <p data-id="230600">大连海事大学出版社</p>
+      <p data-id="321181">大连理工大学出版社</p>
+      <p data-id="210200">大连理工大学电子音像出版社</p>
+      <p data-id="210600">丹东出版社</p>
+      <p data-id="370500">东营出版社</p>
+      <p data-id="371400">德州出版社</p>
+      <p data-id="511700">达州出版社</p>
+      <p data-id="532900">大理白族自治州</p>
+      <p data-id="469003">儋州出版社</p>
+      <p data-id="469025">定安县</p>
+      <p data-id="533400">迪庆藏族自治州</p>
+      <p data-id="510600">德阳出版社</p>
+      <p data-id="469007">东方出版社</p>
+      <p data-id="533100">德宏傣族景颇族自治州</p>
+      <p data-id="441900">东莞出版社</p>
+      <p data-id="621100">定西出版社</p>
+    </div>
+    <div class="city-list"><span class="city-letter" id="E1">E</span>
+      <p data-id="150600">鄂尔多斯出版社</p>
+      <p data-id="420700">鄂州出版社</p>
+      <p data-id="422800">恩施土家族苗族自治州</p>
+    </div>
+    <div class="city-list"><span class="city-letter" id="F1">F</span>
+      <p data-id="210900">阜新出版社</p>
+      <p data-id="210400">抚顺出版社</p>
+      <p data-id="350181">福清出版社</p>
+      <p data-id="341200">阜阳出版社</p>
+      <p data-id="370983">肥城出版社</p>
+      <p data-id="361000">抚州出版社</p>
+      <p data-id="350100">福州出版社</p>
+      <p data-id="440600">佛山出版社</p>
+      <p data-id="450600">防城港出版社</p>
+    </div>
+    <div class="city-list"><span class="city-letter" id="G1">G</span>
+      <p data-id="440100">广州出版社</p>
+      <p data-id="360700">赣州出版社</p>
+      <p data-id="510800">广元出版社</p>
+      <p data-id="511600">广安出版社</p>
+      <p data-id="450300">桂林出版社</p>
+      <p data-id="450800">贵港出版社</p>
+      <p data-id="520100">贵阳出版社</p>
+      <p data-id="513300">甘孜藏族自治州</p>
+      <p data-id="623000">甘南藏族自治州</p>
+      <p data-id="640400">固原出版社</p>
+      <p data-id="632600">果洛藏族自治州</p>
+    </div>
+    <div class="city-list"><span class="city-letter" id="H1">H</span>
+      <p data-id="231100">黑河出版社</p>
+      <p data-id="211400">葫芦岛出版社</p>
+      <p data-id="330481">海宁出版社</p>
+      <p data-id="320800">淮安出版社</p>
+      <p data-id="131100">衡水出版社</p>
+      <p data-id="150100">呼和浩特出版社</p>
+      <p data-id="330500">湖州出版社</p>
+      <p data-id="230400">鹤岗出版社</p>
+      <p data-id="150700">呼伦贝尔出版社</p>
+      <p data-id="230100">哈尔滨出版社</p>
+      <p data-id="130400">邯郸出版社</p>
+      <p data-id="330100">杭州出版社</p>
+      <p data-id="410600">鹤壁出版社</p>
+      <p data-id="371700">菏泽出版社</p>
+      <p data-id="420200">黄石出版社</p>
+      <p data-id="431200">怀化出版社</p>
+      <p data-id="340600">淮北出版社</p>
+      <p data-id="421100">黄冈出版社</p>
+      <p data-id="430400">衡阳出版社</p>
+      <p data-id="340100">合肥出版社</p>
+      <p data-id="340400">淮南出版社</p>
+      <p data-id="341000">黄山出版社</p>
+      <p data-id="451200">河池出版社</p>
+      <p data-id="460100">海口出版社</p>
+      <p data-id="441600">河源出版社</p>
+      <p data-id="532500">红河哈尼族彝族自治州</p>
+      <p data-id="441300">惠州出版社</p>
+      <p data-id="610700">汉中出版社</p>
+      <p data-id="451100">贺州出版社</p>
+      <p data-id="632800">海西蒙古族藏族自治州</p>
+      <p data-id="632100">海东出版社</p>
+      <p data-id="632300">黄南藏族自治州</p>
+      <p data-id="652200">哈密地区</p>
+      <p data-id="632200">海北藏族自治州</p>
+      <p data-id="653200">和田地区</p>
+      <p data-id="632500">海南藏族自治州</p>
+    </div>
+    <div class="city-list"><span class="city-letter" id="J1">J</span>
+      <p data-id="210700">锦州出版社</p>
+      <p data-id="330700">金华出版社</p>
+      <p data-id="140700">晋中出版社</p>
+      <p data-id="320281">江阴出版社</p>
+      <p data-id="220200">吉林出版社</p>
+      <p data-id="230800">佳木斯出版社</p>
+      <p data-id="230300">鸡西出版社</p>
+      <p data-id="330400">嘉兴出版社</p>
+      <p data-id="140500">晋城出版社</p>
+      <p data-id="350582">晋江出版社</p>
+      <p data-id="370282">即墨出版社</p>
+      <p data-id="360800">吉安出版社</p>
+      <p data-id="370100">济南出版社</p>
+      <p data-id="420800">荆门出版社</p>
+      <p data-id="410800">焦作出版社</p>
+      <p data-id="370800">济宁出版社</p>
+      <p data-id="410881">济源出版社</p>
+      <p data-id="421000">荆州出版社</p>
+      <p data-id="360400">九江出版社</p>
+      <p data-id="360200">景德镇出版社</p>
+      <p data-id="445200">揭阳出版社</p>
+      <p data-id="620300">金昌出版社</p>
+      <p data-id="440700">江门出版社</p>
+      <p data-id="620200">嘉峪关出版社</p>
+      <p data-id="620900">酒泉出版社</p>
+    </div>
+    <div class="city-list"><span class="city-letter" id="K1">K</span>
+      <p data-id="320583">昆山出版社</p>
+      <p data-id="410200">开封出版社</p>
+      <p data-id="530100">昆明出版社</p>
+      <p data-id="650200">克拉玛依出版社</p>
+      <p data-id="653000">克孜勒苏柯尔克孜自治州</p>
+      <p data-id="653100">喀什地区</p>
+    </div>
+    <div class="city-list"><span class="city-letter" id="L1">L</span>
+      <p data-id="141000">临汾出版社</p>
+      <p data-id="131000">廊坊出版社</p>
+      <p data-id="211000">辽阳出版社</p>
+      <p data-id="220400">辽源出版社</p>
+      <p data-id="141100">吕梁出版社</p>
+      <p data-id="320700">连云港出版社</p>
+      <p data-id="371200">莱芜出版社</p>
+      <p data-id="411100">漯河出版社</p>
+      <p data-id="331100">丽水出版社</p>
+      <p data-id="341500">六安出版社</p>
+      <p data-id="431300">娄底出版社</p>
+      <p data-id="350800">龙岩出版社</p>
+      <p data-id="370681">龙口出版社</p>
+      <p data-id="371300">临沂出版社</p>
+      <p data-id="410300">洛阳出版社</p>
+      <p data-id="371500">聊城出版社</p>
+      <p data-id="530700">丽江出版社</p>
+      <p data-id="451300">来宾出版社</p>
+      <p data-id="510500">泸州出版社</p>
+      <p data-id="530900">临沧出版社</p>
+      <p data-id="469033">乐东黎族自治县</p>
+      <p data-id="511100">乐山出版社</p>
+      <p data-id="620100">兰州出版社</p>
+      <p data-id="450200">柳州出版社</p>
+      <p data-id="513400">凉山彝族自治州</p>
+      <p data-id="469034">陵水黎族自治县</p>
+      <p data-id="542600">林芝地区</p>
+      <p data-id="469028">临高县</p>
+      <p data-id="540100">拉萨出版社</p>
+      <p data-id="520200">六盘水出版社</p>
+      <p data-id="621200">陇南出版社</p>
+      <p data-id="622900">临夏回族自治州</p>
+    </div>
+    <div class="city-list"><span class="city-letter" id="M1">M</span>
+      <p data-id="231000">牡丹江出版社</p>
+      <p data-id="340500">马鞍山出版社</p>
+      <p data-id="510700">绵阳出版社</p>
+      <p data-id="511400">眉山出版社</p>
+      <p data-id="440900">茂名出版社</p>
+      <p data-id="441400">梅州出版社</p>
+    </div>
+    <div class="city-list"><span class="city-letter" id="N1">N</span>
+      <p data-id="320100">南京出版社</p>
+      <p data-id="330200">宁波出版社</p>
+      <p data-id="320600">南通出版社</p>
+      <p data-id="360100">南昌出版社</p>
+      <p data-id="411300">南阳出版社</p>
+      <p data-id="350700">南平出版社</p>
+      <p data-id="350900">宁德出版社</p>
+      <p data-id="350583">南安出版社</p>
+      <p data-id="542400">那曲地区</p>
+      <p data-id="450100">南宁出版社</p>
+      <p data-id="511300">南充出版社</p>
+      <p data-id="511000">内江出版社</p>
+      <p data-id="533300">怒江傈僳族自治州</p>
+    </div>
+    <div class="city-list"><span class="city-letter" id="P1">P</span>
+      <p data-id="211100">盘锦出版社</p>
+      <p data-id="360300">萍乡出版社</p>
+      <p data-id="410400">平顶山出版社</p>
+      <p data-id="410900">濮阳出版社</p>
+      <p data-id="350300">莆田出版社</p>
+      <p data-id="510400">攀枝花出版社</p>
+      <p data-id="530800">普洱出版社</p>
+      <p data-id="620800">平凉出版社</p>
+    </div>
+    <div class="city-list"><span class="city-letter" id="Q1">Q</span>
+      <p data-id="130300">秦皇岛出版社</p>
+      <p data-id="230200">齐齐哈尔出版社</p>
+      <p data-id="230900">七台河出版社</p>
+      <p data-id="350500">泉州出版社</p>
+      <p data-id="429005">潜江出版社</p>
+      <p data-id="370200">青岛出版社</p>
+      <p data-id="330800">衢州出版社</p>
+      <p data-id="441800">清远出版社</p>
+      <p data-id="522700">黔南布依族苗族自治州</p>
+      <p data-id="450700">钦州出版社</p>
+      <p data-id="530300">曲靖出版社</p>
+      <p data-id="522300">黔西南布依族苗族自治州</p>
+      <p data-id="621000">庆阳出版社</p>
+      <p data-id="522600">黔东南苗族侗族自治州</p>
+      <p data-id="469002">琼海出版社</p>
+      <p data-id="469036">琼中黎族苗族自治县</p>
+    </div>
+    <div class="city-list"><span class="city-letter" id="R1">R</span>
+      <p data-id="320682">如皋出版社</p>
+      <p data-id="371082">荣成出版社</p>
+      <p data-id="371100">日照出版社</p>
+      <p data-id="542301">日喀则出版社</p>
+    </div>
+    <div class="city-list"><span class="city-letter" id="S1">S</span>
+      <p data-id="220300">四平出版社</p>
+      <p data-id="231200">绥化出版社</p>
+      <p data-id="220700">松原出版社</p>
+      <p data-id="320500">苏州出版社</p>
+      <p data-id="310100">上海出版社</p>
+      <p data-id="321300">宿迁出版社</p>
+      <p data-id="330600">绍兴出版社</p>
+      <p data-id="140600">朔州出版社</p>
+      <p data-id="230500">双鸭山出版社</p>
+      <p data-id="210100">沈阳出版社</p>
+      <p data-id="330682">上虞出版社</p>
+      <p data-id="130100">石家庄出版社</p>
+      <p data-id="440500">汕头出版社</p>
+      <p data-id="350400">三明出版社</p>
+      <p data-id="429021">神农架林区</p>
+      <p data-id="361100">上饶出版社</p>
+      <p data-id="411400">商丘出版社</p>
+      <p data-id="421300">随州出版社</p>
+      <p data-id="341300">宿州出版社</p>
+      <p data-id="411200">三门峡出版社</p>
+      <p data-id="420300">十堰出版社</p>
+      <p data-id="440300">深圳出版社</p>
+      <p data-id="430500">邵阳出版社</p>
+      <p data-id="440200">韶关出版社</p>
+      <p data-id="441500">汕尾出版社</p>
+      <p data-id="510900">遂宁出版社</p>
+      <p data-id="611000">商洛出版社</p>
+      <p data-id="542200">山南地区</p>
+      <p data-id="460200">三亚出版社</p>
+      <p data-id="640200">石嘴山出版社</p>
+      <p data-id="659001">石河子出版社</p>
+    </div>
+    <div class="city-list"><span class="city-letter" id="T1">T</span>
+      <p data-id="140100">太原出版社</p>
+      <p data-id="211200">铁岭出版社</p>
+      <p data-id="220500">通化出版社</p>
+      <p data-id="130200">唐山出版社</p>
+      <p data-id="320585">太仓出版社</p>
+      <p data-id="120100">天津出版社</p>
+      <p data-id="321200">泰州出版社</p>
+      <p data-id="150500">通辽出版社</p>
+      <p data-id="331000">台州出版社</p>
+      <p data-id="370900">泰安出版社</p>
+      <p data-id="429006">天门出版社</p>
+      <p data-id="340700">铜陵出版社</p>
+      <p data-id="522201">铜仁出版社</p>
+      <p data-id="469026">屯昌县</p>
+      <p data-id="610200">铜川出版社</p>
+      <p data-id="620500">天水出版社</p>
+      <p data-id="654200">塔城地区</p>
+      <p data-id="659003">图木舒克出版社</p>
+      <p data-id="652100">吐鲁番地区</p>
+      <p data-id="710100">台湾</p>
+    </div>
+    <div class="city-list"><span class="city-letter" id="W1">W</span>
+      <p data-id="330300">温州出版社</p>
+      <p data-id="320200">无锡出版社</p>
+      <p data-id="150900">乌兰察布出版社</p>
+      <p data-id="150300">乌海出版社</p>
+      <p data-id="340200">芜湖出版社</p>
+      <p data-id="420100">武汉出版社</p>
+      <p data-id="370700">潍坊出版社</p>
+      <p data-id="371000">威海出版社</p>
+      <p data-id="469006">万宁出版社</p>
+      <p data-id="610500">渭南出版社</p>
+      <p data-id="469005">文昌出版社</p>
+      <p data-id="469001">五指山出版社</p>
+      <p data-id="620600">武威出版社</p>
+      <p data-id="450400">梧州出版社</p>
+      <p data-id="532600">文山壮族苗族自治州</p>
+      <p data-id="659004">五家渠出版社</p>
+      <p data-id="640300">吴忠出版社</p>
+      <p data-id="650100">乌鲁木齐出版社</p>
+    </div>
+    <div class="city-list"><span class="city-letter" id="X1">X</span>
+      <p data-id="140900">忻州出版社</p>
+      <p data-id="152500">锡林郭勒盟</p>
+      <p data-id="130500">邢台出版社</p>
+      <p data-id="152200">兴安盟</p>
+      <p data-id="320300">徐州出版社</p>
+      <p data-id="410700">新乡出版社</p>
+      <p data-id="420600">襄阳出版社</p>
+      <p data-id="360500">新余出版社</p>
+      <p data-id="411500">信阳出版社</p>
+      <p data-id="429004">仙桃出版社</p>
+      <p data-id="411000">许昌出版社</p>
+      <p data-id="430300">湘潭出版社</p>
+      <p data-id="350200">厦门出版社</p>
+      <p data-id="341800">宣城出版社</p>
+      <p data-id="420900">孝感出版社</p>
+      <p data-id="421200">咸宁出版社</p>
+      <p data-id="433100">湘西土家族苗族自治州</p>
+      <p data-id="610100">西安出版社</p>
+      <p data-id="610400">咸阳出版社</p>
+      <p data-id="532800">西双版纳傣族自治州</p>
+      <p data-id="630100">西宁出版社</p>
+      <p data-id="810100">香港特别行政区</p>
+    </div>
+    <div class="city-list"><span class="city-letter" id="Y1">Y</span>
+      <p data-id="320282">宜兴出版社</p>
+      <p data-id="222400">延边朝鲜族自治州</p>
+      <p data-id="321000">扬州出版社</p>
+      <p data-id="140800">运城出版社</p>
+      <p data-id="320900">盐城出版社</p>
+      <p data-id="140300">阳泉出版社</p>
+      <p data-id="330281">余姚出版社</p>
+      <p data-id="230700">伊春出版社</p>
+      <p data-id="210800">营口出版社</p>
+      <p data-id="370600">烟台出版社</p>
+      <p data-id="420500">宜昌出版社</p>
+      <p data-id="430600">岳阳出版社</p>
+      <p data-id="360900">宜春出版社</p>
+      <p data-id="430900">益阳出版社</p>
+      <p data-id="330782">义乌出版社</p>
+      <p data-id="360600">鹰潭出版社</p>
+      <p data-id="431100">永州出版社</p>
+      <p data-id="450900">玉林出版社</p>
+      <p data-id="511800">雅安出版社</p>
+      <p data-id="530400">玉溪出版社</p>
+      <p data-id="441700">阳江出版社</p>
+      <p data-id="610800">榆林出版社</p>
+      <p data-id="511500">宜宾出版社</p>
+      <p data-id="445300">云浮出版社</p>
+      <p data-id="610600">延安出版社</p>
+      <p data-id="654000">伊犁哈萨克自治州</p>
+      <p data-id="640100">银川出版社</p>
+      <p data-id="632700">玉树藏族自治州</p>
+    </div>
+    <div class="city-list"><span class="city-letter" id="Z1">Z</span>
+      <p data-id="130700">张家口出版社</p>
+      <p data-id="330681">诸暨出版社</p>
+      <p data-id="321100">镇江出版社</p>
+      <p data-id="320582">张家港出版社</p>
+      <p data-id="211300">朝阳出版社</p>
+      <p data-id="430800">张家界出版社</p>
+      <p data-id="410100">郑州出版社</p>
+      <p data-id="370400">枣庄出版社</p>
+      <p data-id="330900">舟山出版社</p>
+      <p data-id="440183">增城出版社</p>
+      <p data-id="440400">珠海出版社</p>
+      <p data-id="411600">周口出版社</p>
+      <p data-id="370300">淄博出版社</p>
+      <p data-id="430200">株洲出版社</p>
+      <p data-id="350600">漳州出版社</p>
+      <p data-id="411700">驻马店出版社</p>
+      <p data-id="440800">湛江出版社</p>
+      <p data-id="520300">遵义出版社</p>
+      <p data-id="510300">自贡出版社</p>
+      <p data-id="530600">昭通出版社</p>
+      <p data-id="441200">肇庆出版社</p>
+      <p data-id="442000">中山出版社</p>
+      <p data-id="620700">张掖出版社</p>
+      <p data-id="512000">资阳出版社</p>
+      <p data-id="640500">中卫出版社</p>
+    </div>
+  </div>
+</div>
+
+<script src="../js/commonul.js"></script>
+<script src="../js/zepto.js"></script>
+<script src="../js/touch.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/publish.js"></script>
+</body>
+</html>
+
+

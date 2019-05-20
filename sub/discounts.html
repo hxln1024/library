@@ -8,11 +8,49 @@
     <title>Document</title>
     <link rel="stylesheet" href="../css/discounts.css">
     <link rel="stylesheet" href="../css/resets.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/layui.css">
+    <script src="../js/layui.js"></script>
     <script src="../js/iscroll.js"></script>
     <script src="../js/discounts.js"></script>
 </head>
 
 <body>
+    <header class="header">
+        <div class="headerInner">
+            <div class="returnBtn">
+                <a href="javascript:history.back(-1);"></a>
+            </div>
+            <div class="head_lable">
+                <span>特价包邮</span>
+            </div>
+            <div class="shareBtn layui-btn" id="shareBtn" data-method="confirmTrans"></div>
+            <div class="shortCut" id="shortCut"></div>
+            <div class="shortCutLayer">
+                <div class="shortCutInner">
+                    <ul>
+                        <li class="homeLink">
+                            <a href="../index.html">首页</a>
+                        </li>
+                        <li class="tstLink">
+                            <a href="bookshops.html">淘书团</a>
+                        </li>
+                        <li class="kindLink">
+                            <a href="classify.html">分类搜索</a>
+                        </li>
+                        <li class="carLink">
+                            <a href="shoppingcar.html">购物车</a>
+                        </li>
+                        <li class="accountLink">
+                            <a href="../login.html">我的账户</a>
+                        </li>
+                    </ul>
+                    <span class="uptriangle"></span>
+                </div>
+            </div>
+    
+        </div>
+    </header>
     <div class="miaoShaBanner">
         <img src="../images/classify/baoyou.jpg" alt="今日超低价">
     </div>
@@ -481,6 +519,31 @@
             </div>
         </div>
     </div>
+    <!-- 快速导航 -->
+    <div class="sidebarNav">
+        <dl>
+            <dt><span>快速<br>导航</span></dt>
+            <dd>
+                <ul>
+                    <li><a href="../index.html"><span class="sideIcon"><img src="../images/common/barnav1.png"
+                                    alt="首页">首页</span></a></li>
+                    <li><a href="bookshops.html"><span class="sideIcon"><img src="../images/common/barnav2.png"
+                                    alt="淘书团">淘书团</span></a></li>
+                    <li><a href="classify.html"><span class="sideIcon"><img src="../images/common/barnav3.png"
+                                    alt="分类搜索">分类搜索</span></a></li>
+                    <li><a href="shoppingcar.html"><span class="sideIcon"><img src="../images/common/barnav4.png"
+                                    alt="购物车">购物车</span></a></li>
+                    <li><a href="../login.html"><img src="../images/common/barnav5.png" alt="我的账户">我的账户</span></a></li>
+                </ul>
+            </dd>
+        </dl>
+    </div>
+    <!-- 上箭头 -->
+    <div class="backTop"><a href="javascript:scrollTo(0,0)"></a></div>
+    <script src="../js/commonul.js"></script>
+    <script src="../js/zepto.js"></script>
+    <script src="../js/touch.js"></script>
+    <script src="../js/common.js"></script>
     <!-- <div class="backTop" style="display: none;"><a href="javascript:scrollTo(0,0)"></a></div> -->
 </body>
 

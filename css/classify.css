@@ -1,16 +1,17 @@
 .classify {
   max-width: 640px;
   max-height: 10rem;
-  margin: 0  auto;
+  margin: 0 auto;
   position: relative;
   font-size: 15px;
-  font-family: Microsoft Yahei,Helvetica,Arial;
+  font-family: Microsoft Yahei, Helvetica, Arial;
 }
-.classify a{
+
+.classify a {
   text-decoration: none;
 }
 
-/* 头部搜索 */
+/* 头部搜索
 .searchBar {
   position:fixed;
    left:0;
@@ -64,9 +65,73 @@
   font-size: 0;
   background: url('../images/classify/seach.png') no-repeat center;
   background-size: 0.34rem 0.34rem;
+} */
+
+/* 首页头部搜索 */
+
+.headers .searchBar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: #e70002;
+  background: linear-gradient(to bottom, #fe2828 0%, #e60000 100%);
+  width: 100%;
+  height: 0.88rem;
+  z-index: 900;
 }
 
+.headers .searchInner {
+  position: relative;
+  height: 0.88rem;
+  width: 100%;
+  overflow: hidden;
+}
 
+.headers .searchBar h1 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 0.6rem;
+  margin-top: 0.14rem;
+  position: relative;
+}
+
+.headers .searchBar h1 img {
+  width: 1.84rem;
+}
+
+.headers .searchBar .searchWrap {
+  width: 60%;
+  height: 0.6rem;
+  border-radius: 0.6rem;
+  line-height: 0.6rem;
+  background: #fff;
+  border: none;
+  position: absolute;
+  left: 1.86rem;
+  top: 0.15rem;
+}
+
+.headers .searchBar .searchWrap span {
+  color: #8e8e8e;
+  font-size: 0.24rem;
+  display: block;
+  text-indent: 0.2rem;
+  height: 0.6rem;
+}
+
+.headers .searchBar .searchBtn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 0.6rem;
+  height: 0.88rem;
+  text-indent: -999px;
+  overflow: hidden;
+  font-size: 0;
+  background: no-repeat url(../images/index/search.png) center;
+  background-size: 0.34rem 0.34rem;
+}
 
 .classify .menu-left {
   width: 1.6rem;
@@ -78,7 +143,7 @@
   overflow: hidden;
 }
 
-.classify .menu-left  .on{
+.classify .menu-left .on {
   background-color: #F3F3F3;
   border-left: 1px solid red;
   color: red
@@ -98,7 +163,6 @@
   top: 1rem;
   left: 1.6rem;
   overflow: hidden;
-
 }
 
 .classify .menu-right .swiper-container {
@@ -111,7 +175,6 @@
 .menu-right .swiper-container .swiper-wrapper .swiper-slide {
   display: flex;
   align-items: center;
-
 }
 
 .swiper-slide img {
@@ -119,7 +182,7 @@
   height: 2rem
 }
 
-.menu-right  .hotLink {
+.menu-right .hotLink {
   width: 4.4rem;
   height: 1.1rem;
   margin: 0.2rem auto;
@@ -127,12 +190,9 @@
   justify-content: space-between;
 }
 
-
-
-.menu-right .hotLink  div {
+.menu-right .hotLink div {
   width: 2.1rem;
   height: 1.1rem;
- 
 }
 
 .menu-right .hotLink img {
@@ -141,7 +201,8 @@
 }
 
 /* tab图书部分 */
-.menu-right-content{
+
+.menu-right-content {
   width: 4.8rem
 }
 
@@ -155,10 +216,9 @@
   float: left;
   /* padding: 0 0.1rem; */
   width: 33.3333%;
-  text-align: center; 
+  text-align: center;
   margin-top: 0.2rem;
 }
-
 
 .menu-right-content .content-item ul li .cover {
   height: 1.35rem;
@@ -178,4 +238,52 @@
   overflow: hidden;
   text-overflow: ellipsis;
   margin-top: 0.12rem;
+}
+
+/* 底部菜单 */
+
+.webNav {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  background: #fff;
+  box-shadow: 0px 0px 5px #8e8e8e;
+  z-index: 100;
+}
+
+.webNav ul {
+  overflow: hidden;
+}
+
+.webNav ul li {
+  float: left;
+  width: 20%;
+  text-align: center;
+  height: 0.88rem;
+}
+
+.webNav ul li.cur a {
+  color: #e60000;
+}
+
+.webNav ul li a {
+  color: #333333;
+  font-size: 0.22rem;
+  display: block;
+  height: 0.88rem;
+}
+
+.webNav ul li a img {
+  width: 0.36rem;
+  margin: auto;
+  display: block;
+  margin-top: 0.13rem;
+  height: 0.36rem;
+}
+
+.webNav ul li a b {
+  display: block;
+  text-align: center;
+  line-height: 0.5rem;
 }
